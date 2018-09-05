@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewBeacon Software Development Kit Guide | Minew mobile</title>
+    <meta name="description" content="A documention site for minew mobile SDKs">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ca1b5866.css" as="style"><link rel="preload" href="/assets/js/app.a01fb809.js" as="script"><link rel="preload" href="/assets/js/14.eb9b367c.js" as="script"><link rel="prefetch" href="/assets/js/10.e2a86036.js"><link rel="prefetch" href="/assets/js/2.0bf7600d.js"><link rel="prefetch" href="/assets/js/3.f6dc4958.js"><link rel="prefetch" href="/assets/js/4.a7775134.js"><link rel="prefetch" href="/assets/js/5.2b963b60.js"><link rel="prefetch" href="/assets/js/6.d487b4d3.js"><link rel="prefetch" href="/assets/js/7.358db2b1.js"><link rel="prefetch" href="/assets/js/8.0c28f7da.js"><link rel="prefetch" href="/assets/js/9.b35cc178.js"><link rel="prefetch" href="/assets/js/11.47018335.js"><link rel="prefetch" href="/assets/js/12.7fc3bf68.js"><link rel="prefetch" href="/assets/js/13.542f537a.js"><link rel="prefetch" href="/assets/js/15.f22229cb.js"><link rel="prefetch" href="/assets/js/16.0680fce0.js"><link rel="prefetch" href="/assets/js/17.f14053da.js"><link rel="prefetch" href="/assets/js/18.7c849573.js"><link rel="prefetch" href="/assets/js/19.63b17b4c.js"><link rel="prefetch" href="/assets/js/20.9b19d5b3.js"><link rel="prefetch" href="/assets/js/21.e163a637.js"><link rel="prefetch" href="/assets/js/22.2cfd09f9.js"><link rel="prefetch" href="/assets/js/23.4d29e84b.js"><link rel="prefetch" href="/assets/js/24.b75cf7fd.js"><link rel="prefetch" href="/assets/js/25.c023be9e.js"><link rel="prefetch" href="/assets/js/26.b7a504ac.js"><link rel="prefetch" href="/assets/js/27.3659652a.js"><link rel="prefetch" href="/assets/js/28.234363b1.js"><link rel="prefetch" href="/assets/js/29.c5c75945.js"><link rel="prefetch" href="/assets/js/30.40e5e2dc.js"><link rel="prefetch" href="/assets/js/31.fe2e4acd.js"><link rel="prefetch" href="/assets/js/32.7aa30448.js"><link rel="prefetch" href="/assets/js/33.80e87a66.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.53980843.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ca1b5866.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/minewLogo.png" alt="Minew mobile" class="logo"> <span class="site-name can-hide">Minew mobile</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">Beacon</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><a href="/keepintouch.html" class="nav-link">Contact us</a></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">Beacon</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><a href="/keepintouch.html" class="nav-link">Contact us</a></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>MinewBeacon Software Development Kit Guide</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#configs-before-development" class="sidebar-link">Configs before development</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#get-started" class="sidebar-link">Get Started</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#class-reference" class="sidebar-link">Class reference</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#minewbeacon" class="sidebar-link">MinewBeacon</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#minewbeaconvalue" class="sidebar-link">MinewBeaconValue</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#minewbeaconmanager" class="sidebar-link">MinewBeaconManager</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="minewbeacon-software-development-kit-guide"><a href="#minewbeacon-software-development-kit-guide" aria-hidden="true" class="header-anchor">#</a> MinewBeacon Software Development Kit Guide</h1> <h2 id="configs-before-development"><a href="#configs-before-development" aria-hidden="true" class="header-anchor">#</a> Configs before development</h2> <p>The SDK used CoreLocation and CoreBluetooth.</p> <p>In order to comply with Apple's audit specifications, we need to some distinction for using background task or not.</p> <p>for the developer not require  background task:</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>  // 1. set backgroundSupport to NO 
+    [aManager startScan:uuids backgroundSupport: NO];
+
+ // 2. disable Location update and Uses Bluetooth LE accessories in your project. 
+
+ //  PS: Because of the iOS restrictions, if some device don't support background scanning, you will not get these data for the device when the App enter background, although the application process is not in a suspended state.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>for the developer require background task：</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>  // 1. set backgroundSupport to YES
+  [aManager startScan:uuids backgroundSupport :YES];
+   
+  // 2、enable Location update and Uses Bluetooth LE accessories.at the same time, you need add &quot;NSLocationAlwaysUsageDescription&quot; item to your project's info.plist file. 
+
+  // PS：SDK will change to background mode and continue to scan,if there are devices support background mode, all delegate methods will be execute normally.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>Configs for &quot;info.plist&quot;</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>  &lt;!-- Bluetooth --&gt; 
+&lt;key&gt;NSBluetoothPeripheralUsageDescription&lt;/key&gt; 
+&lt;string&gt;App will use bluetooth to communication with devices.&lt;/string&gt; 
+  &lt;!-- Location --&gt; 
+&lt;key&gt;NSLocationUsageDescription&lt;/key&gt; 
+&lt;string&gt;App will record your location&lt;/string&gt; 
+&lt;!-- use location while app in use --&gt; 
+&lt;key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt; 
+&lt;string&gt;App will record your location&lt;/string&gt; 
+  
+&lt;!-- if you need background scanning, you should add configs below --&gt;
+&lt;!-- always use location--&gt; 
+&lt;key&gt;NSLocationAlwaysUsageDescription&lt;/key&gt; 
+&lt;string&gt;App will record your location&lt;/string&gt; 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="get-started"><a href="#get-started" aria-hidden="true" class="header-anchor">#</a> Get Started</h2> <p>MinewBeaconManager (as Manager below) can scan or stop scan devices around, it will create <strong>Minewbeacon</strong>(as Beacon below)  instance for every device. it will listen the data update and appear(we think a device disappeared if it doesn't update data in seconds, we think a device appeared if it is scanned at first time or scanned from &quot;disappear&quot; ) state of devices, at the same time, Manager will listen the changes of cellphone's Bluetooth state. Here is the code below:</p> <ol><li>Get Manager shared instance, set delegate:</li></ol> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>MinewBeaconManager *manager = [MinewBeaconManager sharedInstance];
+manager.delegate = self;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="2"><li>Start scan for devices.</li></ol> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>[manager startScan:@[@&quot;uuid1&quot;, @&quot;uuid2&quot;,...] backgroundSupport:NO];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="3"><li>get data of devices from delegate method.</li></ol> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// if the manager found devices, this method will be executed every second, 
+- (void)minewBeaconManager:(MinewBeaconManager *)manager didRangeBeacons:(NSArray&lt;MinewBeacon *&gt; *)beacons
+{
+    NSLog(@&quot;current beacons:%@&quot;, beacons);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="4"><li><p>get data of beacon instance.</p> <p>Via method &quot;-(MinewBeaconValue *)getBeaconValue:(BeaconValueIndex)index&quot;. for data versatility, we use <strong>MinewBeaconValue</strong> to handle all types of data, BeaconValue instance can be a string, int, float or bool, every &quot;index&quot; correspond to a value, as the code below:</p></li></ol> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>MinewBeacon *beacon = beacons[0];
+
+// uuid
+NSString *uuid = [beacon getBeaconValue:BeaconValueIndex_UUID].stringValue; 
+// major
+NSInteger major = (long)[beacon getBeaconValue:BeaconValueIndex_Major].intValue;
+// minor
+NSInteger minor = (long)[beacon getBeaconValue:BeaconValueIndex_Minor].intValue;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>Table for ValueIndex and data types</p> <table><thead><tr><th>index</th> <th>Data name</th> <th>Type</th> <th>Detail</th></tr></thead> <tbody><tr><td>BeaconValueIndex_UUID</td> <td>uuid</td> <td>stringValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Name</td> <td>Name</td> <td>stringValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Major</td> <td>major</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Minor</td> <td>minor</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_WechatId</td> <td>wechatId</td> <td>intValue</td> <td>Partial device</td></tr> <tr><td>BeaconValueIndex_Mac</td> <td>MAC address</td> <td>stringValue</td> <td>Partial device</td></tr> <tr><td>BeaconValueIndex_RSSI</td> <td>rssi</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_BatteryLevel</td> <td>Battery</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Temperature</td> <td>Temperature</td> <td>floatValue</td> <td>Partial device</td></tr> <tr><td>BeaconValueIndex_Humidity</td> <td>Humidity</td> <td>floatValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Txpower</td> <td>txPower</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_InRange</td> <td>in range</td> <td>boolValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Connectable</td> <td>Connectable</td> <td>boolValue</td> <td></td></tr></tbody></table> <p>you just need get the data you want via indexs above.</p> <p>Now, we finish the basic use of SDK, more codes below:</p> <p>listen to the device appear and disappear changes.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// disappear devices.
+- (void)minewBeaconManager:(MinewBeaconManager *)manager disappearBeacons:(NSArray&lt;MinewBeacon *&gt; *)beacons
+{
+    NSLog(@&quot;---disappear beacons:%@&quot;, beacons);
+}
+
+// appear devices.
+- (void)minewBeaconManager:(MinewBeaconManager *)manager appearBeacons:(NSArray&lt;MinewBeacon *&gt; *)beacons
+{
+    NSLog(@&quot;appear beacons:%@&quot;, beacons);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>Listen to the Bluetooth state of cellphone.</p> <p>Three Bluetooth state:</p> <p>BluetoothState：BluetoothStatePowerOn（poweron），BluetoothStatePowerOff（power off），BluetoothStateUnknown（unknown）</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// listen to the changes of bluetooth state
+- (void)minewBeaconManager:(MinewBeaconManager *)manager didUpdateState:(BluetoothState)state
+{
+    NSLog(@&quot;Bluetooth state:%ld&quot;, (long)state);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>you can also check bluetooth state like this:</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>BluetoothState state = [aManager checkBluetoothState];
+
+if(state == BluetoothStatePowerOn)
+  NSLog(@&quot;Bluetooth is PowerOn now.&quot;);
+else if ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="class-reference"><a href="#class-reference" aria-hidden="true" class="header-anchor">#</a> Class reference</h2> <h3 id="minewbeacon"><a href="#minewbeacon" aria-hidden="true" class="header-anchor">#</a> MinewBeacon</h3> <p>Device instance Class,</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// get data of device
+ -(MinewBeaconValue *)getBeaconValue:(BeaconValueIndex)index;
+
+// such as get UUID：
+  [aBeacon getBeaconValue:BeaconValueIndex_UUID].stringValue;
+
+// index from &quot;BeaconValueIndex&quot;；
+ // !!!:you should get data by its type
+typedef NS_ENUM(NSInteger, BeaconValueIndex) {
+     // UUID      
+    BeaconValueIndex_UUID = 1,  // stringValue
+    // Major 
+    BeaconValueIndex_Major,   // intValue
+    // Minor
+    BeaconValueIndex_Minor,   // intValue
+    // Name
+    BeaconValueIndex_Name,   // stringValue
+    // RSSI
+    BeaconValueIndex_RSSI,   //  intValue
+    // battery
+    BeaconValueIndex_BatteryLevel,  // intValue
+    // temperature
+    BeaconValueIndex_Temperature, 
+    // humidity
+    BeaconValueIndex_Humidity, 
+    // TxPower
+    BeaconValueIndex_TxPower,  // intValue
+    // in scanning range or not
+    BeaconValueIndex_InRage,  // boolValue
+    // wechatId，（Partial device）
+    BeaconValueIndex_WechatId, // intValue
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><h3 id="minewbeaconvalue"><a href="#minewbeaconvalue" aria-hidden="true" class="header-anchor">#</a> MinewBeaconValue</h3> <p>Device value instance class</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// get int value
+@property (nonatomic, readonly, assign) NSInteger intValue;
+
+// get float value
+@property (nonatomic, readonly, assign) float floatValue;
+
+// get string value
+@property (nonatomic, readonly, copy) NSString *stringValue;
+
+// get data value
+@property (nonatomic, readonly, strong) NSData  *dataValue;
+
+// get bool value
+@property (nonatomic, readonly, assign) BOOL boolValue;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="minewbeaconmanager"><a href="#minewbeaconmanager" aria-hidden="true" class="header-anchor">#</a> MinewBeaconManager</h3> <p>Global Manager class.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// delegate
+@protocol MinewBeaconManagerDelegate &lt;NSObject&gt;
+@optional
+
+// scanned new devices, callback every 3 seconds, 
+- (void)minewBeaconManager:(MinewBeaconManager * )manager appearBeacons:(NSArray&lt;MinewBeacon *&gt; *)beacons;
+
+// listen the disappear devices (doesn't update data in 10 second.)
+- (void)minewBeaconManager:(MinewBeaconManager * )manager disappearBeacons:(NSArray&lt;MinewBeacon *&gt; *)beacons;
+
+// listen the appear devices (scanned first time.)
+- (void)minewBeaconManager:(MinewBeaconManager * )manager didRangeBeacons:(NSArray&lt;MinewBeacon *&gt; * )beacons;
+
+@end
+
+// 
+@interface MinewBeaconManager : NSObject
+
+// sharedinstance
+- (MinewBeaconManager  *)sharedInstance;
+
+// start scan devices, &quot;uuids&quot; is a uuid string array, &quot;enable&quot; is a switch for background scanning support 
+- (void)startScan:(NSArray&lt;NSString *&gt; *)uuids backgroundSupport :(BOOL)enable;
+
+// stop scan for device.
+- (void)stopScan;
+
+// delegate
+@property (nonatomic, strong) id &lt;MinewBeaconManagerDelegate&gt; delegate;
+
+@property (nonatomic, readonly, assign) BluetoothState
+
+// all devices scanned.
+@property (nonatomic, readonly, copy) NSArray&lt;MinewBeacon *&gt; *scannedBeacons;
+
+// all devices in range.
+@property (nonatomic, readonly, copy) NSArray&lt;MinewBeacon *&gt; *inRangeBeacons;
+
+@end
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p>#Change log</p> <ul><li>2017.10.16 English version</li> <li>2016.12.22 update for iOS 10</li> <li>2016.9.18 update for Apple's review</li> <li>2016.11.29 update for new firmware.</li></ul></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:: </span> <span class="time">9/5/2018, 4:58:02 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/14.eb9b367c.js" defer></script><script src="/assets/js/app.a01fb809.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewTrackerKit Development Guide | Minew mobile</title>
+    <meta name="description" content="A documention site for minew mobile SDKs">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ca1b5866.css" as="style"><link rel="preload" href="/assets/js/app.a01fb809.js" as="script"><link rel="preload" href="/assets/js/17.f14053da.js" as="script"><link rel="prefetch" href="/assets/js/10.e2a86036.js"><link rel="prefetch" href="/assets/js/2.0bf7600d.js"><link rel="prefetch" href="/assets/js/3.f6dc4958.js"><link rel="prefetch" href="/assets/js/4.a7775134.js"><link rel="prefetch" href="/assets/js/5.2b963b60.js"><link rel="prefetch" href="/assets/js/6.d487b4d3.js"><link rel="prefetch" href="/assets/js/7.358db2b1.js"><link rel="prefetch" href="/assets/js/8.0c28f7da.js"><link rel="prefetch" href="/assets/js/9.b35cc178.js"><link rel="prefetch" href="/assets/js/11.47018335.js"><link rel="prefetch" href="/assets/js/12.7fc3bf68.js"><link rel="prefetch" href="/assets/js/13.542f537a.js"><link rel="prefetch" href="/assets/js/14.eb9b367c.js"><link rel="prefetch" href="/assets/js/15.f22229cb.js"><link rel="prefetch" href="/assets/js/16.0680fce0.js"><link rel="prefetch" href="/assets/js/18.7c849573.js"><link rel="prefetch" href="/assets/js/19.63b17b4c.js"><link rel="prefetch" href="/assets/js/20.9b19d5b3.js"><link rel="prefetch" href="/assets/js/21.e163a637.js"><link rel="prefetch" href="/assets/js/22.2cfd09f9.js"><link rel="prefetch" href="/assets/js/23.4d29e84b.js"><link rel="prefetch" href="/assets/js/24.b75cf7fd.js"><link rel="prefetch" href="/assets/js/25.c023be9e.js"><link rel="prefetch" href="/assets/js/26.b7a504ac.js"><link rel="prefetch" href="/assets/js/27.3659652a.js"><link rel="prefetch" href="/assets/js/28.234363b1.js"><link rel="prefetch" href="/assets/js/29.c5c75945.js"><link rel="prefetch" href="/assets/js/30.40e5e2dc.js"><link rel="prefetch" href="/assets/js/31.fe2e4acd.js"><link rel="prefetch" href="/assets/js/32.7aa30448.js"><link rel="prefetch" href="/assets/js/33.80e87a66.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.53980843.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ca1b5866.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/minewLogo.png" alt="Minew mobile" class="logo"> <span class="site-name can-hide">Minew mobile</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><a href="/keepintouch.html" class="nav-link">Contact us</a></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><a href="/keepintouch.html" class="nav-link">Contact us</a></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>MinewTrackerKit Development Guide</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html#minewtrackerkit-development-guide" class="sidebar-link">MinewTrackerKit Development Guide</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html#preparations" class="sidebar-link">Preparations</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html#get-started" class="sidebar-link">Get started</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="minewtrackerkit-development-guide"><a href="#minewtrackerkit-development-guide" aria-hidden="true" class="header-anchor">#</a> MinewTrackerKit Development Guide</h2> <p>This SDK only support Minew Trackers base on nordic52 chips, it incompatible with previous trackers based on nordic51 chips. please read this document carefully in order to start developing as soon as possible.</p> <p><strong>Compatibility instructions:  If you have used &quot;MinewFinderSDK&quot; before, the MinewFinder and MinewTrackerKit are not compatible with each other, please don't use them in the same project.</strong></p> <h3 id="preparations"><a href="#preparations" aria-hidden="true" class="header-anchor">#</a> Preparations</h3> <p>This SDK is similar to the MinewFinde. We update a new encryption and Increased stability, The performance is much higher than trackers based on nordic51 chips.</p> <p>MTTrackerManager is a class for device managing, it's a shared instance in the APP run time, this SDK will create a MTTracker instance for every device, you can use them for operating and listening devices.</p> <p>The design ideas:</p> <p><img src="/assets/img/design.48a5b3ec.png" alt="设计说明"></p> <p>*MTTrackerManager：*device managing class, it can scan devices around and connect to them, validate trackers.</p> <p>MTTracker：the tracker class, the manager will generate a instance for every physical tracker device.</p> <h3 id="get-started"><a href="#get-started" aria-hidden="true" class="header-anchor">#</a> Get started</h3> <p>environment:</p> <ul><li>Xcode9+, the SDK is compiled by xcode9, please use Xcode9 or high to develop APPs.</li> <li>iOS8, the lowest iOS version is 8.</li></ul> <h5 id="import-the-framework："><a href="#import-the-framework：" aria-hidden="true" class="header-anchor">#</a> import the framework：</h5> <ol><li><p>import the framework file &quot;MTTrackit.framework&quot; to your project, the target is current project.</p> <p><img src="/assets/img/addframework.0b887314.png" alt="添加framework"></p></li></ol> <p>&quot;Target&quot; -&gt; General -&gt; Embedded Binaries, click the &quot;+&quot; button below, then click &quot;Add Other&quot;, choose &quot;MTTrackit.framework&quot;(as the screenshot above). at the same time, you should add the file to &quot;Linked Frameworks and Libraries&quot;, as the screenshot below.</p> <p><img src="/assets/img/frameworkadded.219650ea.png" alt="frameworkadded"></p> <ol start="2"><li>The APP should handle the tracker's event , so we should switch on the background ble permission. as the screenshot below:</li></ol> <p><img src="/assets/img/bluetoothbackground.f0d91607.png" alt></p> <ol start="3"><li>*if you use the swift programming language, you need add an Objective C BridgingHead .h file (please solve it by yourself) , import framework in this .h file. if you use Objective C, add &quot;import&quot; at the beginning of the code.</li> <li>!!! on the iOS10 and above version, we should add a bluetooth description for using iPhone bluetooth module. In your info.plist file, add key-value: <strong>Privacy - Bluetooth Peripheral Usage Description - &quot;your description&quot;</strong>, as the screenshot below:</li></ol> <p><img src="/assets/img/bluetoothdescription.7ceeb2e7.png" alt="bluetoothdescription"></p> <h4 id="starting-development"><a href="#starting-development" aria-hidden="true" class="header-anchor">#</a> Starting Development</h4> <h5 id="scan-devices"><a href="#scan-devices" aria-hidden="true" class="header-anchor">#</a> Scan devices</h5> <p>Get the sharedinstance of MTTrackerManager, then you can check the bluetooth state of iPhone or start scanning devices.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// get sharedinstance of Manager
+MTTrackerManager *manager = [MTTrackerManager sharedInstance];
+
+// the bluetooth status of iPhone
+if(manager.bleState == Poweron) {
+   NSLog(@&quot;the state is power on.&quot;);
+}
+
+// start scanning task.
+[manager startScan:^(NSArray&lt;MTTracker *&gt; *trackers){
+    // if manager found devices, this block will call back.
+}];   
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>PS: the &quot;trackers&quot; array only contains <strong>Unbind devices</strong> (The following will explain &quot;binding&quot;).</p> <h5 id="bind-validating"><a href="#bind-validating" aria-hidden="true" class="header-anchor">#</a> Bind validating</h5> <p>Only bind trackers will work normally, we suggest that the users should keep 10cm between the tracker and  iPhone.</p> <p>Based on previous experience, we create a new encryption for the communication between iPhone and trackers. on the other hand, the trackers' password is null, every tracker needs a password when the user bind it, when is it bind, this tracker will only accept connections from the owner's phone.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager: MTTrackerManager sharedInstance
+*/
+//  set the password, the length must be 8.
+//  the password consists of uppercase and lowercase letters, numbers, special symbols.
+manager.password = @&quot;********&quot;;
+
+// start validating tracker bind operation.
+[manager bindingVerify:aTracker completion:^(BOOL success, NSError *error) {
+     // the tracker will be add to the &quot;bindTrackers&quot; array of the manager when it's validated.
+     // success == NO means validate failed.
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>PS: the unbind trackers will not work normally, we suggest that using the webserver for different bind passwords of the users.</p> <h5 id="unbind-trackers"><a href="#unbind-trackers" aria-hidden="true" class="header-anchor">#</a> Unbind Trackers</h5> <p>if a user lose the tracker or he/she wants to give it others, the user should unbind the tracker. Strictly speaking, the user should keep connection of iPhone and trackers for the unbind operation unless the tracker is lost. The Tracker keeps bind password, unbind operations will delete the password for the next time work normally.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager: MTTrackerManager shared instance.
+*/
+// unbind tracker
+
+// the mac of the tracker
+NSString *mac = @&quot;acd498765432&quot;;
+
+// unbind the tracker
+[manager unbindTracker:mac completion:^(BOOL success, NSError *error) {
+    // success YES means operate success, else NO.
+}];
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h5 id="get-the-information"><a href="#get-the-information" aria-hidden="true" class="header-anchor">#</a> Get the information</h5> <p>You can get the information of physical devices via the MTTracker instance, such as the mac address, rssi and so on.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// aTracker MTTracker instance
+
+NSString *mac = aTracker.mac; // mac address
+NSString *name = aTracker.name; // bluetooth name
+NSInteger rssi = aTraker.rssi;   // RSSI
+NSInteger battery = aTracker.battery; // battery 0～100
+Connection status = aTracker.connection; // current connection status
+ModelType model = aTracker.model;    // the tracker's model
+Distance dis = aTracker.distance;    // distance information.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h5 id="ring-the-tracker"><a href="#ring-the-tracker" aria-hidden="true" class="header-anchor">#</a> Ring the Tracker</h5> <p>you can ring the tracker via our APi. Of course, the device remains connected.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// aTracker MTTracker instance
+
+// ring == YES means ring the tracker, NO will stop the ring.
+BOOL ring = YES;
+
+// switch the bell status of the tracker
+[aTracker switchBellStatus:ring completion:^(BOOL success, NSError *error) {
+    if (success) {
+       NSLog(@&quot;switch the ring status successfully!&quot;);   
+    }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h5 id="the-disconnection-of-the-trackers"><a href="#the-disconnection-of-the-trackers" aria-hidden="true" class="header-anchor">#</a> The disconnection of the trackers.</h5> <p>The tracker device have disconnection event, such as alert when disconnected.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// aTracker MTTracker instance
+
+// YES means the tracker will rings when disconnected, else Not.
+BOOL alert = YES;
+
+// set the disconnection alert
+[aTracker writeLossAlert:alert completion:^(BOOL success, NSError *error) {
+   
+    if (success) {
+       NSLog(@&quot;config the disconnection alert successfully!&quot;);   
+    }
+}];]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h5 id="receive-the-events-of-the-trackers"><a href="#receive-the-events-of-the-trackers" aria-hidden="true" class="header-anchor">#</a> Receive the events of the trackers</h5> <p>The iPhone accepts the devices events, listen them and handle the events.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// aTracker MTTracker instance
+[aTracker didReceive:^(Receiving rec) {
+    
+    // button pressed，
+    // handle the button pressed event
+    if(rec == ReceivingButtonPushed) {
+       NSLog(@&quot;The button on the device is pressed&quot;); 
+    }
+}];
+
+// listen the event changes of the device
+[aTracker didConnectionChange:^(Connection con){
+    switch(con){
+        case ConnectionConnecting:
+            NSLog(@&quot;Connection to the Tracker&quot;);
+            break;
+        case ConnectionConnected:
+            NSLog(@&quot;Tracker is connected&quot;);
+            break;
+        case ConnectionDisconnected:
+            NSLog(@&quot;Tracker is disconnected&quot;);
+            break;
+    }; 
+}];
+
+// listen the data changes
+[aTracker didValueUpdate:^(){
+    /*
+      the trackers status updated, you may want to refresh the UI.
+    */
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h5 id="after-the-app-restarted"><a href="#after-the-app-restarted" aria-hidden="true" class="header-anchor">#</a> After the APP restarted</h5> <p>You may find the SDK operate the memory data only, if the APP is been killed, the Bind trackers will lose. so you should make the perpetual storage all by yourself, such as the current bind password, the MAC address of every tracker.</p> <p>We also provide some APi for related operations after APP recovery.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// get a bind tracker instance
+/*
+  The SDK will handle the given mac address and generate a MTTracker instance intelligently, if the tracker is working around, the SDK will handle the connection and configuration automatically.
+  
+  The only thing that needs attention is the need to ensure that the provided mac address is bound， it means that you have used the method “- (void)bindingVerify:(MTTracker *)tracker completion:(void(^)(BOOL success, NSError *error))handler;” and got a success callback.
+  
+  at the same time, the devices correspond to Mac addresses will be added to the bindTrackers array by the manager.
+*/
+MTTracker *bindTracker = [aManager addTracker:@&quot;xxxxxxxxxxxx&quot;];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h5 id="about-the-user-switching"><a href="#about-the-user-switching" aria-hidden="true" class="header-anchor">#</a> About the user switching</h5> <p>sometimes the user may sign out the current account and sign in another account. At this point, we should remove the current bind trackers and load the new user's bind trackers.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// remove the bind trackers of current user.
+[aMTTrackerManager removeAllTrackers];
+
+// set the bind password of the new user
+aMTTrackerManager.password = @&quot;********&quot;; 
+
+/*
+    load the bind trackers' mac addresses, assuming the array is bindMacs
+*/
+for(NSinteger i = 0; i &lt; bindMacs.count; i ++) {
+    // tracker is the bind tracker of the new user
+   MTTracker *tracker = [aMTTrackerManager addTracker:bindMacs[i]]; 
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h4 id="advanced-operations"><a href="#advanced-operations" aria-hidden="true" class="header-anchor">#</a> !!!Advanced operations</h4> <p>This part is Advanced APi, we provide it to the Advanced developers. Unless you understand the results of what these operations will lead to, don't try it lightly.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// aTracker MTTracker instance
+
+// modify the delay of disconnected alert
+
+// it means the tracker will alert after &quot;delay&quot; seconds since the tracker is disconnected.
+// please note: the range is 1s-7s, Too small value may cause false alert.
+NSInteger delay = 7;
+
+// set the disconnect alert delay.
+[aTracker writeLossDelay:delay completion:^(BOOL success, NSError *error) {
+    
+    if(success) {  // write successfully.
+        
+    }
+}];
+
+// this parameter is the disconnect distance, the tracker will disconnect at that distance.
+// For example: is the level is &quot;Far&quot;, the tracker will disconnect at 30m, &quot;Middle&quot;: 20m,
+// &quot;Near&quot;: 10m;
+// Please note the 30m/20m/10m above is not a real value, Because the actual environment is very complicated.
+// Three values: Far/Middle/Near for choosen, the default is &quot;Far&quot;.
+DistanceLevel level = DistanceLevelFar;
+[aTracker writeLossDistance:level completion:^(BOOL success, NSError *error) {
+    if (success) {   // write successfully.
+    }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:: </span> <span class="time">9/5/2018, 4:58:02 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/17.f14053da.js" defer></script><script src="/assets/js/app.a01fb809.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BeaconPlus iOS开发套件说明 | 云里物里移动开发</title>
+    <meta name="description" content="云里物里移动SDK文档平台">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.ca1b5866.css" as="style"><link rel="preload" href="/assets/js/app.a01fb809.js" as="script"><link rel="preload" href="/assets/js/28.234363b1.js" as="script"><link rel="prefetch" href="/assets/js/10.e2a86036.js"><link rel="prefetch" href="/assets/js/2.0bf7600d.js"><link rel="prefetch" href="/assets/js/3.f6dc4958.js"><link rel="prefetch" href="/assets/js/4.a7775134.js"><link rel="prefetch" href="/assets/js/5.2b963b60.js"><link rel="prefetch" href="/assets/js/6.d487b4d3.js"><link rel="prefetch" href="/assets/js/7.358db2b1.js"><link rel="prefetch" href="/assets/js/8.0c28f7da.js"><link rel="prefetch" href="/assets/js/9.b35cc178.js"><link rel="prefetch" href="/assets/js/11.47018335.js"><link rel="prefetch" href="/assets/js/12.7fc3bf68.js"><link rel="prefetch" href="/assets/js/13.542f537a.js"><link rel="prefetch" href="/assets/js/14.eb9b367c.js"><link rel="prefetch" href="/assets/js/15.f22229cb.js"><link rel="prefetch" href="/assets/js/16.0680fce0.js"><link rel="prefetch" href="/assets/js/17.f14053da.js"><link rel="prefetch" href="/assets/js/18.7c849573.js"><link rel="prefetch" href="/assets/js/19.63b17b4c.js"><link rel="prefetch" href="/assets/js/20.9b19d5b3.js"><link rel="prefetch" href="/assets/js/21.e163a637.js"><link rel="prefetch" href="/assets/js/22.2cfd09f9.js"><link rel="prefetch" href="/assets/js/23.4d29e84b.js"><link rel="prefetch" href="/assets/js/24.b75cf7fd.js"><link rel="prefetch" href="/assets/js/25.c023be9e.js"><link rel="prefetch" href="/assets/js/26.b7a504ac.js"><link rel="prefetch" href="/assets/js/27.3659652a.js"><link rel="prefetch" href="/assets/js/29.c5c75945.js"><link rel="prefetch" href="/assets/js/30.40e5e2dc.js"><link rel="prefetch" href="/assets/js/31.fe2e4acd.js"><link rel="prefetch" href="/assets/js/32.7aa30448.js"><link rel="prefetch" href="/assets/js/33.80e87a66.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.53980843.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ca1b5866.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh-CN/" class="home-link router-link-active"><img src="/minewLogo.png" alt="云里物里移动开发" class="logo"> <span class="site-name can-hide">云里物里移动开发</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><a href="/zh-CN/keepintouch.html" class="nav-link">联系我们</a></div><div class="nav-item"><a href="/zh-CN/about.html" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">简体中文</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li></ul></div></div><div class="nav-item"><a href="/zh-CN/keepintouch.html" class="nav-link">联系我们</a></div><div class="nav-item"><a href="/zh-CN/about.html" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">简体中文</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>BeaconPlus iOS开发套件说明</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#广播阶段" class="sidebar-link">广播阶段</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#连接阶段" class="sidebar-link">连接阶段</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#ota单独说明" class="sidebar-link">OTA单独说明</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#准备工作" class="sidebar-link">准备工作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#开发环境：" class="sidebar-link">开发环境：</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#导入到工程：" class="sidebar-link">导入到工程：</a></li></ul></li><li><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#开始开发" class="sidebar-link">开始开发</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#获取管理类单例" class="sidebar-link">获取管理类单例</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#扫描设备" class="sidebar-link">扫描设备</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#连接设备" class="sidebar-link">连接设备</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#获取基本信息" class="sidebar-link">获取基本信息</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#获取各通道数据" class="sidebar-link">获取各通道数据</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#修改通道数据" class="sidebar-link">修改通道数据</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#修改设备全局参数" class="sidebar-link">修改设备全局参数</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#读取设备上的温湿度数据" class="sidebar-link">读取设备上的温湿度数据</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#配置触发器" class="sidebar-link">配置触发器</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="beaconplus-ios开发套件说明"><a href="#beaconplus-ios开发套件说明" aria-hidden="true" class="header-anchor">#</a> BeaconPlus iOS开发套件说明</h1> <ul><li><strong>持续更新中...</strong>
+​       本套SDK仅支持基于miniBeaconPlus固件的设备，不再兼容之前的iBeacon，Eddystone等其它设备。相对于之前的单一通道设备SDK来说，现在的这一套BeaconSET+ SDK支持的特性更多。当然开发过程中也遇到过诸多问题，我们会在本文档说明设计缘由以及注意事项。所以，请仔细阅读此文档以便尽快上手进行项目开发。</li></ul> <p>​       请按需阅读以下每个部分，第一部分我们会说明这套SDK的整体架构，第二部分会帮助开发者上手开发，第三部分会提及开发过程中的注意事项，第四部分可以查阅到错误码的对应说明。</p> <h1 id="设计说明"><a href="#设计说明" aria-hidden="true" class="header-anchor">#</a> 设计说明</h1> <p>我们在SDK里把手机对设备的操作分成了两个阶段：广播阶段和连接阶段。为了便于理解，我们先来看看我们都提供了哪些可以操作的类以及它们的职责：</p> <p><em>MTCentralManager：</em> 全局管理，可以检查当前手机的蓝牙状态，监听系统的蓝牙状态改变。另外最重要的是可以扫描以及连接到这些设备；</p> <p><em>MTPeripheral：</em> 设备实例，当CentralManager发现一个新设备时，会对应为其生成一个MTPeripheral实例，以真实的物理设备为单位，一个设备对应一个MTPeripheral实例。它包括了MTConnectionHandler和MTFrameHandler两个属性（下文会继续描述这两个属性的作用）。</p> <p>*MTFrameHandler：*广播包解析，这个类可以解析某个设备所广播出来的所有数据包，也就是说，它是扫描阶段的核心，所有由MTCentralManager扫描出来的广播数据都由它来解析成对应的数据帧实例。</p> <p>*MTConnectionHandler：*连接状态操作，所有连接上设备后发生的操作都是由此类完成，包括监听连接状态改变，读取数据，写入数据等。</p> <p>*MinewFrame：*数据帧，每个此类（或者子类）实例都对应一种数据帧，一般会由MTFrameHandler生成，如果设备正在广播多种数据帧，就会生成多个对应的MinewFrame实例。这些实例可以通过MTFrameHandler获取到。</p> <p>*MTOTAManager：*空中升级，此类只能用来更新设备固件，它操作的是MTConnectionHandler实例。</p> <h1 id="整体架构："><a href="#整体架构：" aria-hidden="true" class="header-anchor">#</a> 整体架构：</h1> <p><img src="/assets/img/BeaconSET+.bcc1157c.png" alt="BeaconSET+"></p> <h2 id="广播阶段"><a href="#广播阶段" aria-hidden="true" class="header-anchor">#</a> 广播阶段</h2> <p>这个阶段主要是扫描周围的miniBeaconPlus设备和解析这些设备上的广播数据，首先MTCentralManager发起扫描，MTCentralManager会为每一个物理设备生成一个MTPeripheral实例，开发者可以通过它的MTFrameHandler属性拿到关于此设备的所有广播数据。</p> <h2 id="连接阶段"><a href="#连接阶段" aria-hidden="true" class="header-anchor">#</a> 连接阶段</h2> <p>当MTCentralManager扫描到物理设备并生成MTPeripheral实例后，就可以连接到设备，此时针对设备的连接操作都是通过MTConnectionHandler来完成的。</p> <h2 id="ota单独说明"><a href="#ota单独说明" aria-hidden="true" class="header-anchor">#</a> OTA单独说明</h2> <p>常规的OTA逻辑比较复杂，所以单独封装了MTOTAManager来执行OTA操作，必须在已经和设备建立连接的状态下才能进行。</p> <h1 id="开始上手"><a href="#开始上手" aria-hidden="true" class="header-anchor">#</a> 开始上手</h1> <h2 id="准备工作"><a href="#准备工作" aria-hidden="true" class="header-anchor">#</a> 准备工作</h2> <h3 id="开发环境："><a href="#开发环境：" aria-hidden="true" class="header-anchor">#</a> 开发环境：</h3> <ul><li><p>Xcode9+，由于使用的DFU和Zip框架基于Swift4.0开发，所以请使用Xcode9及更高版本进行开发；</p></li> <li><p>iOS8，限制最低系统版本为iOS8；</p></li></ul> <h3 id="导入到工程："><a href="#导入到工程：" aria-hidden="true" class="header-anchor">#</a> 导入到工程：</h3> <ol><li>将开发套件的三个framework文件：MTBeaconPlus.framework, iOSDFULibrary.framework, Zip.framework拷贝到项目工程目录下，然后添加到工程中，target为当前的工程，然后点“Add”，如下图所示：</li></ol> <p><img src="/assets/img/add_frameworks.8a932d1c.png" alt="add frameworks"></p> <ol start="2"><li><p>依次找到：“Target” -&gt; General -&gt; Embedded Binaries，点击下面的“+”，将上述3个Framework文件添加进来，同样的，也需要添加到 ”Linked Frameworks and Libraries“，添加完应该如下图：</p> <p><img src="/assets/img/make_sure_frameworks.d4466176.png" alt="make sure frameworks"></p></li> <li><p>*如果使用Swift开发，需要添加一个Objective C BridgingHeader .h文件（此处不再赘述），并且在此文件添加：import &lt;MTBeaconPlus/MTBeaconPlus.h&gt;，如果使用Objective C进行开发，在需要的文件的顶端添加：import &lt;MTBeaconPlus/MTBeaconPlus.h&gt;</p></li> <li><p>!!!在iOS10及以上版本，苹果对蓝牙APi添加了权限限制，你需要在工程的info.plist文件里添加一项字符串：Privacy - Bluetooth Peripheral Usage Description - &quot;你的使用描述&quot;。如下图所示：</p> <p><img src="/assets/img/bp_access.795e088e.png" alt="bp_access"></p></li></ol> <h2 id="开始开发"><a href="#开始开发" aria-hidden="true" class="header-anchor">#</a> 开始开发</h2> <h3 id="获取管理类单例"><a href="#获取管理类单例" aria-hidden="true" class="header-anchor">#</a> 获取管理类单例</h3> <p>首先开发者需要获取一个管理类单例，并且做好开发者需要的监听：</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// 获取管理类单例
+MTCentralManager *manager = [MTCentralManager sharedInstance];
+
+// 如果需要监听系统蓝牙状态变化请这样做
+// *** 还可以通过state属性主动获取
+// *** 仅当state == PowerStatePoweredOn时开发套件才可正常工作
+manager.stateBlock = ^(PowerState state) {
+     NSLog(&quot;当前系统蓝牙状态：%d&quot;,state);
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="扫描设备"><a href="#扫描设备" aria-hidden="true" class="header-anchor">#</a> 扫描设备</h3> <p>需要通过扫描来发现附近的设备，这样才能获取它们的广播内容，连接并修改设备参数等。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager: MTCentralManager的单例
+*/
+
+// 执行扫描方法
+[manager startScan:^(NSArray&lt;MTPeripheral *&gt; *peris){
+  
+   // 遍历数组，获取每个设备实例
+   // 也可以把它们绑定到UI上，将所有数据显示出来。
+    for(NSInteger i = 0; i &lt; peris; i ++){
+        MTPeripheral *peri = peris[i];
+        
+        // 获取设备广播阶段实例
+        // 部分属性可能为空，请参见“注意事项”
+        MTFrameHandler *framer = peri.framer; 
+        NSString *name = framer.name;          // 设备名, 可能为空
+        NSInteger rssi = framer.rssi;          // rssi
+        NSInteger battery = framer.battery;    // 电池，可能为空
+        NSString *mac = framer.mac;            // mac地址， 可能为空
+        NSArray *frames = framer.advFrames;    // 设备广播的所有数据帧（iBeacon，UID，URL...）
+    }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>另外，你可以在任何时候停止扫描任务。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager: MTCentralManager的单例
+*/
+
+// 通过这种方式停止扫描
+[manager stopScan];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>通过以上方式我们就可以获取到设备在广播阶段的所有相关数据，进一步的，想要从frameHandler里获取到所有的数据帧，可以参考以下代码示例：</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  aFrameHandler: MTFrameHandler实例，
+*/
+
+NSArray *frames = aFrameHandler.advFrames;
+for (NSInteger i = 0; i &lt; frames.count; i ++){
+    MinewFrame *frame = frames[i];
+    
+    switch(frame.frameType){
+      case FrameiBeacon: 
+        {
+          MinewiBeacon *bea = (MinewiBeacon *)frame;
+          NSLog(@&quot;iBeacon:%@, %d, %d&quot;,bea.uuid, bea.major, bea.minor);
+        }
+           break;
+        
+      case FrameUID:
+        {
+           MinewUID *uid = (MinewUID *)frame;
+           NSLog(@&quot;UID:%@, %@&quot;, uid.namespaceId, uid.instanceId);
+        }
+           break;
+      /*
+         更多类型，请自行处理
+      */
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>**重要提示：**在获取所有的传感器数据时，如果值等于<em>MTNAValue</em>（我们定义的无效值常量，在&quot;MTPublicHeader.h“文件中），表示这个数据是无效的。所有的传感器实例（MinewHTSensor，MinewLightSensor，MinewAccSensor）都有这种情况。</p> <p>请参考以下代码：</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+    aHT: MinewHTSensor实例
+    aLight: MinewLightSensor实例
+    aAcc： MinewAccSensor实例
+*/
+
+if (aHT.temperature == MTNAValue) {
+    NSLog(@&quot;this value is not available.&quot;)
+}
+
+if (aLight.luxValue == MTNAValue) {
+    NSLog(@&quot;this value is not available.&quot;)
+}
+
+if (aAcc.XAxis) {
+    NSLog(@&quot;this value is not available.&quot;)
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="连接设备"><a href="#连接设备" aria-hidden="true" class="header-anchor">#</a> 连接设备</h3> <p>要对设备进一步操作（修改参数，OTA），需要先连接到设备。由于有些设备在连接时可能需要密码验证，所以验证密码的Block为必须实现，否则将引起Crash!!! 如下代码所示：</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager： MTCentralManager的单例
+  aMTPeripheral： MTPeripheral实例
+*/
+
+// 监听设备连接状态改变
+aMTPeripheral.connector.statusChangeHandler = ^(ConnectionStatus status, NSError *error) {
+    
+    // 整个连接过程需要经过多个中间状态，如果遇到错误，会通过error抛出
+    // 只有当status == StatusCompleted时，才算是连接成功
+  
+};
+
+// 连接到设备
+// 需要一个MTPeripheral实例作为参数
+// !!!:特别提醒：passwordRequire为必须实现的
+[manager connectToPeripheral:aMTPeripheral passwordRequire:^(MTPasswordBlock passwordBlock){
+    // 给定一个8位长度的密码，
+    // !!! 实际开发中应该从UITextField读取输入的内容作为密码。
+    NSString *password = @&quot;minew123&quot;;
+    passwordBlock(password);
+}];
+
+// 断开某个设备的连接状态
+[manager disconnectFromPeriperal:aMTPeripheral];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="获取基本信息"><a href="#获取基本信息" aria-hidden="true" class="header-anchor">#</a> 获取基本信息</h3> <p>成功连接到设备后，就可以获取设备信息以及修改设备参数了。我们先来看看怎么获取各种基础数据。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aMTPeripheral： MTPeripheral实例
+*/
+
+MTConnectionHandler *con = aMTPeripheral.connector;
+
+ConnectionStatus conSte = con.status;  // 当前的设备连接状态
+NSDictionary *infoDict = con.infoDict; // 设备信息，例如：（Firmware Version： 0.9.1）；
+NSString *mac = con.macString; // mac地址；
+Connectable able = con.connectable； // 标记设备是否可以连接，None未知，No不可连，Yes可连
+Version version = con.version； // 固件版本枚举，方便处理版本号区分；
+PasswordStatus pwdStatus = con.passwordStatus; // 连接时是否需要密码，None不需要，Require需要
+
+
+MTConnectionFeature *feature = con.feature; // 设备特性；
+NSInteger slotAtitude = feature.slotAtitude; // 设备的广播通道数量，可以根据此动态生成UI；
+FeatureSupported feaSup = feature.featureSupported; // 可以调节参数类型：none不可调，adv可调，txpower可调，adv/txpower均可调
+NSArray&lt;NSNumber *&gt; *supFrames = feature.supportedSlots; // 支持的广播帧类型（多种）
+NSArray&lt;NSNumber *&gt; *supTxpower = feature.supportedTxpowers; // 支持的Txpower（多档位）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p><strong>PS:</strong> <strong>MTConnectionHandler</strong>的<em>Version</em>属性说明：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Versoin值来自设备的固件版本号，可以通过检查Version的值来判断当前设备支持的功能：
+ 
+// 初始化值 
+VersionUndefined
+
+// 基础版本，仅支持基础功能
+VersionBase
+
+// 此版本及以上支持自定义连接密码 / 设备信息广播帧
+Version0_9_8
+
+// 此版本及以上支持远程关机命令
+Version0_9_9
+
+// 此版本及以上开始支持触发器
+Version2_0_0
+
+// 此版本及以上开始支持带广播设置的触发器配置
+Version2_2_60
+
+// 理想值，支持所有特性。
+VersionMax = 1000
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="获取各通道数据"><a href="#获取各通道数据" aria-hidden="true" class="header-anchor">#</a> 获取各通道数据</h3> <p>接下来可以获取每个通道对应的参数数据，之所以单独讲这部分，是因为所有与修改相关的内容全部在这里。</p> <p>在阅读代码之前，我们先来了解通道的概念：通道相当于一个广播工具，它不管里面是什么内容，只管把内容广播出来，例如一个6通道的设备可能是这样的：</p> <table><thead><tr><th>通道序号</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th></tr></thead> <tbody><tr><td>广播内容</td> <td>iBeacon</td> <td>TLM</td> <td>UID</td> <td>URL</td> <td>HTSensor</td> <td>None</td></tr> <tr><td>广播间隔（ms）</td> <td>1000</td> <td>2000</td> <td>500</td> <td>900</td> <td>3000</td> <td>0</td></tr> <tr><td>RSSI@0/1m（dbm）</td> <td>-1</td> <td>0</td> <td>-4</td> <td>-10</td> <td>-3</td> <td>0</td></tr> <tr><td>信号强度（dbm）</td> <td>4</td> <td>0</td> <td>-4</td> <td>4</td> <td>0</td> <td>0</td></tr></tbody></table> <p>上表的意思是，第0个通道广播iBeacon数据，第1个通道广播TLM数据，…，第5个通道不广播任何数据。它们每个都有独立的广播间隔，信号强度和校准值，互相之间没有关系也不产生任何影响。</p> <p>PS：校准值(RSSI@0/1m)指的是手机在设备0/1m（iBeacon为1，其它为0）处的信号强度。</p> <p>接下来我们来看下怎么获取设备的通道数据。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+    con: MTConnectionHandler实例
+*/
+
+// 当前设备每一个通道对应的数据帧
+// 此数组的数量和通道数量保持一致（也就是feature.slotAtitude）
+// 按照通道顺序严格排序，比如：0. -&gt; MinewiBeacon，1. -&gt; MinewUID ...
+NSArray&lt;MinewFrame *&gt; *frames = con.allFrames;
+
+/*
+   假如第3个通道为iBeacon数据，第4个通道数据为UID，
+   我们尝试解析第3个通道的数据。
+*/
+
+// 由于默认指针是MinewFrame（MinewiBeacon的父级）类型，需要做一下转换。
+
+// 获取第3个通道的数据帧
+MinewFrame *frame = frames[2];
+
+// 确认此通道是iBeacon类型，如果类型确认，可以不需要做这一步判断
+if (frame.frameType == FrameiBeacon) {
+  
+    MinewiBeacon *iBeacon = (MinewiBeacon *)frame;
+  
+    // iBeacon数据
+    NSString *uuid = iBeacon.uuid;   // 获取uuid
+    NSInteger major = iBeacon.major;  // 获取major
+    NSInteger minor = iBeacon.minor;  // 获取minor
+  
+    // 所处通道的参数
+    NSInteger slotNumber = iBeacon.slotNumber           // 第几通道
+    NSInteger slotAdvInterval = iBeacon.slotAdvInterval // 此通道的广播间隔
+    NSInteger slotAdvTxpower = iBeacon.slotAdvTxpower   // 此通道的信号校准值 iBeacon：RSSI@1m others： RSSI@0m
+    NSInteger slotRadioTxpower = iBeacon.slotRadioTxpower // 此通道信号强度  
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><p>你可以使用同样的方式来解析其它所有通道，值得注意的是，当frameType == FrameNone 时，说明此通道没有广播数据。</p> <h3 id="修改通道数据"><a href="#修改通道数据" aria-hidden="true" class="header-anchor">#</a> 修改通道数据</h3> <p>通过我们的开发套件，开发者可以自由的修改每个通道的广播数据。</p> <p>我们区分了静态数据帧和动态数据帧，静态数据帧指的是广播数据不会发生变化的：iBeacon，UID，URL等等，动态数据帧指的是广播数据不定时发生变化的：TLM，各类传感器数据等。</p> <p>可以通过下面的参考代码实现。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: MTConnectionHandler实例
+*/
+
+// 生成一个uid实例
+MinewUID *uid = [[MinewUID alloc]init];
+
+// 配置uid的namespaceId和instanceId参数
+uid.namespaceId = @&quot;0123456789abdcdcba12&quot;;
+uid.instanceId = @&quot;0123456789dc&quot;;
+
+// 通道相关配置
+uid.slot = 1;  // 设置想要配置的通道序号
+uid.slotAdvInterval = 600;  // 配置这个通道的广播间隔
+uid.slotAdvTxpower = -3;    // 配置这个通道的信号校准值 RSSI@0m
+uid.slotRadioTxpower = 4;   // 配置这个通道的广播功率
+
+// 写入到设备
+// 详情：1.把1通道设置为UID广播，namespaceId：0123456789abdcdcba12，instanceId：0123456789dc
+//      2.设置1通道的广播间隔为600ms，RSSI@0m为-3dbm，广播功率为：4dbm
+[aConnectionHandler writeFrame:uid completion:^(BOOL success, NSError *error){
+     if（success）{
+        NSLog(@&quot;write frame to device successfully.&quot;);   
+     } 
+     else if(error) {
+        NSLog(@&quot;Error:%@&quot;, error)
+     }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>请注意，以下通道参数设置必须在范围内：</p> <ul><li><strong>广播间隔</strong>: 100 - 5000 (ms)</li> <li><strong>RSSI@0m</strong>: -127 - 0 (dbm)</li></ul> <p><strong>重要提醒</strong>: 广播功率是档位值, 例如: -8, -4, 0, 4. 你可以通过&quot;MTConnectionHandler&quot;的feature属性里获取到当前设备支持的所有广播功率档位：</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   feature: MTConnectionHandler实例的属性.
+*/
+
+// 获取当前设备支持的所有广播功率档位.
+NSArray&lt;NSNumber *&gt; *supTx = feature.supportedTxpowers
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>你可以通过相同的方式修改任何一个通道的广播数据，如果需要关闭某个通道，只需要创建一个frameType=FrameNone的MinewFrame对象写入到设备即可，当然，别忘了设置通道序号。</p> <h3 id="修改设备全局参数"><a href="#修改设备全局参数" aria-hidden="true" class="header-anchor">#</a> 修改设备全局参数</h3> <p>设备全局参数指的是设备级的一些特性，比如：配置设备是否可连接，是否需要密码，恢复出厂等。</p> <p>可以通过以下代码示例参考。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: MTConnectionHandler实例
+*/
+// 恢复出厂设置
+[aConnectionHandler resetFactorySettings:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// 更新设备可连接设置
+// YES为可连接，NO不可连接，
+// 配置设备不可连接后，可以通过按下设备上的按钮再次连接到设备。
+// !!!:如果设备上没有按钮，且把设备配置为不可连后，设备将无法再次被连接。
+[aConnectionHandler updateConnectable:YES completion:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// 修改/增加密码
+// !!!: 只能设置8位密码，数字或英文字母；
+// 设备没有密码时，会添加密码，设备有密码时，会更新密码。
+[aConnectinoHandler modifyPassword:@&quot;12345678&quot; completion:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// 移除密码
+[aConnectionHandler removePassword:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// 远程关闭设备
+// !!!:请确认设备上有按钮，可以通过按下按钮的方式重启，否则关闭后无法重启设备。
+[aConnectionHandler poweroff];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br></div></div><h3 id="读取设备上的温湿度数据"><a href="#读取设备上的温湿度数据" aria-hidden="true" class="header-anchor">#</a> 读取设备上的温湿度数据</h3> <p>BeaconPlus设备整合了温湿度，光感，加速度等多种传感器，目前我们提供了温湿度历史数据的读取接口。</p> <p>请确认此设备带有温湿度传感器，否则无法正确获取数据。</p> <p>可以通过以下代码示例参考。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: MTConnectionHandler实例
+*/
+
+// 从设备上读取温湿度数据
+[aConnectionHandler readSensorHistory:^(MTSensorData *data, EndStatus end){
+  
+   NSInteger time = data.timestamp;   // 此数据的Unix时间戳；
+   double temp = data.temperature;    // 温度数据；
+   double humi = data.humidity;       // 湿度数据；
+   NSInteger index = data.index;      // 此数据的编号；
+  
+   if (end == EndStatusNone){
+       NSLog(@&quot;there is no data.&quot;);
+   }
+   else if (end == EndStatusSuccess) {
+       NSLog(@&quot;sensor data sync successfully!&quot;);
+   }
+   else if (end == EndStatusError) {
+       NSLog(@&quot;something wrong in syncing progress.&quot;);   
+   }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>你可以用表格或者曲线的方式把这些数据生动的呈现出来。</p> <h3 id="配置触发器"><a href="#配置触发器" aria-hidden="true" class="header-anchor">#</a> 配置触发器</h3> <p>BeaconPlus设备加入了触发器功能，你可以给每个通道独立的配置触发器，仅当满足触发条件时设备才会开启对应通道进行广播，否则，对应通道将会一直处于关闭状态。</p> <p>可以通过以下代码示例参考。</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: MTConnectionHandler实例
+*/
+
+NSInteger sn = 2;                          // 目标通道：2
+TriggerType type = TriggerTypeTempAbove;   // 触发条件：温度高于
+NSInteger value = 10;                      // 触发值：10
+
+MTTriggerData *trigger = [[MTTriggerData alloc]initWithSlot:sn triggerType:type value:value];
+
+// 写入到设备
+[aConnectionHandler writeTrigger:trigger completion:^(BOOL success, NSError){
+    if(success){
+        NSLog(@&quot;write trigger successfully!&quot;);
+    }
+    else {
+        NSLog(@&quot;write trigger failed!&quot;);
+    }
+}];
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>现在，你可以参考以上示例进行开发了。</p> <h1 id="注意事项"><a href="#注意事项" aria-hidden="true" class="header-anchor">#</a> 注意事项</h1> <ol><li><p>在开发过程中你可能会发现，持续扫描一段时间，有些设备会出现多个MTPeripheral实例。关于这一点，我们咨询过苹果工程师。得到的答复是在目前的iOS平台下，CoreBluetooth对多通道广播（特别是广播数据在变化）设备并不友好。</p> <p>iOS11中此问题已不再存在。</p></li> <li><p>在扫描过程中，有些属性可能是无法获取的，特别是mac地址（iOS平台下的限制），如果当前设备广播了DeviceInfo数据帧，那么name，mac地址，电池都是可以获取到的。</p></li> <li><p>当你成功连接到设备后，固件最多只保持5分钟连接。然后设备端会主动断开连接。</p></li></ol> <h1 id="文档版本记录"><a href="#文档版本记录" aria-hidden="true" class="header-anchor">#</a> 文档版本记录</h1> <ul><li>2017.10.11  v1.0 初版；</li></ul></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:: </span> <span class="time">2018/9/5 下午4:58:02</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/28.234363b1.js" defer></script><script src="/assets/js/app.a01fb809.js" defer></script>
+  </body>
+</html>
