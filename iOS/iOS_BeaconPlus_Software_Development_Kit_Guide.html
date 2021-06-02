@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BeaconPlus iOS Software Development Kit Guide | Minew mobile</title>
+    <meta name="description" content="A documention site for minew mobile SDKs">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.cd062f0a.css" as="style"><link rel="preload" href="/assets/js/app.b2ffef25.js" as="script"><link rel="preload" href="/assets/js/3.c4fcc7d2.js" as="script"><link rel="preload" href="/assets/js/6.0a886f16.js" as="script"><link rel="prefetch" href="/assets/js/10.1387b785.js"><link rel="prefetch" href="/assets/js/11.4fe39219.js"><link rel="prefetch" href="/assets/js/12.409bdafc.js"><link rel="prefetch" href="/assets/js/13.8039af40.js"><link rel="prefetch" href="/assets/js/14.ee3af016.js"><link rel="prefetch" href="/assets/js/15.2355997d.js"><link rel="prefetch" href="/assets/js/16.5db54fc9.js"><link rel="prefetch" href="/assets/js/17.563334fe.js"><link rel="prefetch" href="/assets/js/18.7c64ff89.js"><link rel="prefetch" href="/assets/js/19.6e191918.js"><link rel="prefetch" href="/assets/js/20.b571f5ec.js"><link rel="prefetch" href="/assets/js/21.07017dea.js"><link rel="prefetch" href="/assets/js/22.1eae7898.js"><link rel="prefetch" href="/assets/js/23.201f7cef.js"><link rel="prefetch" href="/assets/js/24.a30ab2b7.js"><link rel="prefetch" href="/assets/js/25.251035c2.js"><link rel="prefetch" href="/assets/js/26.22b5146c.js"><link rel="prefetch" href="/assets/js/27.2340782f.js"><link rel="prefetch" href="/assets/js/28.5105cdbc.js"><link rel="prefetch" href="/assets/js/29.f1a35319.js"><link rel="prefetch" href="/assets/js/30.b55f47be.js"><link rel="prefetch" href="/assets/js/31.5c80e793.js"><link rel="prefetch" href="/assets/js/32.de719f67.js"><link rel="prefetch" href="/assets/js/33.122a1f29.js"><link rel="prefetch" href="/assets/js/34.1a1c2785.js"><link rel="prefetch" href="/assets/js/35.0bf916db.js"><link rel="prefetch" href="/assets/js/36.6cf8ac1f.js"><link rel="prefetch" href="/assets/js/37.88d71209.js"><link rel="prefetch" href="/assets/js/38.1e0230eb.js"><link rel="prefetch" href="/assets/js/39.ca6328d0.js"><link rel="prefetch" href="/assets/js/4.48e57de2.js"><link rel="prefetch" href="/assets/js/40.92d34ab7.js"><link rel="prefetch" href="/assets/js/41.11735866.js"><link rel="prefetch" href="/assets/js/42.d261b10a.js"><link rel="prefetch" href="/assets/js/43.34267b7c.js"><link rel="prefetch" href="/assets/js/44.9b491195.js"><link rel="prefetch" href="/assets/js/45.861d4bf8.js"><link rel="prefetch" href="/assets/js/46.f8b0654b.js"><link rel="prefetch" href="/assets/js/47.2d3391b1.js"><link rel="prefetch" href="/assets/js/48.7a2d1e93.js"><link rel="prefetch" href="/assets/js/49.2ab4c154.js"><link rel="prefetch" href="/assets/js/5.fefa0ead.js"><link rel="prefetch" href="/assets/js/50.499c0cb1.js"><link rel="prefetch" href="/assets/js/51.b6b7b3db.js"><link rel="prefetch" href="/assets/js/52.d1da1ab5.js"><link rel="prefetch" href="/assets/js/53.63cd2d51.js"><link rel="prefetch" href="/assets/js/54.48b69653.js"><link rel="prefetch" href="/assets/js/55.52453a39.js"><link rel="prefetch" href="/assets/js/56.dcec8fdd.js"><link rel="prefetch" href="/assets/js/7.8dcc3660.js"><link rel="prefetch" href="/assets/js/8.ac925c1a.js"><link rel="prefetch" href="/assets/js/9.abc1ef9b.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e9dbea50.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cd062f0a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.ico" alt="Minew mobile" class="logo"> <span class="site-name can-hide">Minew mobile</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_LockDevice_Software_Development_Kit_Guide.html" class="nav-link">Lock</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTWristbandKit_Software_Development_Kit_Guide.html" class="nav-link">WristbandKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">Sensor</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">Tools</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewDoorLock_Kit_Guide.html" class="nav-link">Lock</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MTWristbandKit_Software_Development_Kit_Guide.html" class="nav-link">WristbandKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">Sensor</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">Tools</a></li></ul></div></div><div class="nav-item"><a href="/keepintouch.html" class="nav-link">Contact us</a></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_LockDevice_Software_Development_Kit_Guide.html" class="nav-link">Lock</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTWristbandKit_Software_Development_Kit_Guide.html" class="nav-link">WristbandKit</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">Sensor</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">Tools</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">BeaconPlus</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">TrackerKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">ModuleKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Beacon_Software_Development_Kit_Guide.html" class="nav-link">Beacon</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">BeaconAdmin</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Keyfinder_Software_Development_Kit_Guide.html" class="nav-link">Keyfinder</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewDoorLock_Kit_Guide.html" class="nav-link">Lock</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MTWristbandKit_Software_Development_Kit_Guide.html" class="nav-link">WristbandKit</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">Sensor</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">Tools</a></li></ul></div></div><div class="nav-item"><a href="/keepintouch.html" class="nav-link">Contact us</a></div><div class="nav-item"><a href="/about.html" class="nav-link">About</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">简体中文</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>BeaconPlus iOS Software Development Kit Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#design-instructions" class="sidebar-link">Design instructions</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#overall-structure" class="sidebar-link">Overall structure</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#get-started" class="sidebar-link">Get Started</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#prepare" class="sidebar-link">Prepare</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#import-to-project" class="sidebar-link">Import to Project</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#start-developing" class="sidebar-link">Start Developing</a></li></ul></li><li><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#notes" class="sidebar-link">Notes</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#other" class="sidebar-link">Other</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html#change-log" class="sidebar-link">Change log</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="beaconplus-ios-software-development-kit-guide"><a href="#beaconplus-ios-software-development-kit-guide" aria-hidden="true" class="header-anchor">#</a> BeaconPlus iOS Software Development Kit Guide</h1> <ul><li><strong>Updating…</strong></li></ul> <p>This SDK only support devices based on miniBeaconPlus firmware, it doesn't compatible with previous devices, such as iBeacon, eddystone and etc. BeaconSET+ SDK support more feature than BeaconSET SDK. We encountered some issues in the development process, So, please read this document carefully in order to help you get started as soon as possible. At the same time, this document will also inform the notes and issues.</p> <p>please read the part of this document which you need,  part 1 we will explain the architecture of this SDK, part 2 will help developers to get started, part 3 will explain notes in your developing progress, part 4 you can get error codes and descriptions.</p> <h2 id="design-instructions"><a href="#design-instructions" aria-hidden="true" class="header-anchor">#</a> Design instructions</h2> <p>We divide the communications between SDK and devices into two stages: Scanning stage, Connection stage. For ease of understanding, let's take a look at the related classes and the relationships between them.</p> <p><strong>MTCentralManager:</strong> global manager, check system's bluetooth status, listen status changes, the most important is scan and connect to devices;</p> <p><strong>MTPeripheral:</strong> instance of devices, MTCentralManager will create an MTPeripheral instance while it found a physical device, a device corresponds to an instance. every MTPeripheral instance has a MTFrameHandler property and a MTConnectionHandler property(These two properties are explained below);</p> <p><strong>MTFrameHandler:</strong> Advertisement frame analysis, it can analyze all frames from advertisement data of a device. in other words, it's the core of the scanning stage;</p> <p><strong>MTConnectionHandler:</strong> connection Operator. this class control all the operation of device in connection stage.</p> <p><strong>MTSensorHandler:</strong> sensor Operator, this class control all the sensor operation of device in connection stage.</p> <p>**MinewFrame:**data frame, every minewframe(or subclass) instance corresponds to a data frame, usually created by &quot;MTFrameHandler&quot;, if a device advertises mutiple data frames(such as iBeacon, UID, URL) &quot;MTFrameHandler&quot; will create multiple corresponding MinewFrame instances.</p> <p><strong>MTOTAManager:</strong> OTA, use this class for update device's firmware only.</p> <h2 id="overall-structure"><a href="#overall-structure" aria-hidden="true" class="header-anchor">#</a> Overall structure</h2> <p><img src="/assets/img/BeaconSET+.3b64ceba.png" alt="BeaconSET+"></p> <h4 id="advertisement-stage"><a href="#advertisement-stage" aria-hidden="true" class="header-anchor">#</a> Advertisement Stage</h4> <p>in this stage, <strong>MTCentralManager</strong> will scan and analyze the advertisement data of miniBeaconPlus devices, <strong>MTCentralManager</strong> will create <strong>&quot;MTPeripheral&quot;</strong> instance for every physical devices, developers can get all advertisement data by its <strong>MTFrameHandler</strong> property.</p> <h4 id="connection-stage"><a href="#connection-stage" aria-hidden="true" class="header-anchor">#</a> Connection Stage</h4> <p>After a <strong>MTPeripheral</strong> connected, developer can make some changes of the device by <strong>MTConnectionHandler</strong>(a Property of <strong>MTPeripheral</strong> instance).</p> <h4 id="ota-operations"><a href="#ota-operations" aria-hidden="true" class="header-anchor">#</a> OTA Operations</h4> <p>In general, OTA operations is complicated, so we encapsulates the <strong>MTOTAManager</strong> to perform firmware update operations, please note developer can update devices only in connection status.</p> <h2 id="get-started"><a href="#get-started" aria-hidden="true" class="header-anchor">#</a> Get Started</h2> <h3 id="prepare"><a href="#prepare" aria-hidden="true" class="header-anchor">#</a> Prepare</h3> <h4 id="development-environment"><a href="#development-environment" aria-hidden="true" class="header-anchor">#</a> Development environment:</h4> <ul><li><strong>Xcode9+</strong>， due to the DFU and Zip Framework based on Swift4.0, so please use Xcode9 or high version to develop;</li> <li><strong>iOS8</strong>, we limit the minimum iOS system version to 8.0;</li></ul> <h3 id="import-to-project"><a href="#import-to-project" aria-hidden="true" class="header-anchor">#</a> Import to Project</h3> <h4 id="cocoapods"><a href="#cocoapods" aria-hidden="true" class="header-anchor">#</a> CocoaPods</h4> <p>MTBeaconPlus is available through <a href="http://cocoapods.org/" target="_blank" rel="noopener noreferrer">CocoaPods<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. To install it, simply add the following line to your Podfile, and then import &lt;MTBeaconPlus/MTBeaconPlus.h&gt;:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pod 'MTBeaconPlus'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="manually"><a href="#manually" aria-hidden="true" class="header-anchor">#</a> Manually</h4> <ol><li><p>copy the framework files to your project folder，include <strong>&quot;MTBeaconPlus.framework&quot;</strong>, <strong>&quot;iOSDFULibrary.framework&quot;</strong>, <strong>&quot;Zip.framework&quot;</strong>, then add them to your project, make sure the <strong>&quot;target&quot;</strong> is checked. as the screenshot below:      <img src="/assets/img/add_frameworks.8a932d1c.png" alt="add frameworks"></p></li> <li><p>find: <strong>&quot;Target&quot;</strong> -&gt; <strong>General</strong> -&gt; <strong>Embedded Binaries</strong>, click the <strong>&quot;+&quot;</strong> below, add that 3 framework files. at the same time, make sure add them to <strong>&quot;Linked Frameworks and Librarys&quot;</strong>, as the screenshot blew:</p> <p><img src="/assets/img/make_sure_frameworks.d4466176.png" alt="make sure frameworks"></p></li> <li><p>*about using swift, the developer should add a <strong>&quot;Objective C BridgingHeader.h&quot;</strong> file to the project(please do this by yourself), then add <strong>&quot;import &lt; MTBeaconPlus/MTBeaconPlus.h &gt;&quot;</strong> to the file.</p></li> <li><p>*using Objective-C, find: “Target” -&gt; Building Settings -&gt; Always Embed Swift Standard Libraries&quot; ,then set yes</p></li> <li><p>!!!on iOS 10 and above, Apple add authority  control of bluetooth, you need add the string to &quot;info.plist&quot; file of your project: <em>Privacy - Bluetooth Peripheral Usage Description</em> - <em>&quot;your description&quot;</em>. as the screenshot below.</p> <p><img src="/assets/img/bp_access.795e088e.png" alt="bp_access"></p> <ol start="6"><li>!!! In iOS13 and above, Apple added permission restrictions on Bluetooth APi. You need to add a string to the project's info.plist file: Privacy-Bluetooth Always Usage Description-&quot;Your usage description&quot;.</li></ol></li></ol> <h3 id="start-developing"><a href="#start-developing" aria-hidden="true" class="header-anchor">#</a> Start Developing</h3> <h5 id="get-sharedinstance-of-manager"><a href="#get-sharedinstance-of-manager" aria-hidden="true" class="header-anchor">#</a> Get sharedInstance of Manager</h5> <p>First of all, the developer should get the sharedInstance of Manager:</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// get sharedInstance
+MTCentralManager *manager = [MTCentralManager sharedInstance];
+
+// listen the change of iPhone bluetooth
+// *** also get from &quot;state&quot; property.
+// *** this SDK will work normally only while state == PowerStatePoweredOn!
+manager.stateBlock = ^(PowerState state) {
+     NSLog(&quot;current bluetooth state：%d&quot;,state);
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h5 id="scan-devices"><a href="#scan-devices" aria-hidden="true" class="header-anchor">#</a> Scan devices</h5> <p>start scanning task to find devices around you, then you can get their advertisement content, connect to device and change parsameters.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager: sharedInstance of MTCentralManager
+*/
+
+// start scanning task
+[manager startScan:^(NSArray&lt;MTPeripheral *&gt; *peris){
+  
+   // Traverse the array，get instance of every device.
+   // ** you can also display them on views.
+    for(NSInteger i = 0; i &lt; peris.count; i ++){
+        MTPeripheral *peri = peris[i];
+        
+        // get FrameHandler of a device.
+        // **some properties maybe nil
+        MTFrameHandler *framer = peri.framer; 
+        NSString *name = framer.name;          // name of device, may nil
+        NSInteger rssi = framer.rssi;          // rssi
+        NSInteger battery = framer.battery;    // battery,may nil
+        NSString *mac = framer.mac;            // mac address,may nil
+        NSArray *frames = framer.advFrames;    // all data frames of device（such as:iBeacon，UID，URL...）
+    }
+}];
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>at the sometime, you can stop the scanning task in this way:</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager: sharedInstance of MTCentralManager
+*/
+
+// stop the task.
+[manager stopScan];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>now the developer can get all advertisement data of device in this way. Next, we will talk about how to get frame data, such as <strong>iBeacon</strong>, <strong>URL</strong>, <strong>UID</strong> and etc...</p> <p>Please refer to the code example below.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  aFrameHandler: a MTFrameHandler instance.
+*/
+
+
+NSArray *frames = aFrameHandler.advFrames;
+for (NSInteger i = 0; i &lt; frames.count; i ++){
+    MinewFrame *frame = frames[i];
+    
+    switch(frame.frameType){
+      case FrameiBeacon:
+        {
+          MinewiBeacon *bea = (MinewiBeacon *)frame;
+          NSLog(@&quot;iBeacon:%@, %ld, %ld, %@&quot;,bea.uuid, bea.major, bea.minor, bea.lastUpdate);
+        }
+           break;
+        
+      case FrameUID:
+        {
+           MinewUID *uid = (MinewUID *)frame;
+           NSLog(@&quot;UID:%@, %@, %ld, %@&quot;, uid.namespaceId, uid.instanceId, uid.txPower, uid.lastUpdate);
+        }
+           break;
+        
+        case FrameDeviceInfo:
+        {
+            MinewDeviceInfo *info = (MinewDeviceInfo *)frame;
+            NSLog(@&quot;DeviceInfo: %ld, %@, %@, %@&quot;, (long)info.battery, info.mac, info.name, info.lastUpdate);
+        }
+            break;
+        
+        case FrameTLM:
+        {
+            MinewTLM *tlm = (MinewTLM *)frame;
+            NSLog(@&quot;TLM: %ld, %f, %ld, %ld, %@&quot;, tlm.batteryVol, tlm.temperature, tlm.advCount, (long)tlm.secCount, tlm.lastUpdate);
+        }
+            break;
+        
+        case FrameURL:
+        {
+            MinewURL *url = (MinewURL *)frame;
+            NSLog(@&quot;URL: %ld, %@, %@&quot;, url.txPower, url.urlString, url.lastUpdate);
+        }
+            break;
+        
+        case FrameLineBeacon:
+        {
+            MinewLineBeacon *lineBeacon = (MinewLineBeacon *)frame;
+            // If necessary, vendorKey and lotKey can be obtained after the connection by other operations. For details, refer to the section &quot;Getting the data of each channel&quot;.
+            NSLog(@&quot;LineBeacon:%@, %@, %@, %ld, %@&quot;, lineBeacon.hwId, lineBeacon.authenticationCode, lineBeacon.timestamp, lineBeacon.txPower, lineBeacon.lastUpdate);
+        }
+            break;
+                    
+      /*
+         You can handle other types of data if you need to. 
+      */
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br></div></div><p><strong>Important:</strong> for all types of sensor value, if it equals to <em>MTNAValue</em>（a not available value we defined, in file &quot;MTPublicHeader.h&quot;), it means that this value is not available.</p> <p>Please refer to the code example below:</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+    aHT: a MinewHTSensor instance
+    aLight: a MinewLightSensor instance
+    aAcc：a MinewAccSensor instance
+*/
+
+if (aHT.temperature == MTNAValue) {
+    NSLog(@&quot;this value is not available.&quot;)
+}
+
+if (aLight.luxValue == MTNAValue) {
+    NSLog(@&quot;this value is not available.&quot;)
+}
+
+if (aAcc.XAxis == MTNAValue) {
+    NSLog(@&quot;this value is not available.&quot;)
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h5 id="connect-to-device"><a href="#connect-to-device" aria-hidden="true" class="header-anchor">#</a> Connect to device</h5> <p>Connect to the device in order to do more operations(change parameter, OTA). you will find that when connect to device password may need, so <strong>the &quot;password Validating Block&quot; must not be NULL, otherwise the app will crash!!!!</strong></p> <p>Please refer to the code example below.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+  manager： a MTCentralManager sharedInstance
+  aMTPeripheral： a MTPeripheral instance
+*/
+
+// listen the change of device connection state
+aMTPeripheral.connector.statusChangeHandler = ^(ConnectionStatus status, NSError *error) {
+    
+    /*
+     typedef NS_ENUM(NSInteger, ConnectionStatus) {
+         StatusConnectFailed = -2,
+         StatusDisconnected = -1,
+         StatusUndifined = 0,
+         StatusConnecting,
+         StatusConnected,
+         StatusReadingInfo,
+         StatusDeviceValidating,
+         StatusPasswordValidating,
+         StatusSycingTime,
+         StatusReadingConnectable,
+         StatusReadingFeature,
+         StatusReadingFrames,
+         StatusReadingTriggers,
+         StatusReadingSensorInfo,
+         StatusCompleted,
+     };
+     */
+     
+    /*
+     there is mutiple state when connect to the device,
+     only &quot;status == StatusCompleted&quot; means connection operations success.
+     if exception appears, error will not be NULL
+    */
+    
+};
+
+// Connect to the device
+// the aMTPeripheral is a device instance
+// !!!:Warnning: passwordRequire must not be NULL!!!
+[manager connectToPeripheral:aMTPeripheral passwordRequire:^(MTPasswordBlock passwordBlock){
+     // the length of password string must be 8.
+    // !!! read the input content from the UITextField as a password in development.
+    NSString *password = @&quot;minew123&quot;;
+    passwordBlock(password);
+}];
+
+// disconnec from the device.
+[manager disconnectFromPeriperal:aMTPeripheral];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><h5 id="get-base-information"><a href="#get-base-information" aria-hidden="true" class="header-anchor">#</a> Get base information</h5> <p>the developer can get device information and modify parameters when a device connected.</p> <p>the code example below let the developer get the base data of the device.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aMTPeripheral：a MTPeripheral instance
+*/
+
+MTConnectionHandler *con = aMTPeripheral.connector;
+
+ConnectionStatus conSte = con.status;  // current connection status
+NSDictionary *infoDict = con.infoDict; // device info, such as：（Firmware Version： 0.9.1）;
+NSString *mac = con.macString; // mac address；
+Connectable able = con.connectable; // device connectable，None Unknown，No disable，Yes enable
+Version version = con.version; // Version of firmware；
+PasswordStatus pwdStatus = con.passwordStatus; // password require or not. None, Require
+
+MTConnectionFeature *feature = con.feature; // device features
+NSInteger slotAtitude = feature.slotAtitude; // atitude of slot(s), 
+FeatureSupported feaSup = feature.featureSupported; // parameters can be modified：none，adv,txpower,adv/txpower
+NSArray&lt;NSNumber *&gt; *supFrames = feature.supportedSlots; // frames supported（multiple）
+NSArray&lt;NSNumber *&gt; *supTxpower = feature.supportedTxpowers; // Txpower supported（multiple）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p><strong>PS:</strong> <strong>MTConnectionHandler</strong>’s <em>Version</em> property.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>The version value comes form firmware version， check the version value to find out functions the device support:
+ 
+// init value
+VersionUndefined
+
+// base version, base function only.
+VersionBase
+
+// this version or above support custom connection password and device info frame.
+Version0_9_8
+
+// this version or above support remote shut down.
+Version0_9_9
+
+// this version or above support triggers.
+Version2_0_0
+
+// this version or above support triggers with adv configs.
+Version2_2_60
+
+// ideal value, support all features.
+VersionMax = 1000
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h5 id="get-data-of-each-slot"><a href="#get-data-of-each-slot" aria-hidden="true" class="header-anchor">#</a> Get data of each Slot</h5> <p>Next, let talk about the parameter data of every slot, the reason why we speak about this is because all the content of changing parameters is here.</p> <p><strong>Slot</strong> :Before read the code, let's talk about slot, you can think slot as a advertisement tool, it advertise the content of advertisement data even &quot;don't know&quot; what the content is. such as the 6 slots may like this:</p> <table><thead><tr><th>Slot Number</th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th></tr></thead> <tbody><tr><td>Adv content</td> <td>iBeacon</td> <td>TLM</td> <td>UID</td> <td>URL</td> <td>HTSensor</td> <td>None</td></tr> <tr><td>Adv interval（ms）</td> <td>1000</td> <td>2000</td> <td>500</td> <td>900</td> <td>3000</td> <td>0</td></tr> <tr><td>RSSI@0/1m（dbm）</td> <td>-1</td> <td>0</td> <td>-4</td> <td>-10</td> <td>-3</td> <td>0</td></tr> <tr><td>Txpower（dbm）</td> <td>4</td> <td>0</td> <td>-4</td> <td>4</td> <td>0</td> <td>0</td></tr></tbody></table> <p>By meaning of the table, the <strong>No.0</strong>  slot will advertise <strong>iBeacon</strong> data, the <strong>No.1</strong> slot will advertise <strong>TLM</strong> data, …, the <strong>No.5</strong> slot will not advertise any data. each of them have their own <strong>advertising interval</strong>, <strong>Txpower</strong> and <strong>Calibration RSSI</strong>. They are independent of each other.</p> <p>PS: <strong>Calibration RSSI(RSSI@0/1m)</strong> is the RSSI when device @ 0/1m(iBeacon is 1, others 0).</p> <p>How to get the slot advertisement data? please refer to the code example below.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+    con: a MTConnectionHandler instance
+*/
+
+// each slot has a frame of current device.
+// atitude of this array is equals to slot atitude(feature.slotAtitude)
+// 
+// In strict accordance with the order of the slot，such as：0. -&gt; MinewiBeacon，1. -&gt; MinewUID ...
+NSArray&lt;MinewFrame *&gt; *frames = con.allFrames;
+
+/*
+   We assume the No.3 slot has iBeacon data, the No.4 slot has UID data.
+   let's try to analyze the data of No.3 slot.
+*/
+
+// due to the defualt point is MinewFrame(the superclass of MinewiBeacon), so we need make a conversion.
+
+// get the frame of No.3 slot
+MinewFrame *frame = frames[2];
+
+// check this slot has iBeacon data or not,
+// *You can not check if you confirm its type.
+for (NSInteger i = 0; i &lt; frames.count; i ++){
+MinewFrame *frame = frames[i];
+
+switch (frame.frameType) {
+case FrameiBeacon:
+{
+    MinewiBeacon *iBeacon = (MinewiBeacon *)frame;
+
+    // iBeacon
+    NSString *uuid = iBeacon.uuid;   // uuid
+    NSInteger major = iBeacon.major;  // major
+    NSInteger minor = iBeacon.minor;  // minor
+
+    // The parameters of the slot
+    NSInteger slotNumber = iBeacon.slotNumber;           // number of the slot
+    NSInteger slotAdvInterval = iBeacon.slotAdvInterval; // advertisement interval
+    NSInteger slotAdvTxpower = iBeacon.slotAdvTxpower;   // iBeacon：RSSI@1m others： RSSI@0m
+    NSInteger slotRadioTxpower = iBeacon.slotRadioTxpower; // radio Txpower  
+}
+    break;
+    
+case FrameURL:
+{
+    // URL
+    MinewURL *url = (MinewURL *)frame;
+    NSString *urlStr = url.urlString;
+    
+    // The parameters of the slot are obtained in the same way
+}
+    break;
+    
+case FrameUID:
+{
+    // UID
+    MinewUID *uid = (MinewUID *)frame;
+    NSString *namespaceId = uid.namespaceId;
+    NSString *instanceId = uid.instanceId;
+    
+    // The parameters of the slot are obtained in the same way
+}
+    break;
+
+case FrameLineBeacon:
+{
+    // LineBeacon(The acquisition method is special)
+    MTLineBeaconData *lineBeaconData = self.currentPeripheral.connector.slotHandler.slotFrameDataDic[FrameTypeString(FrameLineBeacon)];
+    NSString *hwid = lineBeaconData.hwId;
+    NSString *vendorKey = lineBeaconData.vendorKey;
+    NSString *lotKey = lineBeaconData.lotKey;
+    
+    // The parameters of the slot are obtained in the same way
+}
+    break;
+/*
+   You can handle other types of data if you need to. 
+*/
+default:
+    break;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br></div></div><p>You can analyze the data of other slots in the same way, it's worth noting that when <strong>frameType == FrameNone</strong> means the slot has no data: From another perspective it means this slot is closed.</p> <h5 id="change-slot-data"><a href="#change-slot-data" aria-hidden="true" class="header-anchor">#</a> Change slot data</h5> <p>The developer can modify advertisement and parameters of every slot freely via our APi.</p> <p>We divide the data frame into <strong>static frames</strong> and <strong>dynamic frames</strong>:</p> <ul><li><strong>Static frame</strong>: advertisement data will not change when it was advertise, such as <strong>iBeacon</strong>, <strong>UID</strong>, <strong>URL</strong></li> <li><strong>Dynamic frame</strong>: advertisement data will change while it was advertise, such as <strong>TLM</strong>, <strong>Sensor</strong></li></ul> <p>Please refer to the code example below:</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler:a MTConnectionHandler instance
+*/
+
+// create a uid instance
+MinewUID *uid = [[MinewUID alloc]init];
+
+// set &quot;namespaceId&quot; and &quot;instanceId&quot; of UID
+uid.namespaceId = @&quot;0123456789abdcdcba12&quot;;
+uid.instanceId = @&quot;0123456789dc&quot;;
+
+// the other parameters of slot
+uid.slot = 1;  // The number of slot which you want to modify
+uid.slotAdvInterval = 600;  // advertisement interval
+uid.slotAdvTxpower = -3;    // RSSI@0m
+uid.slotRadioTxpower = 4;   // Radio txpower.
+
+// write to device.
+// detail: 1.let No.1 slot advertise UID data, namespaceId：0123456789abdcdcba12 instanceId：0123456789dc
+//         2.set No.1 slot advertisement interval to 600ms, RSSI@0m to -3dbm, radio txpower to 4dbm 
+[aConnectionHandler writeFrame:uid completion:^(BOOL success, NSError *error){
+     if (success) {
+        NSLog(@&quot;write frame to device successfully.&quot;);   
+     } 
+     else if(error) {
+        NSLog(@&quot;Error:%@&quot;, error)
+     }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>Becareful, the slot parameter has ranges:</p> <ul><li><strong>Advertisement interval</strong>: 100 - 5000 (ms)</li> <li><strong>RSSI@0m</strong>: -127 - 0 (dbm)</li></ul> <p><strong>The most import</strong>: Radio txpower is not a range, it's grade, such as: -8, -4, 0, 4. you can get all supported Radio Txpowers from the feature property of the &quot;MTConnectionHandler&quot;</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   feature: a property of MTConnectionHandler.
+*/
+
+// get all supported Radio txpower of current device.
+NSArray&lt;NSNumber *&gt; *supTx = feature.supportedTxpowers
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>OK, you can modify any slot in the way above, if you want to close a slot, only need to create a <strong>MinewFrame</strong> instance and make its <strong>frameType</strong> property to <strong>FrameNone</strong>, then write this frame to device. oh don't forget to set a slotnumber for the slot which you want to close.</p> <h5 id="set-linebeacon"><a href="#set-linebeacon" aria-hidden="true" class="header-anchor">#</a> Set lineBeacon</h5> <p>The LineBeacon frame needs to call writeFrame  method, and then the following two methods are called to set the lineBeacon's hwid, vendorKey, and lotKey.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>// lotKey:Length of 16, hwid:Length of 10,vendorKey:Length of 8，include a-f/A-F/0-9.
+
+// set LineBeacon's lotKey
+[self.currentPeripheral.connector.slotHandler lineBeaconSetLotkey:@&quot;0011223344556677&quot; completion:^(BOOL success) {
+    if (success) {
+        NSLog(@&quot;Set LineBeacon's lotKey success&quot;);
+    } else {
+        NSLog(@&quot;Set LineBeacon's lotKey failed&quot;);
+    }
+}];
+
+
+// set LineBeacon's hwid LineBeacon's vendorKey
+[self.currentPeripheral.connector.slotHandler lineBeaconSetHWID:@&quot;0011223344&quot; VendorKey:@&quot;00112233&quot; completion:^(BOOL success) {
+    if (success) {
+        NSLog(@&quot;Set LineBeacon's hwid and vendorKey success&quot;);
+    } else {
+        NSLog(@&quot;Set LineBeacon's hwid and vendorKey failed&quot;);
+    }
+}];
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h5 id="change-global-parameter"><a href="#change-global-parameter" aria-hidden="true" class="header-anchor">#</a> Change global parameter</h5> <p>Global parameter of device is a device level feature, such as connectable, password require, reset to default and etc.</p> <p>Please refer to the code example below.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: a MTConnectionHandler instance
+*/
+// reset the device
+[aConnectionHandler resetFactorySettings:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// update connectable settings
+// ConnectableYES: app can connect to the device, ConnectableNO app can't connect to the device.
+// if you set connectableNO, you can connect to device by press the button on device maybe next time.
+// DANGER!!!:if there is no button on device and set ConnectableNO, the app can't connect to device even forever.
+[aConnectionHandler updateConnectable:ConnectableYES completion:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// Modify/Add password
+// !!!: the password string length must be 8, digits or letters；
+// it will add password if device has no password, update password if device has a password
+[aConnectinoHandler modifyPassword:@&quot;12345678&quot; completion:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// remove password
+[aConnectionHandler removePassword:^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+
+// remote shut down the device.
+// DANGER!!!: please make sure there a button on device, otherwise it may not boot again.if the Model Number String is Beacon Plus-BL,not work.
+[aConnectionHandler poweroff^(BOOL success, NSError *error){
+    if(success){
+        NSLog(@&quot;Operation success!&quot;);
+    }
+    else {
+        NSLog(@&quot;Opertion failed!&quot;);
+    }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><h5 id="sensor-data"><a href="#sensor-data" aria-hidden="true" class="header-anchor">#</a> Sensor data</h5> <p>BeaconPlus devices integrated a variety of sensors: <strong>HT(Temperature and Humidity )</strong>, <strong>Light</strong>, <strong>Acceleration</strong> and etc, currently we provide APi  for read HT/Sixaxis/Magnetometer/AtmosphericPressure History data and set PIR param data.</p> <p>Please make sure the device has <strong>HT Sensor</strong>, otherwise you can't get data correctly.</p> <p>Please refer to the code example below.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: a MTConnectionHandler instance
+*/
+
+// read HT History from the device
+[aConnectionHandler.sensorHandler readSensorHistory:^(MTSensorData *data){
+  
+   // a record corresponds to an instance
+   NSInteger time = ((MTSensorHTData *)data).timestamp;   // the Unix timestamp；
+   double temp = ((MTSensorHTData *)data).temperature;    // temperature data；
+   double humi = ((MTSensorHTData *)data).humidity;       // humidity data；
+   NSInteger index = ((MTSensorHTData *)data).index;      // number of this data；
+  
+   if (((MTSensorHTData *)data).endStatus == EndStatusNone){
+       NSLog(@&quot;there is no data.&quot;);
+   }
+   else if (((MTSensorHTData *)data).endStatus == EndStatusSuccess) {
+       NSLog(@&quot;sensor data sync successfully!&quot;);
+   }
+   else if (((MTSensorHTData *)data).endStatus == EndStatusError) {
+       NSLog(@&quot;something wrong in syncing progress.&quot;);   
+   }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>you can vividly display these data with the curve, table or other.</p> <p>Please make sure the device has <strong>PIR Sensor</strong>, otherwise you can't get data correctly.</p> <p>Please refer to the code example below.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: a MTConnectionHandler instance
+   aRepeat: a bool,whether to allow repeated triggers
+   aTime:trigger time, the infrared sensor can be triggered again after the trigger time
+*/
+
+// set PIR param to the device
+[aConnectionHandler.sensorHandler pirSet:aRepeat andDelayTime:aTime completion:^(MTSensorData *data){
+   
+    if (data.status) {
+        NSLog(@&quot;success&quot;);
+    }
+    else {
+        NSLog(@&quot;failed&quot;);
+    }
+}];
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h5 id="set-triggers"><a href="#set-triggers" aria-hidden="true" class="header-anchor">#</a> Set triggers</h5> <p>BeaconPlus device has triggers, you can set triggers for every slot, the device will advertise the corresponding slot only when the trigger condition is met.</p> <p>Please refer to the code example below.</p> <div class="language-objective-c line-numbers-mode"><pre class="language-text"><code>/*
+   aConnectionHandler: a MTConnectionHandler instance
+*/
+
+NSInteger sn = 2;                          // Target slot：2
+TriggerType type = TriggerTypeTempAbove;   // Triggering condition：temperature above
+NSInteger value = 10;                      // value：10
+
+// create a trigger instance
+// this trigger means when temperature &gt; 10 meet the condition.
+MTTriggerData *trigger = [[MTTriggerData alloc]initWithSlot:sn triggerType:type value:value];
+
+// write to the device.
+[aConnectionHandler writeTrigger:trigger completion:^(BOOL success, NSError){
+    if(success){
+        NSLog(@&quot;write trigger successfully!&quot;);
+    }
+    else {
+        NSLog(@&quot;write trigger failed!&quot;);
+    }
+}];
+
+NSInteger slotAtitude = 2;                 // Target slot：2
+TriggerType type = TriggerTypeTempAbove;   // Triggering condition：temperature above
+NSInteger value = 10;                      // temperature above：10
+
+// create a trigger instance
+// this trigger means when temperature &gt; 10 meet the condition.
+MTTriggerData *trigger = [[MTTriggerData alloc] initWithSlot:slotAtitude paramSupport:true triggerType:type value:value];
+
+// Continue broadcasting after triggering if necessary
+trigger.always = true;        // Whether to continue broadcasting after triggering
+trigger.advInterval = 100;    // The broadcast interval
+trigger.radioTxpower = -20;   // The broadcast signal strength
+
+// write to the device.
+[self.connectedPeripheral.connector writeTrigger:trigger completion:^(BOOL success) {
+    if(success){
+        NSLog(@&quot;write trigger successfully!&quot;);
+    }
+    else {
+        NSLog(@&quot;write trigger failed!&quot;);
+    }
+}];
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><p>At the end of this part, you can refer all code above to develop. Of course we made a note for every APi in the SDK, if there is something new, we will update this document.</p> <h2 id="notes"><a href="#notes" aria-hidden="true" class="header-anchor">#</a> Notes</h2> <ol><li><p>In development progress, you may find there are <strong>multiple MTPeripheral instance</strong> correspond to a physical device. On this point, we consulted Apple's engineers. they told us that currently on the iOS platform, CoreBluetooth framework  unfriendly to the multiple slot devices(especially the advertisement data in changing). due to that sometimes app can't connect to the device, Google Eddystone solve this issue by <strong>press button on eddystone devices</strong>, our device support this operation too.</p> <p>iOS11 doesn't has this issue.</p></li> <li><p>In scanning stage, some properties may nil, especially MAC address(restriction of iOS),if current device advertise <strong>DeviceInfo</strong> frame, then you can get name, MAC address and battery.</p></li> <li><p>After 5 minus the app connected to device, the device will take the initiative to disconnect.</p></li> <li><p>If the running display cannot find the path after adding the SDK, remove the package and add it again at General-&gt; Frameworks,Libraries,and Embedded Content</p></li></ol> <h2 id="other"><a href="#other" aria-hidden="true" class="header-anchor">#</a> Other</h2> <p>BeaconPlus SDK is also used in our BeaconSET+ app. If you need a more intuitive understanding of our beaconPlus equipment and the corresponding functions of the SDK, you can also download the BeaconSET+ app to learn more. (Reminder: BeaconSET+ app and BeaconPlus SDK need to be used with equipment produced by our company)</p> <h2 id="change-log"><a href="#change-log" aria-hidden="true" class="header-anchor">#</a> Change log</h2> <ul><li>2017.10.11  v1.0 first version;</li> <li>2019.01.07  v1.1 second version;</li> <li>2019.07.11  v1.2 change the poweroff;</li> <li>2020.03.27  v1.10.0 add LineBeacon;</li> <li>2020.07.27  v1.10.1 Optimize getting and setting of LineBeacon frame</li> <li>2020.10.27 v1.10.2 Added lastUpdate property for each broadcast frame</li> <li>2020.4.21 v1.11.0 Added Sixaxis/Magnetometer/AtmosphericPressure sensor</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:: </span> <span class="time">4/21/2021, 11:28:48 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b2ffef25.js" defer></script><script src="/assets/js/3.c4fcc7d2.js" defer></script><script src="/assets/js/6.0a886f16.js" defer></script>
+  </body>
+</html>
