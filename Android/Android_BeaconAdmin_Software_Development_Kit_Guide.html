@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewBeaconAdmin Android Software Development Kit Guide | SDK &amp; API</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="SDKs and APIs for MBeacon, BeaconPlus, MSensor, etc.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/45.a58e8a25.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/106.a3d11e42.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/113.e8cff9ce.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/18.6db3ccbb.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.ca9adaaf.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/68.8866be89.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.a4692fcf.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/75.723e0570.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="SDK &amp; API" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewBeaconAdmin Android Software Development Kit Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#class-overview" class="sidebar-link">Class Overview</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#minewbeaconmanager" class="sidebar-link">MinewBeaconManager</a></li><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#minewbeacon" class="sidebar-link">MinewBeacon</a></li><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#minewbeaconconnection" class="sidebar-link">MinewBeaconConnection</a></li><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#minewbeaconsetting" class="sidebar-link">MinewBeaconSetting</a></li></ul></li><li><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#usage" class="sidebar-link">Usage</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#settings" class="sidebar-link">Settings</a></li><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#device-shutdown-function" class="sidebar-link">Device shutdown function</a></li></ul></li><li><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#changelog" class="sidebar-link">Changelog</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#_2018-11-20" class="sidebar-link">2018.11.20</a></li><li class="sidebar-sub-header"><a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html#before" class="sidebar-link">Before</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="minewbeaconadmin-android-software-development-kit-guide"><a href="#minewbeaconadmin-android-software-development-kit-guide" class="header-anchor">#</a> MinewBeaconAdmin Android Software Development Kit Guide</h1> <h1 id="new-project"><a href="#new-project" class="header-anchor">#</a> New Project</h1> <p>Android Studio Settings:</p> <p>targetSdkVersion Version choose 33</p> <p>Place the minewBeaconScan.jar into the libs folder, and then in the current project under the build.gradle file configuration items in the dependencies new content, as follows compile files ('libs / minewBeaconScan.jar').</p> <p>Eclipse Configuration</p> <p>targetSdkVersion: Choose version 33 Place the minewBeaconAdmin.jar file into the 'libs' folder. Right-click on the project, select 'Java Build Path,' and add a dependency on minewDevice in the 'Library' section.</p> <p>For targetSdkVersion greater than or equal to 23, you need to dynamically request permissions:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot;/&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>Required permissions for the current SDK:</p> <div class="language- extra-class"><pre><code>&lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot;/&gt;
+&lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot;/&gt;
+</code></pre></div><p>For targetSdkVersion: Choose version 33</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot;
+        android:maxSdkVersion=&quot;30&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot;
+        android:maxSdkVersion=&quot;30&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_SCAN&quot;
+        tools:targetApi=&quot;s&quot; /&gt;
+    &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_CONNECT&quot; /&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Add service and receiver as follows:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;service android:name=&quot;com.minew.beaconset.ConnectService&quot;/&gt;
+
+&lt;receiver android:name=&quot;com.minew.beaconset.BluetoothChangedReceiver&quot;
+    android:exported=&quot;false&quot;&gt;
+    &lt;intent-filter&gt;
+        &lt;action android:name=&quot;android.bluetooth.adapter.action.STATE_CHANGED&quot; /&gt;
+    &lt;/intent-filter&gt;
+&lt;/receiver&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>For targetSdkVersion: Choose version 33
+You must grant Bluetooth-related permissions to call Bluetooth-related APIs; otherwise, you will encounter errors. Change the receiver from a static broadcast to a dynamic broadcast, and call the registerBleChangeBroadcast() method in the corresponding logical code.</p> <p>Add the following dependencies to your Android Studio's build.gradle file:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>dependencies {
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation files('libs/minewBeaconAdmin.jar')
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>You can use this SDK to configure parameters such as UUID, major, minor, etc., for nearby beacons. Four classes are used for this purpose.</p> <h2 id="class-overview"><a href="#class-overview" class="header-anchor">#</a> Class Overview</h2> <h3 id="minewbeaconmanager"><a href="#minewbeaconmanager" class="header-anchor">#</a> MinewBeaconManager</h3> <p>A management class for scanning devices:</p> <p>Functions:</p> <ol><li><p>Start/stop scanning</p></li> <li><p>Get devices in the current scanning range/get all scanned devices</p></li> <li><p>Get the current Bluetooth state</p></li> <li><p>Listen for device entry/exit status (delegate callbacks)</p></li> <li><p>Update data of scanned devices (delegate callbacks)</p></li> <li><p>Listen for Bluetooth state changes (delegate callbacks)</p></li> <li><p>Start/stop connection service</p></li></ol> <h3 id="minewbeacon"><a href="#minewbeacon" class="header-anchor">#</a> MinewBeacon</h3> <p>A data model class for scanned devices. All properties of this class are read-only, and the underlying data for each device will be periodically updated (if it hasn't left the scanning range).</p> <p>Functions:</p> <ol><li>Export device data as a JSON string</li> <li>Support importing JSON strings</li></ol> <h3 id="minewbeaconconnection"><a href="#minewbeaconconnection" class="header-anchor">#</a> MinewBeaconConnection</h3> <p>A maintenance class for connection status and data updates between devices and Android devices. Each instance of this class corresponds to a MinewBeacon and MinewBeaconSetting instance when connected.</p> <p>Functions:</p> <ol><li>Connect/disconnect from a device</li> <li>Update changes to the &quot;MinewBeaconSetting&quot; property to the device (callback method returns whether the update was successful)</li></ol> <h3 id="minewbeaconsetting"><a href="#minewbeaconsetting" class="header-anchor">#</a> MinewBeaconSetting</h3> <p>A data model for device data after connecting. This class can only be obtained after a successful connection is initiated through the Connection instance. Some properties can be modified, and modifications will be temporarily cached. Only changes successfully updated to the device through the Connection instance will take effect.</p> <p>Functions:</p> <ol><li>Export data as a JSON string</li> <li>Import JSON strings</li></ol> <h2 id="usage"><a href="#usage" class="header-anchor">#</a> Usage</h2> <h4 id="scanning-devices"><a href="#scanning-devices" class="header-anchor">#</a> Scanning Devices</h4> <p>Use the MinewBeaconManager management class to initiate scanning. The SDK will generate MinewBeacon instances for devices found during scanning.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">// 1. Get an instance of MinewBeaconManager and set a delegate object</span>
+<span class="token class-name">MinewBeaconManager</span> mMinewBeaconManager <span class="token operator">=</span> <span class="token class-name">MinewBeaconManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Set up callback listener</span>
+mMinewBeaconManager<span class="token punctuation">.</span><span class="token function">setMinewbeaconManagerListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">MinewBeaconManagerListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2. Start the connection service</span>
+mMinewBeaconManager<span class="token punctuation">.</span><span class="token function">startService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. Initiate scanning</span>
+mMinewBeaconManager<span class="token punctuation">.</span><span class="token function">startScan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">MinewBeaconManagerListener</span> <span class="token class-name">Interface</span> <span class="token class-name">Description</span><span class="token operator">:</span>
+<span class="token comment">// Bluetooth states: On, Off, Unknown</span>
+<span class="token comment">// It only works when Bluetooth is in the &quot;On&quot; state.</span>
+<span class="token operator">-</span> <span class="token keyword">void</span> <span class="token function">onUpdateBluetoothState</span><span class="token punctuation">(</span><span class="token class-name">BluetoothState</span> state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Listen for devices within range (appeared within 10 seconds).</span>
+<span class="token operator">-</span> <span class="token keyword">void</span> <span class="token function">onRangeBeacons</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MinewBeacon</span><span class="token punctuation">&gt;</span></span> beacons<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Listen for disappearing devices (disappeared after 10 seconds).</span>
+<span class="token operator">-</span> <span class="token keyword">void</span> <span class="token function">onDisappearBeacons</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MinewBeacon</span><span class="token punctuation">&gt;</span></span> beacons<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Listen for newly discovered devices.</span>
+<span class="token operator">-</span> <span class="token keyword">void</span> <span class="token function">onAppearBeacons</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MinewBeacon</span><span class="token punctuation">&gt;</span></span> beacons<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* Other methods of MinewBeaconManager */</span>
+<span class="token comment">// Actively retrieve all scanned devices.</span>
+<span class="token operator">-</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MinewBeacon</span><span class="token punctuation">&gt;</span></span> <span class="token function">getScannedBeacons</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Actively retrieve devices within range.</span>
+<span class="token operator">-</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MinewBeacon</span><span class="token punctuation">&gt;</span></span> <span class="token function">getInRangeBeacons</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Actively retrieve newly discovered devices.</span>
+<span class="token operator">-</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MinewBeacon</span><span class="token punctuation">&gt;</span></span> <span class="token function">getNewMinewBeaconList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Set the interval time for the onRangeBeacons callback in milliseconds, default is 1000 milliseconds, minimum is 100 milliseconds.</span>
+mMinewBeaconManager<span class="token punctuation">.</span><span class="token function">setRangeInterval</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h4 id="connection"><a href="#connection" class="header-anchor">#</a> Connection</h4> <p>If you want to connect to the device, you need to use the  MinewBeacon instance to generate a MinewBeaconConnection instance, through Connection to manage the connection / disconnect / update data.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">// 1. Use a MinewBeacon instance to generate a Connection instance and set a callback monitor</span>
+<span class="token class-name">MinewBeaconConnection</span> minewBeaconConnection <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MinewBeaconConnection</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> minewBeacon<span class="token punctuation">)</span><span class="token punctuation">;</span>
+minewBeaconConnection<span class="token punctuation">.</span><span class="token function">setMinewBeaconConnectionListener</span><span class="token punctuation">(</span>minewBeaconConnectionListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               
+<span class="token comment">// 2. connect to device</span>
+ minewBeaconConnection<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3.connection state</span>
+<span class="token operator">-</span> <span class="token keyword">void</span> <span class="token function">onChangeState</span><span class="token punctuation">(</span><span class="token class-name">MinewBeaconConnection</span> connection<span class="token punctuation">,</span> <span class="token class-name">ConnectionState</span> state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">{</span>
+  <span class="token comment">//  When the connection is successful, the MinewBeaconSetting property of the connection instance is no longer empty, and the MinewBeaconSetting instance is the data obtained from the device</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">case</span> <span class="token class-name">BeaconStatus_Connected</span><span class="token operator">:</span>
+                   minewBeaconConnection<span class="token punctuation">.</span>setting<span class="token punctuation">.</span><span class="token function">getMajor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token keyword">case</span> <span class="token class-name">BeaconStatus_ConnectFailed</span><span class="token operator">:</span>
+                <span class="token keyword">case</span> <span class="token class-name">BeaconStatus_Disconnect</span><span class="token operator">:</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="settings"><a href="#settings" class="header-anchor">#</a> Settings</h3> <p>When the state of the connection is connected, you can modify all the non-read attributes whose attributes are set. You can update to the Beacon device by simply executing method. You can know if the update has been successfully by callback method.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">// 1.modify the setting attribute of connection</span>
+<span class="token class-name">MinewbeaconSetting</span> mMinewBeaconSetting <span class="token operator">=</span> minewBeaconConnection<span class="token punctuation">.</span>setting<span class="token punctuation">;</span>
+mMinewBeaconSetting<span class="token punctuation">.</span><span class="token function">setUuid</span><span class="token punctuation">(</span><span class="token string">&quot;FDA50693A4E24FB1AFCFC6EB07647825&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*.....*/</span>
+
+<span class="token comment">// 2.Update changes to the device</span>
+<span class="token comment">// It should be noted that the parameters here are the current restart password for the Beacon device;</span>
+<span class="token comment">// Modify/Add password,it will add password if device has no password, update password if device has a password</span>
+<span class="token comment">// (Warning/Note)!!!: the password string length must be 8, digits or letters,Otherwise, it may cause the device firmware to malfunction</span>
+mMinewBeaconConnection<span class="token punctuation">.</span><span class="token function">writeSetting</span><span class="token punctuation">(</span><span class="token string">&quot;minew123&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3.Use the callback method to get a successful update to the device</span>
+<span class="token operator">-</span> <span class="token keyword">void</span> <span class="token function">onWriteSettings</span><span class="token punctuation">(</span><span class="token class-name">MinewBeaconConnection</span> connection<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> success<span class="token punctuation">,</span> <span class="token keyword">boolean</span> dissView<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+               <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token function">getApplicationContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;Success&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token constant">LENGTH_SHORT</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token function">getApplicationContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;Failed&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token constant">LENGTH_SHORT</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="device-shutdown-function"><a href="#device-shutdown-function" class="header-anchor">#</a> Device shutdown function</h3> <p>Currently only the B6-B001A version of the device has the shutdown function</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">// 1.Determine whether the shutdown function is turned off</span>
+<span class="token class-name">MinewBeaconConnection</span> mMinewBeaconConnection <span class="token operator">=</span> <span class="token class-name">MinewBeaconConnection</span><span class="token punctuation">.</span>minewBeaconConnections<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>mac<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">MinewbeaconSetting</span> mMinewBeaconSetting <span class="token operator">=</span> minewBeaconConnection<span class="token punctuation">.</span>setting<span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>mMinewBeaconSetting<span class="token punctuation">.</span><span class="token function">isPowerOff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//true：true: there is a shutdown function, false: there is no shutdown function</span>
+
+   <span class="token comment">//Shutdown button can be shown here</span>
+   
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 2. addListener</span>
+mMinewBeaconConnection<span class="token punctuation">.</span><span class="token function">setMinewBeaconWriteListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">MinewBeaconWriteListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPowerOff</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token keyword">boolean</span> success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    <span class="token function">runOnUiThread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token annotation punctuation">@Override</span>
+                        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                <span class="token comment">// When success device will not callback here , because The device has been turned off</span>
+				<span class="token comment">// You can refer to the code in the example on how to override the finish method</span>
+                            <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                                <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;tag&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;DetilActivity &quot;</span> <span class="token operator">+</span> <span class="token string">&quot;onPowerOff fail&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;tag&quot;</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 3. Send shutdown command,you must send device password</span>
+<span class="token comment">// It should be noted that the parameters here are the current restart password for the Beacon device;</span>
+mMinewBeaconConnection<span class="token punctuation">.</span><span class="token function">writePowerOffByAuth</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>More details ,refer to demo code.</p> <h2 id="changelog"><a href="#changelog" class="header-anchor">#</a> Changelog</h2> <h4 id="_2023-04-24"><a href="#_2023-04-24" class="header-anchor">#</a> 2023.04.24</h4> <ul><li>The interval time for scanning callback data can be set；</li></ul> <h4 id="_2023-02-02"><a href="#_2023-02-02" class="header-anchor">#</a> 2023.02.02</h4> <ul><li>Added shutdown function of B6-B001A version；</li></ul> <h4 id="_2022-04-20"><a href="#_2022-04-20" class="header-anchor">#</a> 2022.04.20</h4> <ul><li>Optimized for filtering irrelevant devices；</li> <li>Added support for Beacon info broadcast frames；</li> <li>Fix issues；</li></ul> <h3 id="_2018-11-20"><a href="#_2018-11-20" class="header-anchor">#</a> 2018.11.20</h3> <p>Fixed bug for scanning.</p> <h3 id="before"><a href="#before" class="header-anchor">#</a> Before</h3> <p>None.</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated::</span> <span class="time">11/8/2024, 10:41:54 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/45.a58e8a25.js" defer></script>
+  </body>
+</html>

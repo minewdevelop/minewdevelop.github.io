@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewSensorKit说明文档 | 移动SDK文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="汇集 MBeacon, BeaconPlus, MSensor 等产品的移动SDK文档.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/106.a3d11e42.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/113.e8cff9ce.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/18.6db3ccbb.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/45.a58e8a25.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.ca9adaaf.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/68.8866be89.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.a4692fcf.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/75.723e0570.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="移动SDK文档" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewSensorKit说明文档</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html#前期工作" class="sidebar-link">前期工作</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html#导入到工程" class="sidebar-link">导入到工程</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html#扫描部分" class="sidebar-link">扫描部分</a></li><li class="sidebar-sub-header"><a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html#连接" class="sidebar-link">连接</a></li><li class="sidebar-sub-header"><a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html#读写" class="sidebar-link">读写</a></li></ul></li><li><a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html#历史记录" class="sidebar-link">历史记录</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="minewsensorkit说明文档"><a href="#minewsensorkit说明文档" class="header-anchor">#</a> MinewSensorKit说明文档</h1> <p>本套SDK仅支持Minew公司出品的蓝牙传感器设备。通过SDK可以帮助开发者处理手机和传感器之间的一切工作，包括：扫描设备，广播数据、连接设备，向设备写入数据，从设备接收数据等。</p> <p>目前SDK仅支持资产温度传感器的使用。</p> <h2 id="前期工作"><a href="#前期工作" class="header-anchor">#</a> 前期工作</h2> <p>整体框架：<code>PT100SensorBleManager</code>为设备管理类，在APP运行时始终是单例。<code>MST03Entity</code>是设备实例类，此套件会为每一个设备生成一个实例，在扫描和连接后都会使用，内部包含设备广播数据，在扫描期间该数据会随着设备不停广播而更新。</p> <p><code>PT100SensorBleManager</code>：设备管理类，可以扫描周围的设备，并且可以连接它们，校验它们等；</p> <p><code>PT100SensorEntity</code>：扫描时获取到的资产温度传感器设备实例，继承自<code>BaseBleDeviceEntity</code>；</p> <h2 id="导入到工程"><a href="#导入到工程" class="header-anchor">#</a> 导入到工程</h2> <ol><li><p>开发环境</p> <p>sdk最低支持Android 7.0，对应API Level为24。在module的<code>build.gradle</code>中设置<code>minSdkVersion</code>为24或24以上</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>android <span class="token punctuation">{</span>
+
+    defaultConfig <span class="token punctuation">{</span>
+        applicationId <span class="token interpolation-string"><span class="token string">&quot;com.xxx.xxx&quot;</span></span>
+        minSdkVersion <span class="token number">24</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>将 jar包添加到module的libs文件夹下，并在该<code>module</code>的<code>build.gradle</code>中添加如下语句（直接添加依赖）：</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/base_ble_library.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/minew_pt100.jar'</span><span class="token punctuation">)</span>
+api <span class="token string">'org.lucee:bcprov-jdk15on:1.52.0'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>或者右键该jar文件，选择<code>Add as Library</code>，添加到当前module。</p> <p>添加.so库文件，App目录下build.gradle添加如下配置</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>android {
+    defaultConfig {
+  
+        ndk {
+            abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+        }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li> <li><p>在<code>AndroidManifest.xml</code>需要以下权限，如果<code>targetSdkVersion</code>大于23，则需要做<strong>权限管理</strong>以获取权限：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADMIN<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_SCAN<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADVERTISE<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_CONNECT<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_FINE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_COARSE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_BACKGROUND_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_AUDIO<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_IMAGES<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_VIDEO<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_VISUAL_USER_SELECTED<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.MANAGE_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>ignore</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ScopedStorage<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Required to maintain app compatibility. --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.WRITE_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">/&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div></li></ol> <p>​</p> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <p>sdk分为扫描、连接和读写三个阶段。</p> <h3 id="扫描部分"><a href="#扫描部分" class="header-anchor">#</a> 扫描部分</h3> <h4 id="开始扫描"><a href="#开始扫描" class="header-anchor">#</a> 开始扫描</h4> <p>Android6.0系统以上，进行BLE扫描时，需要先申请到蓝牙权限后并且打开定位开关才能进行。</p> <p>开启蓝牙扫描需要首先打开蓝牙，如果未打开蓝牙就去扫描，APP会闪退。可通过BLETool.checkBluetooth(this)来判断蓝牙是否已经打开。如果没有打开，可以先打开蓝牙。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val mBleManager <span class="token operator">=</span> <span class="token class-name">PT100SensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        when <span class="token punctuation">(</span><span class="token class-name">BLETool</span><span class="token punctuation">.</span><span class="token function">checkBluetooth</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token annotation punctuation">@Mst01Pt100ScanDevicesListActivity</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">BluetoothState</span><span class="token punctuation">.</span><span class="token constant">BLE_NOT_SUPPORT</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token annotation punctuation">@Mst01Pt100ScanDevicesListActivity</span><span class="token punctuation">,</span> <span class="token string">&quot;Not Support BLE&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token constant">LENGTH_SHORT</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">BluetoothState</span><span class="token punctuation">.</span><span class="token constant">BLUETOOTH_OFF</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                val enableIntent <span class="token operator">=</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">BluetoothAdapter</span><span class="token punctuation">.</span><span class="token constant">ACTION_REQUEST_ENABLE</span><span class="token punctuation">)</span>
+                launcherActivityResultForBle<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>enableIntent<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">BluetoothState</span><span class="token punctuation">.</span><span class="token constant">BLUETOOTH_ON</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+
+               manager<span class="token punctuation">.</span><span class="token function">startScan</span><span class="token punctuation">(</span><span class="token class-name">ModuleMst01Pt100Application</span><span class="token punctuation">.</span><span class="token function">getApplication</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mApplication<span class="token punctuation">,</span> <span class="token number">5</span><span class="token operator">*</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">1000</span><span class="token punctuation">,</span>object <span class="token operator">:</span>                 					<span class="token class-name">OnScanDevicesResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PT100SensorEntity</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+            override fun <span class="token function">onScanResult</span><span class="token punctuation">(</span>scanList<span class="token operator">:</span> <span class="token class-name">MutableList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PT100SensorEntity</span><span class="token punctuation">&gt;</span></span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                
+            <span class="token punctuation">}</span>
+
+
+            override fun <span class="token function">onStopScan</span><span class="token punctuation">(</span>scanList<span class="token operator">:</span> <span class="token class-name">MutableList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PT100SensorEntity</span><span class="token punctuation">&gt;</span></span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>sdk内部并没有对蓝牙扫描时长进行处理，但是扫描是耗电操作，SDK默认5分钟就停止扫描了，如果还需要继续扫描，可以提供定时器或者刷新等操作以便继续调用扫描方法继续扫描设备。</p> <h4 id="取出数据"><a href="#取出数据" class="header-anchor">#</a> 取出数据</h4> <p>在扫描期间，APP能够通过sdk获取到设备当前的一部分数据。如下所示通过<code>PT100SensorEntity</code>获取设备温度传感器数据，该数据保存在广播帧对象中。</p> <p>sdk提供了<code>BaseBleDeviceEntity</code>作为<code>PT100SensorEntity</code>的基类，用于存储传感器设备的公有数据，如下表所示：</p> <table><thead><tr><th>名称</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>macAddress</td> <td>String</td> <td>设备mac</td></tr> <tr><td>name</td> <td>String</td> <td>设备名称</td></tr> <tr><td>rssi</td> <td>int</td> <td>信号强度</td></tr></tbody></table> <p><code>BaseBleDeviceEntity</code>还保存了一个Map，内部用于存储其在扫描期间获取到的设备广播数据帧，可通过如下方式取出：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val <span class="token keyword">module</span><span class="token operator">:</span><span class="token class-name">PT100SensorEntity</span>
+        val industrialHtFrame <span class="token operator">:</span> <span class="token class-name">IndustrialHtFrame</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">module</span><span class="token punctuation">.</span><span class="token function">getMinewFrame</span><span class="token punctuation">(</span><span class="token class-name">FrameType</span><span class="token punctuation">.</span><span class="token constant">INDUSTRIAL_TEMPERATURE_HUMIDITY_TAG_STATUS_V2_FRAME</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span>
+            it as <span class="token class-name">IndustrialHtFrame</span>
+        <span class="token punctuation">}</span>
+        val deviceStaticInfoFrame <span class="token operator">:</span> <span class="token class-name">DeviceStaticInfoFrame</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">module</span><span class="token punctuation">.</span><span class="token function">getMinewFrame</span><span class="token punctuation">(</span><span class="token class-name">FrameType</span><span class="token punctuation">.</span><span class="token constant">DEVICE_INFORMATION_FRAME</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span>
+            it as <span class="token class-name">DeviceStaticInfoFrame</span>
+        <span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>deviceInforFrame <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//设备mac地址</span>
+    val macAddress <span class="token operator">=</span> deviceInforFrame<span class="token punctuation">.</span>macAddress
+    <span class="token comment">//电量百分比</span>
+    val battery <span class="token operator">=</span> deviceInforFrame<span class="token punctuation">.</span>battery
+    <span class="token comment">//固件版本</span>
+    val firmwareVersion <span class="token operator">=</span> deviceInforFrame<span class="token punctuation">.</span>firmwareVersion
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>industrialHtFrame <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//传感器当前温度</span>
+    val temperature <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>temperature
+    val humidity <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>humidity
+	<span class="token comment">//单位 为0表示摄氏度，为1表示华氏度</span>
+    val unit <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>unit
+   	<span class="token comment">//type 0：ht,1:temp</span>
+    val temperature <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>type
+    <span class="token comment">//屏幕状态</span>
+    val screenStatus <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>screenStatus
+    <span class="token comment">//传感器状态</span>
+    val sensorStatus <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>sensorStatus
+        <span class="token comment">//标记状态</span>
+    val markStatus <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>markStatus
+        <span class="token comment">//传感器名称</span>
+    val deviceName <span class="token operator">=</span> combinationFrame<span class="token punctuation">.</span>deviceName
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><p>PT100温度传感器设备有2种广播帧类型。</p> <ol><li><p>设备静态信息帧</p> <ul><li><p>DeviceStaticInfoFrame</p> <table><thead><tr><th>名称</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>frameVersion</td> <td>int</td> <td>设备类型</td></tr> <tr><td>firmwareVersion</td> <td>String</td> <td>固件版本</td></tr> <tr><td>batteryLevel</td> <td>int</td> <td>电池电量百分比</td></tr> <tr><td>macAddress</td> <td>String</td> <td>固件mac</td></tr> <tr><td>peripheralSupportInfo</td> <td>PeripheralSupportInfo</td> <td>外设支持描述，包含设备产品id</td></tr></tbody></table></li></ul></li> <li><p>工业温湿度帧</p> <ul><li><p>IndustrialHtFrame</p> <table><thead><tr><th>名称</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>frameVersion</td> <td>int</td> <td>设备类型</td></tr> <tr><td>tempHumiVersion</td> <td>int</td> <td>pt100 温湿度帧版本</td></tr> <tr><td>type</td> <td>int</td> <td>传感器类型。0: 温湿度，1: 单温</td></tr> <tr><td>unit</td> <td>int</td> <td>温度单位 为0表示摄氏度，为1表示华氏度</td></tr> <tr><td>temperature</td> <td>float</td> <td>温度</td></tr> <tr><td>humidity</td> <td>float</td> <td>湿度</td></tr> <tr><td>deviceName</td> <td>String</td> <td>设备名称</td></tr> <tr><td>markStatus</td> <td>int</td> <td>标记状态，1标记，0正常</td></tr> <tr><td>screenStatus</td> <td>int</td> <td>屏幕状态： 1 屏幕异常，0正常</td></tr> <tr><td>sensorStatus</td> <td>int</td> <td>传感器状态： 1传感器异常，0正常</td></tr></tbody></table></li></ul></li></ol> <h3 id="连接"><a href="#连接" class="header-anchor">#</a> 连接</h3> <p>连接前一般需要先停止扫描。sdk提供了连接和断开连接方法。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val manager <span class="token operator">=</span> <span class="token class-name">PT100SensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">//停止扫描</span>
+manager<span class="token punctuation">.</span><span class="token function">stopScan</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+<span class="token comment">//设置设备秘钥</span>
+val key<span class="token operator">=</span><span class="token string">&quot;minewtech1234567&quot;</span>
+manager<span class="token punctuation">.</span><span class="token function">setSecretKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+<span class="token comment">//连接，module为准备连接的设备 </span>
+val <span class="token keyword">module</span><span class="token operator">:</span><span class="token class-name">PT100SensorEntity</span>
+manager<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token keyword">module</span><span class="token punctuation">)</span>
+<span class="token comment">//断开连接。macAddress为设备mac</span>
+manager<span class="token punctuation">.</span><span class="token function">disConnect</span><span class="token punctuation">(</span>macAddress<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>注意：连接设备前，请确认是否扫描到设备，如果没扫描到设备广播，调用连接方法，将连接失败。</p> <p>在调用<code>connect()</code>后，sdk中会对连接过程会有状态监听。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val manager <span class="token operator">=</span> <span class="token class-name">PT100SensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+manager<span class="token punctuation">.</span>setOnConnStateListener <span class="token punctuation">{</span> macAddress<span class="token punctuation">,</span> bleConnectionState <span class="token operator">-&gt;</span> 
+              when <span class="token punctuation">(</span>it<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>Connecting</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Connecting&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>Connected</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Connected&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>AuthenticateSuccess</span> <span class="token operator">-&gt;</span><span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;AuthenticateSuccess&quot;</span><span class="token punctuation">)</span>
+					<span class="token comment">//秘钥检验成功。</span>
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>AuthenticateFail</span> <span class="token operator">-&gt;</span><span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;AuthenticateFail&quot;</span><span class="token punctuation">)</span>
+                    <span class="token comment">//秘钥检验失败。</span>
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>ConnectComplete</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//连接完成，此时设备可进行读写操作</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ConnectComplete&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>Disconnect</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//连接失败或者设备断开连接会回调</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Disconnect&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>               
+                               
+                               <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><p>在连接过程中，sdk会返回多个连接状态到app中，app需要做好处理。</p> <ul><li><strong>BleConnectionState.Connecting</strong>，<strong>BleConnectionState.Connected</strong>: 连接设备中，在这里状态下不要做耗时操作，因为此时在连接设备发现服务，并发送认证数据等。</li> <li><strong>BleConnectionState.ConnectComplete</strong>: 此时传感器设备已经连接成功，可以进行读写操作，比如配置广播参数、传感器配置、读取历史数据等。</li> <li><strong>BleConnectionState.AuthenticateFail</strong>：认证过程中校验秘钥，输入的秘钥不正确，将回调这个状态并且设备主动断开连接。</li> <li><strong>BleConnectionState.AuthenticateSuccess</strong>：认证过程中校验秘钥，输入的秘钥正确，将回调这个状态。</li> <li><strong>BleConnectionState.Disconnect</strong>: 连接失败或者设备断开连接会回调。</li></ul> <h3 id="读写"><a href="#读写" class="header-anchor">#</a> 读写</h3> <p>读写API如下：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token comment">/**
+     * 设置设备秘钥
+     * @param macAddress 设备mac
+     * @param secretKey 秘钥key
+     * @param listener
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setDeviceSecretKey</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">String</span> secretKey<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">/**
+     * 查询设备版本信息
+     * @param macAddress 设备mac
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">queryDeviceFirmwareInfo</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FirmwareVersionModel</span><span class="token punctuation">&gt;</span></span>  listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 读取历史数据
+     *
+     * @param macAddress 设备mac
+     * @param startTime 起始时间戳 单位：秒
+     * @param endTime 结束时间戳 单位：秒
+     * @param systemTime 实时时间戳 单位：秒
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">queryHistoryData</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span><span class="token keyword">long</span> startTime<span class="token punctuation">,</span><span class="token keyword">long</span> endTime<span class="token punctuation">,</span><span class="token keyword">long</span> systemTime<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HistoryHtData</span><span class="token punctuation">&gt;</span></span>  listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+
+    <span class="token comment">/**
+     * 查询广播帧广播参数
+     * @param macAddress 设备mac
+     * @param slot 查询广播的通道值，默认值0
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">queryAdvParametersConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span><span class="token keyword">int</span> slot<span class="token punctuation">,</span>  <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AdvParametersConfiguration</span><span class="token punctuation">&gt;</span></span>  listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 设置广播帧广播参数
+     *
+     * @param macAddress 设备mac
+     * @param frameType FrameType枚举获取
+     * @param slotNumber 设置广播对应的通道值
+     * @param advertisingInterval 广播间隔 单位毫秒,广播间隔 1s ~ 60s 可调，刻度为 1s；
+     * @param isAlwaysAdv 是否持续广播，0：持续广播，1：触发广播；
+     * @param txPower -40 -20 -16 -12 -8 -4 0 4dBm
+     * @param advertisingName 工业温湿度帧传，设置信息帧不需要传，
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setAdvParametersConfiguration</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> frameType<span class="token punctuation">,</span> <span class="token keyword">int</span> slotNumber<span class="token punctuation">,</span> <span class="token keyword">int</span> advertisingInterval<span class="token punctuation">,</span> <span class="token keyword">int</span> isAlwaysAdv<span class="token punctuation">,</span> <span class="token keyword">int</span> txPower<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">String</span> advertisingName<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+    <span class="token comment">/**
+     * 设置温度单位
+     *
+     * @param macAddress 设备mac
+     * @param unit 1华氏，0摄氏
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setTemperatureUnit</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token keyword">int</span> unit<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 读取温度单位
+     *
+     * @param macAddress 设备mac
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">queryTemperatureUnit</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span>  <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">/**
+     * 设置工业温湿度传感器配置
+     *
+     * @param macAddress 设备mac
+     * @param htSettingData 触发阈值list 固定长度2
+     * @param samplingInterval 采样间隔 单位秒
+     * @param delayRecordInterval 延迟记录间隔 单位秒
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setHTSensorConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HTSensorThresholdConfig</span><span class="token punctuation">&gt;</span></span> htSettingData<span class="token punctuation">,</span> <span class="token keyword">int</span> samplingInterval<span class="token punctuation">,</span><span class="token keyword">int</span> delayRecordInterval<span class="token punctuation">,</span><span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 查询温湿度传感器配置
+     *
+     * @param macAddress 设备mac
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">queryHTSensorConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HtSensorConfiguration</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">/**
+     * 固件升级
+     *
+     * @param macAddress  设备mac
+     * @param isLinkUpgrade true url升级，false 固件包升级。默认值false,不支持url升级方式
+     * @param dfuTarget isLinkUpgrade =true, dfuTarget = 0
+     * @param upgradeData 升级包数据
+     * @param listener    监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span><span class="token keyword">boolean</span> isLinkUpgrade<span class="token punctuation">,</span><span class="token keyword">int</span> dfuTarget<span class="token punctuation">,</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> upgradeData<span class="token punctuation">,</span> 		 <span class="token class-name">OnFirmwareUpgradeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">/**String macAddress
+     * 恢复出厂设置
+     *
+     * @param macAddress 设备mac
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 关机
+     * @param macAddress 设备mac
+     * @param listener   监听器
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">powerOff</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 校验OTA升级文件的正确性
+     * @param zipFilePath ota升级文件路径
+     * @return true=升级文件，false= 不是升级文件
+     */</span>
+    <span class="token keyword">boolean</span> <span class="token function">verifyOtaFile</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> zipFilePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br></div></div><p>对部分方法进行补充说明：</p> <ol><li><p>设置设备秘钥。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val manager <span class="token operator">=</span> <span class="token class-name">PT100SensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+val secretKey <span class="token operator">=</span> <span class="token string">&quot;minewtech1234567&quot;</span>
+manager<span class="token punctuation">.</span><span class="token function">setSecretKey</span><span class="token punctuation">(</span>mAddress<span class="token punctuation">,</span>secretKey<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>查询设备版本信息。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>
+   
+    suspend fun <span class="token function">queryFirmwareInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">FirmwareVersionModel</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FirmwareVersionModel</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+            manager<span class="token punctuation">.</span><span class="token function">queryDeviceFirmwareInfo</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> isSuccessful<span class="token punctuation">,</span> version <span class="token operator">-&gt;</span>
+                continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>
+                    when <span class="token punctuation">(</span>isSuccessful<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token boolean">true</span> <span class="token operator">-&gt;</span> version
+                        <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token keyword">null</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">null</span>
+                <span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></li> <li><p>查询设置设备温度</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    //1华氏温度，2摄氏温度
+    
+    suspend fun queryTemperatureUnit(): Int = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext 0
+        }
+        return@withContext suspendCancellableCoroutine&lt;Int&gt; { continuation -&gt;
+            manager.queryTemperatureUnit(connectMacAddress!!) { _, unit -&gt;
+                continuation.resume(unit, null)
+            }
+        }
+    }
+
+    suspend fun setTemperatureUnit(tempUnit: Int): Boolean = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext false
+        }
+        return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+            manager.setTemperatureUnit(connectMacAddress!!, tempUnit) { result -&gt;
+                continuation.resume(result, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div></li> <li><p>查询广播帧广播参数和配置广播参数。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>
+<span class="token comment">//slot = 0 DeviceStaticInfoFrame 、slot = 1 IndustrialHtFrame</span>
+    <span class="token comment">/**
+     * 读取广播参数配置
+     * @return Boolean
+     */</span>
+    suspend fun <span class="token function">queryAdvertisingParametersConfiguration</span><span class="token punctuation">(</span>slot<span class="token operator">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">AdvParametersConfig</span><span class="token operator">?</span> <span class="token operator">=</span>
+        <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token keyword">null</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AdvParametersConfig</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+                manager<span class="token punctuation">.</span><span class="token function">queryAdvParametersConfiguration</span><span class="token punctuation">(</span>
+                    connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">,</span>
+                    slot
+                <span class="token punctuation">)</span> <span class="token punctuation">{</span> isSuccessful<span class="token punctuation">,</span> configResult <span class="token operator">-&gt;</span>
+
+                    continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>
+                        when <span class="token punctuation">(</span>isSuccessful<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token boolean">true</span> <span class="token operator">-&gt;</span> configResult
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token keyword">null</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">null</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置广播参数配置
+     * @return Boolean
+     */</span>
+    suspend fun <span class="token function">setAdvertisingParametersConfiguration</span><span class="token punctuation">(</span>slot<span class="token operator">:</span><span class="token class-name">Int</span><span class="token punctuation">,</span>frameType<span class="token operator">:</span> <span class="token class-name">String</span><span class="token punctuation">,</span>advertisingInterval<span class="token operator">:</span><span class="token class-name">Int</span><span class="token punctuation">,</span> txPower<span class="token operator">:</span><span class="token class-name">Int</span><span class="token punctuation">,</span>isAlwaysAdv<span class="token operator">:</span><span class="token class-name">Int</span><span class="token punctuation">,</span>advertisingName<span class="token operator">:</span><span class="token class-name">String</span><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">Boolean</span> <span class="token operator">=</span>
+        <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token boolean">false</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+                manager<span class="token punctuation">.</span><span class="token function">setAdvParametersConfiguration</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">,</span>frameType<span class="token punctuation">,</span>slot<span class="token punctuation">,</span>advertisingInterval<span class="token punctuation">,</span>isAlwaysAdv<span class="token punctuation">,</span>txPower<span class="token punctuation">,</span>advertisingName<span class="token punctuation">)</span> <span class="token punctuation">{</span> isSuccess <span class="token operator">-&gt;</span>
+                    continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>isSuccess<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div></li> <li><p>查询温度历史数据</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 读取历史数据
+     *
+     * @param macAddress 设备mac
+     * @param startTime 起始时间戳 单位：秒
+     * @param endTime 结束时间戳 单位：秒
+     * @param systemTime 实时时间戳 单位：秒
+     * @return HistoryHtData   温度数据
+     */
+    suspend fun readHistoryData(startTime:Long,endTime:Long,systemTime:Long): HistoryHtData?=
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext null
+            }
+            return@withContext suspendCancellableCoroutine&lt;HistoryHtData?&gt; { continuation -&gt;
+                manager.queryHistoryData(connectMacAddress!!,startTime,endTime,systemTime) { result,historyData -&gt;
+                    continuation.resume(historyData, null)
+                }
+            }
+        }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div></li> <li><p>查询传感器参数和配置传感器参数。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//查询传感器参数</span>
+    <span class="token keyword">private</span> fun <span class="token function">queryHTSensorConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        lifecycleScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Main</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_configing<span class="token punctuation">)</span>
+            val htSensorConfiguration <span class="token operator">=</span>
+                mConnectViewModel<span class="token punctuation">.</span><span class="token function">queryHTSensorConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            mHtSensorConfiguration <span class="token operator">=</span> htSensorConfiguration
+            <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            val sb <span class="token operator">=</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            htSensorConfiguration<span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span>
+                <span class="token comment">//2组温度阈值数据</span>
+                val htSettingData <span class="token operator">=</span> it<span class="token punctuation">.</span>htSettingData
+                <span class="token comment">//温度报警1</span>
+                val temp1Status <span class="token operator">=</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lowTemperature <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">32768f</span> <span class="token operator">&amp;&amp;</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>highTemperature <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">32768f</span>
+                val temp2Status <span class="token operator">=</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lowTemperature <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">32768f</span> <span class="token operator">&amp;&amp;</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>highTemperature <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">32768f</span>
+                when <span class="token punctuation">(</span>temp1Status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token boolean">true</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                        val temperatureAlarmLow1 <span class="token operator">=</span> when <span class="token punctuation">(</span>settingTemperatureUnit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token number">1</span> <span class="token operator">-&gt;</span> <span class="token function">getF</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lowTemperature<span class="token punctuation">)</span>
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lowTemperature
+                        <span class="token punctuation">}</span>
+                        val temperatureAlarmHigh1 <span class="token operator">=</span> when <span class="token punctuation">(</span>settingTemperatureUnit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token number">1</span> <span class="token operator">-&gt;</span> <span class="token function">getF</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>highTemperature<span class="token punctuation">)</span>
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>highTemperature
+                        <span class="token punctuation">}</span>
+
+                        val temp1Group <span class="token operator">=</span> when <span class="token punctuation">(</span>settingTemperatureUnit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token number">1</span> <span class="token operator">-&gt;</span> <span class="token string">&quot;${temperatureAlarmLow1}°F ~ ${temperatureAlarmHigh1}°F&quot;</span>
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token string">&quot;${temperatureAlarmLow1}°C ~ ${temperatureAlarmHigh1}°C&quot;</span>
+                        <span class="token punctuation">}</span>
+                        sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;temp1Group=${temp1Group},\n&quot;</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                        val temp1Group <span class="token operator">=</span> <span class="token string">&quot;~~&quot;</span>
+                        sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;temp1Group=${temp1Group},\n&quot;</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                when <span class="token punctuation">(</span>temp2Status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token boolean">true</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                        val temperatureAlarmLow2 <span class="token operator">=</span> when <span class="token punctuation">(</span>settingTemperatureUnit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token number">1</span> <span class="token operator">-&gt;</span> <span class="token function">getF</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lowTemperature<span class="token punctuation">)</span>
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>lowTemperature
+                        <span class="token punctuation">}</span>
+                        val temperatureAlarmHigh2 <span class="token operator">=</span> when <span class="token punctuation">(</span>settingTemperatureUnit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token number">1</span> <span class="token operator">-&gt;</span> <span class="token function">getF</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>highTemperature<span class="token punctuation">)</span>
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>highTemperature
+                        <span class="token punctuation">}</span>
+                        val temp2Group <span class="token operator">=</span> when <span class="token punctuation">(</span>settingTemperatureUnit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token number">1</span> <span class="token operator">-&gt;</span> <span class="token string">&quot;${temperatureAlarmLow2}°F ~ ${temperatureAlarmHigh2}°F&quot;</span>
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token string">&quot;${temperatureAlarmLow2}°C ~ ${temperatureAlarmHigh2}°C&quot;</span>
+                        <span class="token punctuation">}</span>
+                        sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;temp2Group=${temp2Group},\n&quot;</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                        val temp2Group <span class="token operator">=</span> <span class="token string">&quot;~~&quot;</span>
+                        sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;temp2Group=${temp2Group},\n&quot;</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">//采集间隔。单位秒</span>
+                val samplingInterval <span class="token operator">=</span> it<span class="token punctuation">.</span>samplingInterval
+                <span class="token comment">//延迟记录时间。单位秒.</span>
+                val delayRecordTimeStamp <span class="token operator">=</span> it<span class="token punctuation">.</span>delay
+                sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;samplingInterval=${samplingInterval},\n&quot;</span><span class="token punctuation">)</span>
+                sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;delayRecordTimeStamp=${delayRecordTimeStamp},\n&quot;</span><span class="token punctuation">)</span>
+                <span class="token class-name">MessageDialog</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_tips<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">&quot;SensorConfiguration = ${sb.toString()}&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    suspend fun <span class="token function">queryHTSensorConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">HtSensorConfiguration</span><span class="token operator">?</span> <span class="token operator">=</span>
+        <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token keyword">null</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HtSensorConfiguration</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+                manager<span class="token punctuation">.</span><span class="token function">queryHTSensorConfiguration</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> isSuccessful<span class="token punctuation">,</span> configResult <span class="token operator">-&gt;</span>
+
+                    continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>
+                        when <span class="token punctuation">(</span>isSuccessful<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token boolean">true</span> <span class="token operator">-&gt;</span> configResult
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token keyword">null</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">null</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+<span class="token comment">//设置传感器参数</span>
+<span class="token comment">//2组温度阈值范围[-200,200],单位摄氏度。华氏范围自行换算，调用getF()。</span>
+    <span class="token keyword">private</span> fun <span class="token function">setHTSensorConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        lifecycleScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Main</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            mHtSensorConfiguration<span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_configing<span class="token punctuation">)</span>
+                val result <span class="token operator">=</span> mConnectViewModel<span class="token punctuation">.</span><span class="token function">setHTSensorConfiguration</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>htSettingData<span class="token punctuation">,</span>it<span class="token punctuation">.</span>samplingInterval<span class="token punctuation">,</span>it<span class="token punctuation">.</span>delay<span class="token punctuation">)</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token class-name">ToastUtils</span><span class="token punctuation">.</span><span class="token function">showShort</span><span class="token punctuation">(</span><span class="token function">when</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token boolean">true</span> <span class="token operator">-&gt;</span> <span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_config_success
+                    <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_config_fail
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> fun <span class="token function">getF</span><span class="token punctuation">(</span>t<span class="token operator">:</span> <span class="token class-name">Float</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">Float</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> t <span class="token operator">*</span> <span class="token number">1.8f</span> <span class="token operator">+</span> <span class="token number">32</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br></div></div></li> <li><p>固件升级。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>
+    <span class="token keyword">private</span> fun <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>
+        fileByte<span class="token operator">:</span> <span class="token class-name">ByteArray</span><span class="token punctuation">,</span>
+        dfuTarget<span class="token operator">:</span> <span class="token class-name">Int</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        mConnectViewModel<span class="token punctuation">.</span><span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>dfuTarget<span class="token punctuation">,</span> fileByte<span class="token punctuation">,</span>
+            progressCallBack <span class="token operator">=</span> <span class="token punctuation">{</span> progress <span class="token operator">-&gt;</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_upgrading<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>progress <span class="token operator">/</span> <span class="token number">100f</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                binding<span class="token punctuation">.</span>progressBarSimpleCustom<span class="token punctuation">.</span>progress <span class="token operator">=</span> progress<span class="token punctuation">.</span><span class="token function">toFloat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            successCallBack <span class="token operator">=</span> <span class="token punctuation">{</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token class-name">ToastUtils</span><span class="token punctuation">.</span><span class="token function">showShort</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_firmware_upgrade_successfully<span class="token punctuation">)</span>
+                <span class="token function">finishPageForResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            failCallBack <span class="token operator">=</span> <span class="token punctuation">{</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token class-name">ToastUtils</span><span class="token punctuation">.</span><span class="token function">showShort</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_firmware_upgrade_failure2<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    fun <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>
+        dfuTarget<span class="token operator">:</span> <span class="token class-name">Int</span><span class="token punctuation">,</span>
+        fileByte<span class="token operator">:</span> <span class="token class-name">ByteArray</span><span class="token punctuation">,</span>
+        progressCallBack<span class="token operator">:</span><span class="token punctuation">(</span>progress<span class="token operator">:</span><span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Unit</span><span class="token punctuation">,</span>
+        successCallBack<span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Unit</span><span class="token punctuation">,</span>
+        failCallBack<span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Unit</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">{</span>
+        manager<span class="token punctuation">.</span><span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span>dfuTarget<span class="token punctuation">,</span>fileByte<span class="token punctuation">,</span>
+            object <span class="token operator">:</span> <span class="token class-name">OnFirmwareUpgradeListener</span> <span class="token punctuation">{</span>
+                override fun <span class="token function">updateProgress</span><span class="token punctuation">(</span>progress<span class="token operator">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">progressCallBack</span><span class="token punctuation">(</span>progress<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+
+                override fun <span class="token function">upgradeSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">successCallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+
+                override fun <span class="token function">upgradeFailed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">failCallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div></li> <li><p>恢复出厂设置</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    suspend fun reset(): Boolean = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext false
+        }
+        return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+            manager.reset(connectMacAddress!!) {
+                continuation.resume(it, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></li> <li><p>关机。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    suspend fun <span class="token function">shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">Boolean</span> <span class="token operator">=</span> <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+            manager<span class="token punctuation">.</span><span class="token function">powerOff</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>it<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></li></ol> <h2 id="历史记录"><a href="#历史记录" class="header-anchor">#</a> 历史记录</h2> <ul><li>**2024/10/12  添加编辑文档；</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新::</span> <span class="time">2025/9/10 20:33:57</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/106.a3d11e42.js" defer></script>
+  </body>
+</html>

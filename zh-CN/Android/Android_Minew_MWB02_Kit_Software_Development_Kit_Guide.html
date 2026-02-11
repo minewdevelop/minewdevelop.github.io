@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewMWB02Kit 说明文档 | 移动SDK文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="汇集 MBeacon, BeaconPlus, MSensor 等产品的移动SDK文档.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/113.e8cff9ce.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/106.a3d11e42.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/18.6db3ccbb.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/45.a58e8a25.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.ca9adaaf.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/68.8866be89.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.a4692fcf.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/75.723e0570.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="移动SDK文档" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewMWB02Kit 说明文档</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#前期工作" class="sidebar-link">前期工作</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#导入到工程" class="sidebar-link">导入到工程</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#android-6-0-系统以上-进行-ble-扫描时-需要先申请到蓝牙权限后并且打开定位开关才能进行。" class="sidebar-link">Android 6.0 系统以上，进行 BLE 扫描时，需要先申请到蓝牙权限后并且打开定位开关才能进行。</a></li><li class="sidebar-sub-header"><a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#连接" class="sidebar-link">连接</a></li><li class="sidebar-sub-header"><a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#设备配置读取写入操作" class="sidebar-link">设备配置读取写入操作</a></li></ul></li><li><a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#文档更新记录" class="sidebar-link">文档更新记录</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="minewmwb02kit-说明文档"><a href="#minewmwb02kit-说明文档" class="header-anchor">#</a> MinewMWB02Kit 说明文档</h1> <p>本套 SDK 仅支持 Minew 公司出品的蓝牙设备。</p> <p>通过 SDK 可以帮助开发者处理手机和蓝牙设备之间的一切工作，包括：扫描设备，广播数据、连接设备，向设备写入数据，从设备接收数据等。</p> <p>目前 SDK 仅支持 佩戴式SOS按钮设备使用。</p> <h2 id="前期工作"><a href="#前期工作" class="header-anchor">#</a> 前期工作</h2> <p>整体框架：<code>MWB02BleManager</code> 为设备管理类，在 APP 运行时始终是单例。<code>MWB02Model</code> 是设备实例类，此套件会为每一个设备生成一个实例，在扫描和连接后都会使用，内部包含设备广播数据，在扫描期间该数据会随着设备不停广播而更新。</p> <p><code>MWB02BleManager</code>  ：设备管理类，可以扫描周围的设备，并且可以连接它们，校验它们等</p> <p><code>MWB02Model</code>  ：扫描时获取到的 4G 智能工牌设备实例，继承自 <code>BaseBleDeviceEntity</code></p> <h2 id="导入到工程"><a href="#导入到工程" class="header-anchor">#</a> 导入到工程</h2> <ol><li><p>开发环境</p> <p>SDK 最低支持 Android 5.0，对应 API Level 为 21 。在 module 的 <code>build.gradle</code> 中设置 <code>minSdkVersion</code> 为 21 或 21 以上 :</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>android <span class="token punctuation">{</span>
+    defaultConfig <span class="token punctuation">{</span>
+        applicationId <span class="token interpolation-string"><span class="token string">&quot;com.xxx.xxx&quot;</span></span>
+        minSdkVersion <span class="token number">21</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>将  jar  包添加到 module 的 libs 文件夹下，并在该 <code>module</code>  的 <code>build.gradle</code>  中添加如下语句（直接添加依赖）：</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/lib_ble_base.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/lib_ble_mwb02.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/lib_ble_nl.jar'</span><span class="token punctuation">)</span>
+api <span class="token string">'org.lucee:bcprov-jdk15on:1.52.0'</span>
+api <span class="token string">'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.16.0'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol> <p>或者右键该 jar 文件，选择 <code>Add as Library</code> ，添加到当前module。</p> <p>添加 .so 库文件，App 目录下   <code>build.gradle</code>   添加如下配置：</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>   android <span class="token punctuation">{</span>
+       defaultConfig <span class="token punctuation">{</span>
+           ndk <span class="token punctuation">{</span>
+               abiFilters <span class="token string">'armeabi-v7a'</span><span class="token punctuation">,</span><span class="token string">'arm64-v8a'</span><span class="token punctuation">,</span><span class="token string">'x86'</span><span class="token punctuation">,</span><span class="token string">'x86_64'</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+       sourceSets <span class="token punctuation">{</span>
+           main <span class="token punctuation">{</span>
+               jniLibs<span class="token punctuation">.</span>srcDirs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'libs'</span><span class="token punctuation">]</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ol start="3"><li><p>在<code>AndroidManifest.xml</code>需要以下权限，如果<code>targetSdkVersion</code>大于23，则需要做<strong>权限管理</strong>以获取权限：</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADMIN<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_SCAN<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADVERTISE<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_CONNECT<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_FINE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_COARSE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_BACKGROUND_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_IMAGES<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_AUDIO<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_VIDEO<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.WRITE_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li></ol> <p>​</p> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <p>SDK 分为扫描、连接和读写三个阶段。</p> <h3 id="android-6-0-系统以上-进行-ble-扫描时-需要先申请到蓝牙权限后并且打开定位开关才能进行。"><a href="#android-6-0-系统以上-进行-ble-扫描时-需要先申请到蓝牙权限后并且打开定位开关才能进行。" class="header-anchor">#</a> Android 6.0 系统以上，进行 BLE 扫描时，需要先申请到蓝牙权限后并且打开定位开关才能进行。</h3> <h4 id="开始扫描"><a href="#开始扫描" class="header-anchor">#</a> 开始扫描</h4> <p>Android6.0 系统以上，进行 BLE 扫描时，需要先申请到蓝牙权限后并且打开定位开关才能进行。</p> <p>开启蓝牙扫描需要首先打开蓝牙，如果未打开蓝牙就去扫描，APP 会闪退。可通过 BLETool.checkBluetooth(this) 来判断蓝牙是否已经打开。如果没有打开，可以先打开蓝牙。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">MWB02BleManager</span> mBleManager <span class="token operator">=</span> <span class="token class-name">MWB02BleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token class-name">BLETool</span><span class="token punctuation">.</span><span class="token function">checkBluetooth</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token constant">BLE_NOT_SUPPORT</span><span class="token operator">:</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">&quot;Not Support BLE&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token constant">LENGTH_SHORT</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token constant">BLUETOOTH_ON</span><span class="token operator">:</span>
+		<span class="token comment">//设置扫描时长5分钟，sdk默认扫描时长5分钟</span>
+		mBleManager<span class="token punctuation">.</span><span class="token function">startScan</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnScanDevicesResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MWB02Model</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onScanResult</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MWB02Model</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStopScan</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MWB02Model</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token constant">BLUETOOTH_OFF</span><span class="token operator">:</span>
+        <span class="token class-name">Intent</span> enableIntent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">BluetoothAdapter</span><span class="token punctuation">.</span><span class="token constant">ACTION_REQUEST_ENABLE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">startActivityForResult</span><span class="token punctuation">(</span>enableIntent<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>在扫描期间 APP 能够通过 sdk 获取到设备当前的一部分数据。如下所示通过 <code>MWB02Model</code>  获取设备数据，该数据保存在广播帧对象中。</p> <p>SDK 提供了 <code>BaseBleDeviceEntity</code> 作为  <code>MWB02Model</code>  的基类，用于存储设备的公有数据，如下表所示：</p> <table><thead><tr><th>名称</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>macAddress</td> <td>String</td> <td>设备mac</td></tr> <tr><td>name</td> <td>String</td> <td>设备名称</td></tr> <tr><td>rssi</td> <td>int</td> <td>信号强度</td></tr></tbody></table> <p><code>BaseBleDeviceEntity</code>  还保存了一个 <code>BaseNanoLinkFrame</code>，内部用于存储其在扫描期间获取到的设备广播数据帧，可通过如下方式取出：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">MWB02Model</span> <span class="token keyword">module</span><span class="token punctuation">;</span>
+<span class="token class-name">MWB02AdvFrame</span> mwb02AdvFrame <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">MWB02AdvFrame</span><span class="token punctuation">)</span> <span class="token keyword">module</span><span class="token punctuation">.</span><span class="token function">getNanoLinkFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>mwb02AdvFrame <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//mac 地址</span>
+    <span class="token class-name">String</span> macAddress <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getMac</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//deviceName 设备名称</span>
+    <span class="token class-name">String</span> deviceName <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getDeviceName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//firmwareVersion 版本号</span>
+    <span class="token class-name">String</span> firmwareVersion <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getFirmwareVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//battery 电量百分比，默认：Integer.MIN_VALUE 表示未获取到电量</span>
+    <span class="token keyword">int</span> battery <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getBattery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//motion 移动状态: 0 移动中  1 静止</span>
+    <span class="token keyword">int</span> motion <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getMotion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//SOS 模式 :0 设备未进入 SOS 模式 ,1 设备正处于 SOS 模式</span>
+    <span class="token keyword">int</span> modeSos <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getModeSos</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>佩戴式SOS按钮设备有 1 种广播帧类型。</p> <ol><li><p>设备帧</p> <ul><li><p>MWB02AdvFrame</p> <table><thead><tr><th>名称</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>mac</td> <td>String</td> <td>固件mac</td></tr> <tr><td>deviceName</td> <td>String</td> <td>设备名称</td></tr> <tr><td>firmwareVersion</td> <td>String</td> <td>版本号</td></tr> <tr><td>battery</td> <td>int</td> <td>电量百分比，默认：Integer.MIN_VALUE 表示未获取到电量</td></tr> <tr><td>motion</td> <td>int</td> <td>移动状态: 0 移动中  1 静止</td></tr> <tr><td>modeSos</td> <td>int</td> <td>SOS 模式 :0 设备未进入 SOS 模式 ,1 设备正处于 SOS 模式</td></tr></tbody></table></li></ul></li></ol> <h3 id="连接"><a href="#连接" class="header-anchor">#</a> 连接</h3> <p>连接前一般需要先停止扫描 ，SDK 提供了连接和断开连接方法。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">MWB02BleManager</span> mBleManager <span class="token operator">=</span> <span class="token class-name">MWB02BleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//停止扫描</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">stopScan</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//连接 ： module 为准备连接的设备 </span>
+<span class="token class-name">MWB02Model</span> <span class="token keyword">module</span><span class="token punctuation">;</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token keyword">module</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//断开连接 ：macAddress 为设备 mac</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">disConnect</span><span class="token punctuation">(</span>macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>注意：连接设备前，请确认是否扫描到设备，如果没扫描到设备广播，调用连接方法，将连接失败。</p> <p>在调用 <code>connect()</code> 后，SDK 中会对连接过程会有状态监听。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//设置监听器</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">setOnConnStateListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OnConnStateListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/*
+     * 连接过程中的状态回调
+     * @param macAddress      设备mac
+     * @param BleConnectionState 状态
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onUpdateConnState</span><span class="token punctuation">(</span><span class="token class-name">String</span> address<span class="token punctuation">,</span> <span class="token class-name">BleConnectionState</span> state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token class-name">Connecting</span><span class="token operator">:</span>
+				<span class="token comment">//调用connect()后就会回调该状态</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Connected</span><span class="token operator">:</span>
+                <span class="token comment">//初步连接成功，作为一个过渡阶段，此时并未真正成功</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Bond_None</span><span class="token operator">:</span>
+				<span class="token comment">//设备配对回调，此处为无效配对状态</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Bond_Bonding</span><span class="token operator">:</span>
+				<span class="token comment">//设备配对回调，此处为正在配对状态</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Bond_Bonded</span><span class="token operator">:</span>
+				<span class="token comment">//设备配对回调，此处为配对完成状态</span>
+                <span class="token comment">//设备配对完成，才能通过 MWB02BleManager 中提供的方法操作设备</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">ConnectComplete</span><span class="token operator">:</span>
+				<span class="token comment">//设备连接完成，才能通过 MWB02BleManager 中提供的方法操作设备</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Disconnect</span><span class="token operator">:</span>
+				<span class="token comment">//连接失败或者设备断开连接会回调，主动断开不会回调该状态</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">default</span><span class="token operator">:</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>在连接过程中，sdk会返回多个连接状态到app中，app需要做好处理。</p> <ul><li><strong>BleConnectionState.Connecting</strong>，<strong>BleConnectionState.Connected</strong>: 连接设备中，在这里状态下不要做耗时操作，因为此时在连接设备发现服务，并发送认证数据等。</li> <li><strong>BleConnectionState.Bond_None</strong>:  设备配对无效状态。</li> <li><strong>BleConnectionState.Bond_Bonding</strong>:  设备正在配对状态。</li> <li><strong>BleConnectionState.Bond_Bonded</strong>:  设备配对完成状态，才能通过 MWB02BleManager 中提供的方法操作设备。</li> <li><strong>BleConnectionState.ConnectComplete</strong>: 设备已经连接成功，可以进行读写操作，比如配置广播参数、读取历史数据等。</li> <li><strong>BleConnectionState.Disconnect</strong>: 连接失败或者设备断开连接会回调。</li></ul> <h3 id="设备配置读取写入操作"><a href="#设备配置读取写入操作" class="header-anchor">#</a> 设备配置读取写入操作</h3> <p>设备配置读取写入操作 API 如下，使用 MWB02BleManager mBleManager = 	MWB02BleManager.getInstance() 对象调用完成：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token comment">/**
+     * 清空扫描设备列表
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">clearScanResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 设置默认扫描时长
+     *
+     * @param scanTime 扫描时长，单位为 ms
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">setDefaultScanTime</span><span class="token punctuation">(</span><span class="token keyword">int</span> scanTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 开始扫描设备
+     *
+     * @param context 上下文
+     * @param listener 监听器
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">startScan</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">OnScanDevicesResultListener</span> listener<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 开始扫描设备
+     *
+     * @param context 上下文
+     * @param scanTime 扫描时长，单位 ms
+     * @param listener 监听器
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">startScan</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token keyword">int</span> scanTime<span class="token punctuation">,</span> <span class="token class-name">OnScanDevicesResultListener</span> listener<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 停止扫描设备
+     *
+     * @param context 上下文
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">stopScan</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 判断是否正在扫描
+     *
+     */</span>
+     <span class="token keyword">boolean</span> <span class="token function">isScanning</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 恢复出厂设置
+     *
+     * @param macAddress 设备mac
+     * @param listener 监听器
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 关机
+     *
+     * @param macAddress 设备mac
+     * @param listener 监听器
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">powerOff</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 重启
+     *
+     * @param macAddress 设备mac
+     * @param listener 监听器
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">reboot</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 连接设备
+     *
+     * @param context 上下文
+     * @param macAddress 设备mac
+     */</span>
+	 <span class="token keyword">void</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 连接设备
+     *
+     * @param context 上下文
+     * @param module 设备实体
+     */</span>
+	 <span class="token keyword">void</span> <span class="token keyword">void</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">MWC03Model</span> <span class="token keyword">module</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 断开连接
+     *
+     * @param macAddress 设备mac
+     */</span>
+	 <span class="token keyword">void</span> <span class="token keyword">void</span> <span class="token function">disConnect</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 设置设备连接监听器
+     *
+     * @param listener 监听器
+     */</span>
+	<span class="token keyword">void</span> <span class="token function">setOnConnStateListener</span><span class="token punctuation">(</span><span class="token class-name">OnConnStateListener</span> listener<span class="token punctuation">)</span>
+
+    <span class="token comment">/**
+     * 设备固件升级
+     *
+     * @param context  上下文对象
+     * @param macAddress  设备mac
+     * @param isLinkUpgrade ：true url升级，false 固件包升级。默认值false,不支持url升级方式
+     * @param filePath OTA文件路径，url升级时可为null
+     * @param upgradeData OTA数据,url升级时可为null
+     * @param fileUpgradeTarget 升级固件目标，OTA数据,默认 fileUpgradeTarget=&quot;main&quot;，链接升级方式无需修改，只有文件升级方式需要填入
+     * @param linkUpgradeTarget 升级固件目标，OTA数据,默认 linkUpgradeTarget=&quot;app&quot;，文件升级方式无需修改，只有链接升级方式需要填入
+     * @param listener 监听器
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLinkUpgrade<span class="token punctuation">,</span> <span class="token class-name">String</span> filePath<span class="token punctuation">,</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> upgradeData<span class="token punctuation">,</span> <span class="token class-name">String</span> fileUpgradeTarget<span class="token punctuation">,</span><span class="token class-name">String</span> linkUpgradeTarget<span class="token punctuation">,</span> <span class="token class-name">OnFirmwareUpgradeListener</span> listener<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 查询固件版本
+     *
+     * @param macAddress 设备mac
+     * @param listener 监听器
+     */</span>
+	<span class="token keyword">void</span> <span class="token function">getFirmwareVersion</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FirmwareVersionModel</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//关于 FirmwareVersionModel 类简要内容</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FirmwareVersionModel</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">VersionInfo</span><span class="token punctuation">&gt;</span></span> versionInfoList<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//关于 VersionInfo 类简要内容</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VersionInfo</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 固件名称</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> firmwareName<span class="token punctuation">;</span>
+        <span class="token comment">// 固件类型</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> firmwareType<span class="token punctuation">;</span>
+        <span class="token comment">// 固件版本</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> firmwareVersion<span class="token punctuation">;</span>
+        <span class="token comment">// 固件插槽</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> slot<span class="token punctuation">;</span>
+        <span class="token comment">// 固件类型对应的升级方式：img 支持镜像文件方式升级，hl 支持链接方式升级，file 支持文件方式升级</span>
+        <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> methods<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">/**
+     * 获取触发模式
+     * @param macAddress  MAC 地址
+     * @param listener 获取触发模式结果回调
+     */</span>
+	<span class="token keyword">void</span> <span class="token function">getTriggerMode</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TriggerMode</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">//关于 TriggerMode 类简要内容</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TriggerMode</span> <span class="token punctuation">{</span>
+        <span class="token comment">//按下事件类型</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">KEVT_PRESS</span> <span class="token operator">=</span> <span class="token string">&quot;10&quot;</span><span class="token punctuation">;</span>
+        <span class="token comment">//双击事件类型</span>
+    	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">KEVT_DOUBLE</span> <span class="token operator">=</span> <span class="token string">&quot;2&quot;</span><span class="token punctuation">;</span>
+        <span class="token comment">//事件类型，必须是 KEVT_PRESS 或者 KEVT_DOUBLE 的数值</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> kevt<span class="token punctuation">;</span>
+        <span class="token comment">//此字段表示设备在激活后保持 Trigger 模式的持续时间。值 0 是一种特殊情况，表示该模式无限期地保持活动状态。单位为秒。</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> dur<span class="token punctuation">;</span>
+        <span class="token comment">//退出事件类型，必须是 KEVT_PRESS 或者 KEVT_DOUBLE 的数值</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> e_kevt<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置触发模式
+     * @param macAddress  MAC 地址
+     * @param kevt 触发事件，必须是 KEVT_PRESS 或者 KEVT_DOUBLE 的数值
+     * @param cont 触发持续时长,单位为秒,范围 1s ~ 300s。
+     * @param listener 设置触发模式结果回调
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setTriggerMode</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">String</span> kevt<span class="token punctuation">,</span><span class="token keyword">int</span> cont<span class="token punctuation">,</span><span class="token class-name">String</span> e_kevt<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 触发状态重置
+     * @param macAddress  MAC 地址
+     * @param force 是否强制
+     * @param isNeedAddForce 是否增加强制标记：true 表示上面的 force 设置有效，false 表示上面的 force 设置无效 
+     * @param listener 触发状态重置结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setStatusReset</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token keyword">boolean</span> force<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isNeedAddForce<span class="token punctuation">,</span><span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 获取广播参数
+     * @param macAddress  MAC 地址
+     * @param listener 获取广播参数结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getAdvParameter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AdvParameter</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//关于 AdvParameter 类简要内容</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameter</span> <span class="token punctuation">{</span>
+        <span class="token comment">//正常模式参数</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterNormal</span> norm<span class="token punctuation">;</span>
+		<span class="token comment">//触发模式参数——SOS模式</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterTrigger</span> trig<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 AdvParameterNormal 类简要内容</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameterNormal</span> <span class="token punctuation">{</span>
+		<span class="token comment">//该模式的开启关闭状态</span>
+    	<span class="token keyword">private</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//该模式的广播参数</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 AdvParameterTrigger 类简要内容</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameterTrigger</span> <span class="token punctuation">{</span>
+		<span class="token comment">//该模式的开启关闭状态</span>
+    	<span class="token keyword">private</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//该模式的广播参数</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 AdvParameterParam 类简要内容</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameterParam</span> <span class="token punctuation">{</span>
+		<span class="token comment">//该模式的广播间隔，100ms ~ 10000ms 可调，刻度为 100ms</span>
+    	<span class="token keyword">private</span> <span class="token keyword">int</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//该模式的广播功率，有8个：-40,-20,-16,-12,-8,-4,0,4,8</span>
+    	<span class="token keyword">private</span> <span class="token keyword">int</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 配置广播参数
+     * @param macAddress MAC 地址
+     * @param advParameter 广播参数
+     * @param listener 配置结果回调监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setAdvParameter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">AdvParameter</span> advParameter<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 获取扫描参数配置
+     * @param macAddress  MAC 地址
+     * @param listener 获取结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getLeScanFilter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LeScanFilter</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//关于 LeScanFilter 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilter</span> <span class="token punctuation">{</span>
+		<span class="token comment">//扫描模式</span>
+        <span class="token keyword">public</span> <span class="token class-name">LeScanFilterMode</span> mode<span class="token punctuation">;</span>
+		<span class="token comment">//扫描过滤器，键只是 rssi，re_mac，re_raw 中的其中一个</span>
+        <span class="token comment">//当键为 : rssi 时，值：int 类型数据，范围 -100 ~ 0</span>
+        <span class="token comment">//当键为 : re_mac 时，值：String 类型数据，长度为 64 个字符的正则表达式</span>
+        <span class="token comment">//当键为 : re_raw 时，值：String 类型数据，长度为 192 个字符的正则表达式</span>
+        <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TypeMap</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> filter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 LeScanFilterMode 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterMode</span> <span class="token punctuation">{</span>
+		<span class="token comment">//正常模式</span>
+    	<span class="token keyword">public</span> <span class="token class-name">LeScanFilterNorm</span> norm<span class="token punctuation">;</span>
+		<span class="token comment">//触发模式 ： SOS 或者 按键</span>
+    	<span class="token keyword">public</span> <span class="token class-name">LeScanFilterTrig</span> trig<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 LeScanFilterNorm 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//正常模式扫描开关状态</span>
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//正常模式扫描参数</span>
+        <span class="token keyword">public</span> <span class="token class-name">LeScanFilterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 LeScanFilterTrig 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterTrig</span> <span class="token punctuation">{</span>
+		<span class="token comment">//触发[SOS 或者 按键]模式扫描开关状态</span>
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//触发[SOS 或者 按键]模式扫描参数</span>
+        <span class="token keyword">public</span> <span class="token class-name">LeScanFilterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 LeScanFilterParam 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterParam</span> <span class="token punctuation">{</span>
+		<span class="token comment">//扫描间隔时长，100ms ~ 10000ms 可调，刻度为 100ms</span>
+        <span class="token keyword">public</span> <span class="token keyword">float</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//扫描窗口时长，扫描窗口定义了每个间隔扫描的时间长度。单位为毫秒。此字段的有效范围为2.5ms至10240ms（10.24s）</span>
+        <span class="token keyword">public</span> <span class="token keyword">float</span> window<span class="token punctuation">;</span>
+		<span class="token comment">//扫描超时时长，LE扫描超时，PRD中单次扫描的持续时间。单位为毫秒。单位为毫秒。此字段的有效范围为500ms到655350ms（655.35s）</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> timeout<span class="token punctuation">;</span>
+		<span class="token comment">//扫描重启时长，两次LE扫描之间的时间。单位为毫秒。</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> gap<span class="token punctuation">;</span>
+		<span class="token comment">//是否为主动扫描：true 主动扫描 false 被动扫描</span>
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> active<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置扫描参数
+     * @param macAddress  MAC 地址
+     * @param leScanFilter 扫描参数
+     * @param listener 设置扫描参数结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setLeScanFilter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">LeScanFilter</span> leScanFilter<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 获取灯效配置
+     * @param macAddress  MAC 地址
+     * @param listener 获取灯效监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getDeviceLEDConfig</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LedConfigEntity</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//关于 LedConfigEntity 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LedConfigEntity</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_BLUE</span> <span class="token operator">=</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_GREEN</span> <span class="token operator">=</span> <span class="token string">&quot;green&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_RED</span> <span class="token operator">=</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_YELLOW</span> <span class="token operator">=</span> <span class="token string">&quot;yellow&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_WHITE</span> <span class="token operator">=</span> <span class="token string">&quot;white&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_MAGENTA</span> <span class="token operator">=</span> <span class="token string">&quot;magenta&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_CYAN</span> <span class="token operator">=</span> <span class="token string">&quot;cyan&quot;</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">EFFECT_OFF</span> <span class="token operator">=</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">EFFECT_STEADY</span> <span class="token operator">=</span> <span class="token string">&quot;steady&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">EFFECT_BLINK</span> <span class="token operator">=</span> <span class="token string">&quot;blink&quot;</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">//灯效颜色，灯效颜色必须是 COLOR_BLUE，COLOR_GREEN，COLOR_RED，COLOR_YELLOW，COLOR_WHITE，COLOR_MAGENTA，COLOR_CYAN 的其中一个</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> color<span class="token punctuation">;</span>
+        <span class="token comment">//灯效效果，此字段指定LED效果，并且必须是以下字符串之一：EFFECT_OFF、EFFECT_STEADY、EFFECT_BLINK。</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> effect<span class="token punctuation">;</span>
+        <span class="token comment">//灯效参数，定义了LED设置为闪烁时的详细行为：第一个参数表示LED在单个周期内保持点亮的持续时间（以毫秒为单位）范围 1 - 65535。第二个参数表示LED在同一周期内保持熄灭的持续时间（以毫秒为单位）范围 1 - 65535。第三个参数指定要执行的循环次数。</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> params<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置灯效
+     * @param macAddress  MAC 地址
+     * @param ledConfig 灯效配置参数
+     * @param listener 设置灯效结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setDeviceLEDConfig</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">LedConfigEntity</span> ledConfig<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 获取 Relay Control 配置
+     * @param macAddress  MAC 地址
+     * @param listener 获取结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getRelayControl</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RelayControl</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//关于 RelayControl 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RelayControl</span> <span class="token punctuation">{</span>
+		<span class="token comment">//此字段指定要中继的消息类型。它有两个不区分大小写的选项：“mac”和“imm”。“mac”表示中继内容是蓝牙LE mac地址；“imm”是指转播的内容是苹果iBeacon的major 和 minor 值。</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> type<span class="token punctuation">;</span>
+		<span class="token comment">//此字段指定中继时必须保留多少字节的MAC地址。允许的长度为2、3、4和6。此字段是可选的，默认为2。只有当 type 字段设置为“mac”时，它才有效。如果获取数值为 Integer.MIN_VALUE 代表未获取到数据。</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> aln <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+		<span class="token comment">//此字段指定一次要中继的数据项数量的上限（即每轮的最大设备数量）。中继时，设备始终选择最新的记录。例如，如果之前的蓝牙扫描产生了5条记录，并且限制设置为4条，则丢弃最旧的记录；如果限制设置为6，并且只找到5条有效记录，则中继5条记录。此字段是可选的，默认为5。如果获取数值为 Integer.MIN_VALUE 代表未获取到数据。范围为 1 - 100 。</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> max <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+		<span class="token comment">//此字段指定中继尝试次数。这是可选的。如果不存在，则表示连续中继广告。如果获取数值为 Integer.MIN_VALUE 代表不存在。</span>
+        <span class="token keyword">private</span> <span class="token class-name">Long</span> cnt <span class="token operator">=</span> <span class="token class-name">Long</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置 Relay Control
+     * @param macAddress  MAC 地址
+     * @param relayControl Relay Control参数
+     * @param listener 设置Relay Control结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setRelayControl</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">RelayControl</span> relayControl<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 获取 Apple Ibeacon Frame 配置
+     * @param macAddress  MAC 地址
+     * @param listener 获取结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getAppleIbeaconFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AppleIbeaconFrame</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//关于 AppleIbeaconFrame 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconFrame</span> <span class="token punctuation">{</span>
+		<span class="token comment">//正常模式参数</span>
+        <span class="token keyword">public</span> <span class="token class-name">AppleIbeaconNorm</span> norm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 AppleIbeaconNorm 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//ibeacon 帧广播的开启关闭状态</span>
+        <span class="token keyword">public</span> <span class="token class-name">Boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//ibeacon 帧广播数据</span>
+        <span class="token keyword">public</span> <span class="token class-name">AppleIbeaconData</span> data<span class="token punctuation">;</span>
+		<span class="token comment">//ibeacon 帧广播参数</span>
+        <span class="token keyword">public</span> <span class="token class-name">AppleIbeaconParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 AppleIbeaconData 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconData</span> <span class="token punctuation">{</span>
+        <span class="token comment">//Apple iBeacon 广告帧中的 uuid，长度必须为 32</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> uuid<span class="token punctuation">;</span>
+		<span class="token comment">//Apple iBeacon 广告帧中的 major，范围 0-65535</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> major<span class="token punctuation">;</span>
+		<span class="token comment">//Apple iBeacon 广告帧中的 minor，范围 0-65535</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> minor<span class="token punctuation">;</span>
+		<span class="token comment">//Apple iBeacon 广告帧中 1 米处的校准发射功率，单位为 dBm，范围 -128 - 127</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> cpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 AppleIbeaconParam 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconParam</span> <span class="token punctuation">{</span>
+        <span class="token comment">//Apple iBeacon 广告帧中的广播间隔，100ms ~ 10000ms 可调，刻度为 100ms</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//Apple iBeacon 广告帧中的广播功率，有8个：-40,-20,-16,-12,-8,-4,0,4,8 单位dBm</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置 Apple Ibeacon Frame
+     * @param macAddress  MAC 地址
+     * @param appleIbeaconFrame Apple Ibeacon Frame参数
+     * @param listener 设置结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setAppleIbeaconFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">AppleIbeaconFrame</span> appleIbeaconFrame<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 获取 Eddystone Uid Frame 配置
+     * @param macAddress  MAC 地址
+     * @param listener 获取结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getEddystoneUidFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EddystoneUidFrame</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//关于 EddystoneUidFrame 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidFrame</span> <span class="token punctuation">{</span>
+		<span class="token comment">//正常模式参数</span>
+        <span class="token keyword">public</span> <span class="token class-name">EddystoneUidNorm</span> norm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 EddystoneUidNorm 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//uid 帧广播的开启关闭状态</span>
+        <span class="token keyword">private</span> <span class="token class-name">Boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//uid 帧广播数据</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUidData</span> data<span class="token punctuation">;</span>
+		<span class="token comment">//uid 帧广播参数</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUidParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 EddystoneUidData 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidData</span> <span class="token punctuation">{</span>
+		<span class="token comment">//uid 广告帧中 0 米处的校准发射功率，单位为 dBm，范围 -100 ~ 20</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> cpwr<span class="token punctuation">;</span>
+		<span class="token comment">//NameSpace ID 长度必须为 20</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> nid<span class="token punctuation">;</span>
+		<span class="token comment">//Instance ID 长度必须为 12</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> bid<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 EddystoneUidParam 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidParam</span> <span class="token punctuation">{</span>
+        <span class="token comment">//uid 广告帧中的广播间隔，100ms ~ 10000ms 可调，刻度为 100ms</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//uid 广告帧中的广播功率，有8个：-40,-20,-16,-12,-8,-4,0,4,8 单位dBm</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置 EddystoneUidFrame参数
+     * @param macAddress  MAC 地址
+     * @param eddystoneUidFrame EddystoneUidFrame参数
+     * @param listener 设置结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setEddystoneUidFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">EddystoneUidFrame</span> eddystoneUidFrame<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 获取 Eddystone Url Frame 配置
+     * @param macAddress  MAC 地址
+     * @param listener 获取结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getEddystoneUrlFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EddystoneUrlFrame</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//关于 EddystoneUrlFrame 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlFrame</span> <span class="token punctuation">{</span>
+		<span class="token comment">//正常模式参数</span>
+        <span class="token keyword">public</span> <span class="token class-name">EddystoneUrlNorm</span> norm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 EddystoneUrlNorm 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//url 帧广播的开启关闭状态</span>
+        <span class="token keyword">private</span> <span class="token class-name">Boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//url 帧广播数据</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUrlData</span> data<span class="token punctuation">;</span>
+		<span class="token comment">//url 帧广播参数</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUrlParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 EddystoneUrlData 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlData</span> <span class="token punctuation">{</span>
+		<span class="token comment">//url 广告帧中 0 米处的校准发射功率，单位为 dBm，范围 -100 ~ 20</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> cpwr<span class="token punctuation">;</span>
+		<span class="token comment">//url 广告帧中的 url 数据</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> url<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//关于 EddystoneUrlParam 类简要内容</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlParam</span> <span class="token punctuation">{</span>
+        <span class="token comment">//url 广告帧中的广播间隔，100ms ~ 10000ms 可调，刻度为 100ms</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//url 广告帧中的广播功率，有8个：-40,-20,-16,-12,-8,-4,0,4,8 单位dBm</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 设置 EddystoneUrlFrame
+     * @param macAddress  MAC 地址
+     * @param eddystoneUrlFrame EddystoneUrlFrame参数
+     * @param listener 设置结果监听器
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setEddystoneUrlFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">EddystoneUrlFrame</span> eddystoneUrlFrame<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br><span class="line-number">370</span><br><span class="line-number">371</span><br><span class="line-number">372</span><br><span class="line-number">373</span><br><span class="line-number">374</span><br><span class="line-number">375</span><br><span class="line-number">376</span><br><span class="line-number">377</span><br><span class="line-number">378</span><br><span class="line-number">379</span><br><span class="line-number">380</span><br><span class="line-number">381</span><br><span class="line-number">382</span><br><span class="line-number">383</span><br><span class="line-number">384</span><br><span class="line-number">385</span><br><span class="line-number">386</span><br><span class="line-number">387</span><br><span class="line-number">388</span><br><span class="line-number">389</span><br><span class="line-number">390</span><br><span class="line-number">391</span><br><span class="line-number">392</span><br><span class="line-number">393</span><br><span class="line-number">394</span><br><span class="line-number">395</span><br><span class="line-number">396</span><br><span class="line-number">397</span><br><span class="line-number">398</span><br><span class="line-number">399</span><br><span class="line-number">400</span><br><span class="line-number">401</span><br><span class="line-number">402</span><br><span class="line-number">403</span><br><span class="line-number">404</span><br><span class="line-number">405</span><br><span class="line-number">406</span><br><span class="line-number">407</span><br><span class="line-number">408</span><br><span class="line-number">409</span><br><span class="line-number">410</span><br><span class="line-number">411</span><br><span class="line-number">412</span><br><span class="line-number">413</span><br><span class="line-number">414</span><br><span class="line-number">415</span><br><span class="line-number">416</span><br><span class="line-number">417</span><br><span class="line-number">418</span><br><span class="line-number">419</span><br><span class="line-number">420</span><br><span class="line-number">421</span><br><span class="line-number">422</span><br><span class="line-number">423</span><br><span class="line-number">424</span><br><span class="line-number">425</span><br><span class="line-number">426</span><br><span class="line-number">427</span><br><span class="line-number">428</span><br><span class="line-number">429</span><br><span class="line-number">430</span><br><span class="line-number">431</span><br><span class="line-number">432</span><br><span class="line-number">433</span><br><span class="line-number">434</span><br><span class="line-number">435</span><br><span class="line-number">436</span><br><span class="line-number">437</span><br><span class="line-number">438</span><br><span class="line-number">439</span><br><span class="line-number">440</span><br><span class="line-number">441</span><br><span class="line-number">442</span><br><span class="line-number">443</span><br><span class="line-number">444</span><br><span class="line-number">445</span><br><span class="line-number">446</span><br><span class="line-number">447</span><br><span class="line-number">448</span><br><span class="line-number">449</span><br><span class="line-number">450</span><br><span class="line-number">451</span><br><span class="line-number">452</span><br><span class="line-number">453</span><br><span class="line-number">454</span><br><span class="line-number">455</span><br><span class="line-number">456</span><br><span class="line-number">457</span><br><span class="line-number">458</span><br><span class="line-number">459</span><br><span class="line-number">460</span><br><span class="line-number">461</span><br><span class="line-number">462</span><br><span class="line-number">463</span><br><span class="line-number">464</span><br><span class="line-number">465</span><br><span class="line-number">466</span><br><span class="line-number">467</span><br><span class="line-number">468</span><br><span class="line-number">469</span><br><span class="line-number">470</span><br><span class="line-number">471</span><br><span class="line-number">472</span><br><span class="line-number">473</span><br><span class="line-number">474</span><br><span class="line-number">475</span><br><span class="line-number">476</span><br><span class="line-number">477</span><br><span class="line-number">478</span><br><span class="line-number">479</span><br><span class="line-number">480</span><br><span class="line-number">481</span><br><span class="line-number">482</span><br><span class="line-number">483</span><br><span class="line-number">484</span><br><span class="line-number">485</span><br><span class="line-number">486</span><br><span class="line-number">487</span><br><span class="line-number">488</span><br><span class="line-number">489</span><br><span class="line-number">490</span><br><span class="line-number">491</span><br><span class="line-number">492</span><br><span class="line-number">493</span><br><span class="line-number">494</span><br><span class="line-number">495</span><br><span class="line-number">496</span><br><span class="line-number">497</span><br><span class="line-number">498</span><br><span class="line-number">499</span><br></div></div><p>对部分方法进行补充说明：</p> <ol><li><p>给设备授予手机当前时间：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>	
+	<span class="token comment">// 首先要检查蓝牙开关是否打开，只有在打开的情况下才能开启手机的 CurrentTimeService 服务，如果蓝牙开关关闭去开启，部分 Android 手机系统可能会出错。并且需要监听蓝牙开关状态，当蓝牙开关开启时候需要开启服务 startSyncTimeServer，关闭的时候需要关闭服务 closeSyncTimeServer。注意，当 activity 页面 ondestroy 时，也需要关闭该服务 closeSyncTimeServer</span>
+	<span class="token class-name">MWB02BleManager</span> mBleManager <span class="token operator">=</span> <span class="token class-name">MWB02BleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// 开启服务</span>
+	mBleManager<span class="token punctuation">.</span><span class="token function">startSyncTimeServer</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 关闭服务</span>
+    mBleManager<span class="token punctuation">.</span><span class="token function">closeSyncTimeServer</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+
+	<span class="token comment">// 因为部分手机会偶现授时失败的情况，所以需要判断授时是否成功，建议在设备连接成功 3 秒后判断</span>
+	mBleManager<span class="token punctuation">.</span><span class="token function">isDeviceReadSyncTime</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token comment">// 如果授时操作不成功，那么需要主动给设备发送授时指令</span>
+	mBleManager<span class="token punctuation">.</span><span class="token function">writeTimeToDevice</span><span class="token punctuation">(</span>macAddress<span class="token punctuation">,</span> onWriteTimeToDeviceListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li> <li><p>固件升级。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>
+<span class="token comment">/**
+ * 固件升级
+ *
+ * @param macAddress  设备mac
+ * @param upgradeData 升级包数据
+ * @param listener    监听器
+ */</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>mac<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span> upgradeData<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnFirmwareUpgradeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token comment">/**
+     * 升级包数据写入进度
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">updateProgress</span><span class="token punctuation">(</span><span class="token keyword">int</span> progress<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 升级成功回调，此时设备会主动跟手机断开连接，所以会触发OnConnStateListener回调，返回
+     * BleConnectionState.Disconnect状态
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">upgradeSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/**
+     * 升级失败
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">upgradeFailed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div></li> <li><p>查询历史记录</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>
+<span class="token comment">// 因为历史记录读取是个耗时操作,所以必须在子线程进行调用，不能在主线程调用</span>
+lifecycleScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers</span><span class="token punctuation">.</span><span class="token constant">IO</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    					<span class="token comment">//历史记录的查询者 StorageIndexRecordSearcher</span>
+    					<span class="token comment">//查询数据回调的泛型类型 StorageActualDataClick</span>
+    					<span class="token comment">//调用 getStorageIndexRecordsNeedSearchFile 进行查询，参数如下</span>
+                        <span class="token class-name">StorageIndexRecordSearcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StorageActualDataClick</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getStorageIndexRecordsNeedSearchFile</span><span class="token punctuation">(</span>
+                            <span class="token comment">//上下文对象</span>
+                            context<span class="token punctuation">,</span>
+                            <span class="token comment">//设备的mac地址</span>
+                            macAddress<span class="token punctuation">,</span>
+                            <span class="token comment">//是否开启查询历史记录的日志，false 为不开启，true 为开启</span>
+                            <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            <span class="token comment">//历史记录的查询条件</span>
+                            <span class="token class-name">StorageIndexRecordCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//查询的数据类型</span>
+                                <span class="token punctuation">.</span><span class="token function">setStorageDataBlockType</span><span class="token punctuation">(</span><span class="token class-name">StorageDataBlockType<span class="token punctuation">.</span>Click</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//查询的对应类型数据的实例，一般使用 StorageIndexInstance.INSTANCE_DEFAULT</span>
+                                <span class="token punctuation">.</span><span class="token function">setInstance</span><span class="token punctuation">(</span><span class="token class-name">StorageIndexInstance</span><span class="token punctuation">.</span><span class="token constant">INSTANCE_DEFAULT</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//查询历史数据的开始时间，queryAllData 该变量由开发者自己定义，true 为查询所有数据，false 为按时间段进行查询，该参数的单位为秒</span>
+                                <span class="token punctuation">.</span><span class="token function">setStartTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token number">0</span>
+                                    <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedStartTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//查询历史数据的结束时间，queryAllData 该变量由开发者自己定义，true 为查询所有数据，false 为按时间段进行查询，该参数的单位为秒</span>
+                                <span class="token punctuation">.</span><span class="token function">setEndTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">1000</span>
+                                    <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedEndTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                            <span class="token comment">//resultClickList StorageDataBlockType.Click类型历史数据的查询结果,如果结果为空，表示该时间段没有历史记录</span>
+                            <span class="token comment">//exceptionClick 查询如果数据如果发生了异常，会在此处给予开发者提示，如果没有异常，那么该值为 null</span>
+                            resultClickList<span class="token punctuation">,</span>exceptionClick <span class="token operator">-&gt;</span>
+                            <span class="token class-name">LogUtil</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;exceptionClick  ${exceptionClick?:&quot;</span> exceptionClick <span class="token keyword">null</span> <span class="token string">&quot;}&quot;</span><span class="token punctuation">)</span>
+                                
+							<span class="token comment">//查询数据回调的泛型类型 StorageActualDataScanResultAdvertisingRawData</span>
+                            <span class="token class-name">StorageIndexRecordSearcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StorageActualDataScanResultAdvertisingRawData</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getStorageIndexRecordsNeedSearchFile</span><span class="token punctuation">(</span>
+                                <span class="token comment">//上下文对象</span>
+                                context<span class="token punctuation">,</span>
+                                <span class="token comment">//设备的mac地址</span>
+                                macAddress<span class="token punctuation">,</span>
+                                <span class="token comment">//是否开启查询历史记录的日志，false 为不开启，true 为开启</span>
+                                <span class="token boolean">false</span><span class="token punctuation">,</span>
+                                <span class="token comment">//历史记录的查询条件</span>
+                                <span class="token class-name">StorageIndexRecordCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//查询的数据类型</span>
+                                    <span class="token punctuation">.</span><span class="token function">setStorageDataBlockType</span><span class="token punctuation">(</span><span class="token class-name">StorageDataBlockType<span class="token punctuation">.</span>Scan_Result</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//查询的对应类型数据的实例，一般使用 StorageIndexInstance.INSTANCE_DEFAULT</span>
+                                    <span class="token punctuation">.</span><span class="token function">setInstance</span><span class="token punctuation">(</span><span class="token class-name">StorageIndexInstance</span><span class="token punctuation">.</span><span class="token constant">INSTANCE_DEFAULT</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//查询历史数据的开始时间，queryAllData 该变量由开发者自己定义，true 为查询所有数据，false 为按时间段进行查询，该参数的单位为秒</span>
+                                    <span class="token punctuation">.</span><span class="token function">setStartTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                        <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token number">0</span>
+                                        <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedStartTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//查询历史数据的结束时间，queryAllData 该变量由开发者自己定义，true 为查询所有数据，false 为按时间段进行查询，该参数的单位为秒</span>
+                                    <span class="token punctuation">.</span><span class="token function">setEndTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                        <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">1000</span>
+                                        <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedEndTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//由于安卓手机系统对 App 内存限制要求，查询数据过多可能会导致内存溢出，所以需要限制查询历史数据的最大数量</span>
+                                    <span class="token punctuation">.</span><span class="token function">setMaximumQuantityLimit</span><span class="token punctuation">(</span><span class="token class-name">StorageIndexRecordCondition<span class="token punctuation">.</span>QuantityLimit</span><span class="token punctuation">.</span><span class="token constant">LIMIT_10000</span><span class="token punctuation">)</span>
+                            <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                                <span class="token comment">//resultStorageActualDataScanResultAdvertisingRawDataList StorageDataBlockType.Scan_Result类型历史数据的查询结果,如果结果为空，表示该时间段没有历史记录</span>
+                                <span class="token comment">//exceptionScanResult 查询如果数据如果发生了异常，会在此处给予开发者提示，如果没有异常，那么该值为 null</span>
+                                resultStorageActualDataScanResultAdvertisingRawDataList<span class="token punctuation">,</span>exceptionScanResult <span class="token operator">-&gt;</span>
+                                <span class="token class-name">LogUtil</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;exceptionScanResult  ${exceptionScanResult?:&quot;</span> exceptionScanResult <span class="token keyword">null</span> <span class="token string">&quot;}&quot;</span><span class="token punctuation">)</span>
+                                storageActualDataScanResultAdvertisingRawDataList <span class="token operator">=</span> resultStorageActualDataScanResultAdvertisingRawDataList
+                                <span class="token keyword">if</span> <span class="token punctuation">(</span>resultStorageActualDataScanResultAdvertisingRawDataList<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token class-name">LogUtil</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;resultStorageActualDataScanResultAdvertisingRawDataList  ${resultStorageActualDataScanResultAdvertisingRawDataList!!.size}&quot;</span><span class="token punctuation">)</span>
+                                <span class="token punctuation">}</span>
+                                <span class="token comment">/**
+                                * 历史数据读取完成，需切换到主线程进行界面更新处理
+                                */</span>
+                                lifecycleScope<span class="token punctuation">.</span>launch <span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Main</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token comment">//主线程处理历史数据相关操作</span>
+                                <span class="token punctuation">}</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br></div></div></li></ol> <h2 id="文档更新记录"><a href="#文档更新记录" class="header-anchor">#</a> 文档更新记录</h2> <ul><li>2026/02/11	新增 MWB02 设备操作基本功能 API</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新::</span> <span class="time">2026/2/11 10:36:25</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/113.e8cff9ce.js" defer></script>
+  </body>
+</html>

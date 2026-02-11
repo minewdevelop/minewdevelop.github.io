@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewSensorKit Instruction document | SDK &amp; API</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="SDKs and APIs for MBeacon, BeaconPlus, MSensor, etc.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/70.a4692fcf.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/106.a3d11e42.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/113.e8cff9ce.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/18.6db3ccbb.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/45.a58e8a25.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.ca9adaaf.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/68.8866be89.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/75.723e0570.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="SDK &amp; API" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Custom/LBS/P25096B5D-MST03+Light sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Custom/LBS/P25096B5D-MST03+Light sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewSensorKit Instruction document</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html#preliminary-work" class="sidebar-link">Preliminary work</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html#import-to-project" class="sidebar-link">Import to project</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html#use" class="sidebar-link">Use</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html#scanning-section" class="sidebar-link">Scanning section</a></li><li class="sidebar-sub-header"><a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html#connections" class="sidebar-link">Connections</a></li><li class="sidebar-sub-header"><a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html#reading-and-writing" class="sidebar-link">Reading and writing</a></li></ul></li><li><a href="/Custom/LBS/P25096B5D-MST03+Light%20sensor/Android_MinewSensorKit_v3_Custom_Mst03_Software_Development_Kit_Guide.html#history" class="sidebar-link">History</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="minewsensorkit-instruction-document"><a href="#minewsensorkit-instruction-document" class="header-anchor">#</a> MinewSensorKit Instruction document</h1> <p>This SDK only supports the Bluetooth sensor devices from Minew. The SDK helps developers to handle everything between the phone and the sensor, including: scanning the device, broadcasting data, connecting to the device, writing data to the device, receiving data from the device, etc.</p> <h2 id="preliminary-work"><a href="#preliminary-work" class="header-anchor">#</a> Preliminary work</h2> <p>Overall framework: <code>MST03SensorBleManager</code> is the device management class, which is always a single instance when the app is running. <code>MST03Entity</code> is the device instance class, this suite generates an instance for each device, which is used after scanning and connecting, and contains device broadcast data inside, which will be updated during scanning as the device keeps broadcasting.</p> <p><code>MST03SensorBleManager</code>：Device management class that scans the surrounding mst03 devices and can connect them, verify them, etc.；</p> <p><code>MST03Entity</code>：Example of an mst03 sensor device acquired during scanning, inherited from <code>BaseBleDeviceEntity</code></p> <h2 id="import-to-project"><a href="#import-to-project" class="header-anchor">#</a> Import to project</h2> <ol><li><p>Development Environment</p> <p>The minimum sdk support is Android 5.0, corresponding to API Level 21. set <code>minSdkVersion</code> to 21 or above in <code>build.gradle</code> of the module.</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>android <span class="token punctuation">{</span>
+
+    defaultConfig <span class="token punctuation">{</span>
+        applicationId <span class="token interpolation-string"><span class="token string">&quot;com.xxx.xxx&quot;</span></span>
+        minSdkVersion <span class="token number">24</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>Add jar to the module's libs folder and add the following statement to the <code>build.gradle</code> of the <code>module</code> (add the dependency directly)：</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/base_ble_library.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/minew_custom_mst03.jar'</span><span class="token punctuation">)</span>
+api <span class="token string">'org.lucee:bcprov-jdk15on:1.52.0'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>Or right-click the jar file and select <code>Add as Library</code> to add it to the current module.</p> <p>Add the  configuration to the.so library file in the App directory build.gradle</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>android {
+    defaultConfig {
+  
+        ndk {
+            abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+        }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li> <li><p>The following permissions are required in <code>AndroidManifest.xml</code>, and if <code>targetSdkVersion</code> is greater than 23, you need to do <strong>permission management</strong> to get the permissions.</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADMIN<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_SCAN<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADVERTISE<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_CONNECT<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_FINE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_COARSE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_BACKGROUND_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_AUDIO<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_IMAGES<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_VIDEO<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_VISUAL_USER_SELECTED<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.WRITE_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">/&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div></li></ol> <p>​</p> <h2 id="use"><a href="#use" class="header-anchor">#</a> Use</h2> <p>The sdk is divided into three phases: scanning, connecting, and reading and writing.</p> <h3 id="scanning-section"><a href="#scanning-section" class="header-anchor">#</a> Scanning section</h3> <h5 id="_1-ble-permissions"><a href="#_1-ble-permissions" class="header-anchor">#</a> 1.Ble Permissions</h5> <p>For Android 6.0 and above systems, when performing BLE scanning, you need to apply for Bluetooth permission and turn on the positioning switch before proceeding.</p> <p>To enable Bluetooth scanning, you need to turn on Bluetooth first. If you scan without turning on Bluetooth, the APP will crash. You can use BLETool.checkBluetooth(this) to determine whether Bluetooth is turned on. If it is not turned on, you can turn on Bluetooth first.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token keyword">private</span> fun <span class="token function">checkBlePermissions</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        val requestPermissionList <span class="token operator">=</span> <span class="token function">listOf</span><span class="token punctuation">(</span>
+            <span class="token class-name">Manifest</span><span class="token punctuation">.</span>permission<span class="token punctuation">.</span><span class="token constant">BLUETOOTH_SCAN</span><span class="token punctuation">,</span>
+            <span class="token class-name">Manifest</span><span class="token punctuation">.</span>permission<span class="token punctuation">.</span><span class="token constant">BLUETOOTH_CONNECT</span><span class="token punctuation">,</span>
+            <span class="token class-name">Manifest</span><span class="token punctuation">.</span>permission<span class="token punctuation">.</span><span class="token constant">BLUETOOTH_ADVERTISE</span><span class="token punctuation">,</span>
+            <span class="token class-name">Manifest</span><span class="token punctuation">.</span>permission<span class="token punctuation">.</span><span class="token constant">ACCESS_COARSE_LOCATION</span><span class="token punctuation">,</span>
+            <span class="token class-name">Manifest</span><span class="token punctuation">.</span>permission<span class="token punctuation">.</span><span class="token constant">ACCESS_FINE_LOCATION</span>
+        <span class="token punctuation">)</span>
+        <span class="token class-name">PermissionConverter</span><span class="token punctuation">.</span><span class="token function">putPermissionDescriptionMap</span><span class="token punctuation">(</span>
+            <span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_permission_nearby_devices<span class="token punctuation">,</span>
+            <span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_request_gps_nearby_devices_message_permission
+        <span class="token punctuation">)</span>
+        <span class="token class-name">PermissionConverter</span><span class="token punctuation">.</span><span class="token function">putPermissionDescriptionMap</span><span class="token punctuation">(</span>
+            <span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_permission_location<span class="token punctuation">,</span>
+            <span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_request_gps_message_permission
+        <span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">XXPermissions</span><span class="token punctuation">.</span><span class="token function">isGrantedPermissions</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>requestPermissionList<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">XXPermissions</span><span class="token punctuation">.</span><span class="token keyword">with</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">permission</span><span class="token punctuation">(</span>requestPermissionList<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">interceptor</span><span class="token punctuation">(</span><span class="token class-name">PermissionInterceptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token class-name">PermissionDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span>object <span class="token operator">:</span> <span class="token class-name">OnPermissionCallback</span> <span class="token punctuation">{</span>
+                    override fun <span class="token function">onGranted</span><span class="token punctuation">(</span>
+                        permissions<span class="token operator">:</span> <span class="token class-name">MutableList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span>
+                        allGranted<span class="token operator">:</span> <span class="token class-name">Boolean</span>
+                    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>allGranted<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token keyword">return</span>
+                        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                            <span class="token function">checkBluetooth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            <span class="token function">checkBluetooth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword">private</span> fun <span class="token function">checkBluetooth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		when <span class="token punctuation">(</span><span class="token class-name">BLETool</span><span class="token punctuation">.</span><span class="token function">checkBluetooth</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">BluetoothState</span><span class="token punctuation">.</span><span class="token constant">BLE_NOT_SUPPORT</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token annotation punctuation">@Mst03ScanDeviceListActivity</span><span class="token punctuation">,</span> <span class="token string">&quot;Not Support BLE&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token constant">LENGTH_SHORT</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">BluetoothState</span><span class="token punctuation">.</span><span class="token constant">BLUETOOTH_OFF</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                val enableIntent <span class="token operator">=</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">BluetoothAdapter</span><span class="token punctuation">.</span><span class="token constant">ACTION_REQUEST_ENABLE</span><span class="token punctuation">)</span>
+                launcherActivityResultForBle<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span>enableIntent<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">BluetoothState</span><span class="token punctuation">.</span><span class="token constant">BLUETOOTH_ON</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+
+                <span class="token function">startScan</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br></div></div><h5 id="_2-start-scanning-devices"><a href="#_2-start-scanning-devices" class="header-anchor">#</a> 2.Start Scanning devices</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>val mBleManager = MST03SensorBleManager.getInstance()
+
+//ManufacturerId. 0x00E0 = Google
+mBleManager.setManufacturerIdHexLe(&quot;E000&quot;)
+
+
+
+private fun startScan(){
+ 	//Set the scan time to 5 minutes. The default scan time of SDK is 5 minutes.
+	mBleManager.startScan(context.mApplication, 5 * 60 * 1000, object : OnScanDevicesResultListener&lt;MST03Entity&gt; {
+            override fun onScanResult(scanList: MutableList&lt;MST03Entity&gt;?) {
+                //During the scan, the scanned device data will be replied once per second
+            }
+
+
+            override fun onStopScan(scanList: MutableList&lt;MST03Entity&gt;?) {
+                //stopScan(context.mApplication) will not actively trigger the onStopScan() method. Currently, the onStopScan() 				//method is only triggered after the set scanning time ends.
+            }
+        })
+ }
+ 
+ 
+//Custom scan duration default duration = 5min 
+mBleManager.setDefaultScanTime(1*60*1000)
+//Customize the scan result return interval.default interval = 1S
+mBleManager.scanSensorManager.setScanResultsIntervalTime(3*1000)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>The SDK does not process the Bluetooth scanning duration internally, but scanning is a power-consuming operation. The SDK stops scanning after 5 minutes by default. If you still need to continue scanning, you can provide a timer or refresh operation to continue calling the scanning method to continue scanning the device.。</p> <h5 id="_3-stop-scanning-deveces"><a href="#_3-stop-scanning-deveces" class="header-anchor">#</a> 3.Stop Scanning deveces</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>mBleManager.stopScan(context)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h5 id="_4-adv-data"><a href="#_4-adv-data" class="header-anchor">#</a> 4.Adv data</h5> <p>During the scan, the APP is able to get a part of the current data of the device through the sdk. The  data of the device is obtained through <code>MST03Entity</code> as shown below, which is stored in the broadcast frame object.</p> <p>The sdk provides <code>BaseBleDeviceEntity</code> as the base class of <code>MST03Entity</code> to store the public data of the sensor device as shown in the following table.</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>macAddress</td> <td>String</td> <td>device mac</td></tr> <tr><td>name</td> <td>String</td> <td>Device name</td></tr> <tr><td>rssi</td> <td>int</td> <td>Signal strength</td></tr></tbody></table> <p>The <code>BaseBleDeviceEntity</code> also keeps a Map, which is used internally to store the device broadcast data frames it acquires during a scan, and can be retrieved as follows</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code> val <span class="token keyword">module</span><span class="token operator">:</span><span class="token class-name">MST03Entity</span><span class="token punctuation">;</span>
+
+ val combinationFrame <span class="token operator">:</span> <span class="token class-name">CombinationFrame</span><span class="token operator">?</span> <span class="token operator">=</span> item<span class="token punctuation">.</span><span class="token function">getMinewFrame</span><span class="token punctuation">(</span><span class="token class-name">FrameType</span><span class="token punctuation">.</span><span class="token constant">CUSTOM_COMBINATION_FRAME</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span>
+            it as <span class="token class-name">CombinationFrame</span>
+        <span class="token punctuation">}</span>
+val deviceStaticInfoFrame <span class="token operator">:</span> <span class="token class-name">DeviceStaticInfoFrame</span><span class="token operator">?</span> <span class="token operator">=</span> item<span class="token punctuation">.</span><span class="token function">getMinewFrame</span><span class="token punctuation">(</span><span class="token class-name">FrameType</span><span class="token punctuation">.</span><span class="token constant">CUSTOM_DEVICE_INFORMATION_FRAME</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span>
+            it as <span class="token class-name">DeviceStaticInfoFrame</span>
+        <span class="token punctuation">}</span>
+deviceStaticInfoFrame<span class="token operator">?</span><span class="token punctuation">.</span>let<span class="token punctuation">{</span>
+    <span class="token comment">//Device mac address</span>
+    val macAddress <span class="token operator">=</span> it<span class="token punctuation">.</span>macAddress
+    <span class="token comment">//Percentage of power</span>
+    val battery <span class="token operator">=</span> it<span class="token punctuation">.</span>battery
+    <span class="token comment">//firmware version</span>
+    val firmwareVersion <span class="token operator">=</span> it<span class="token punctuation">.</span>firmwareVersion
+<span class="token punctuation">}</span>
+    
+
+
+combinationFrame<span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span>
+    <span class="token comment">//current temperature</span>
+    val temperature <span class="token operator">=</span> it<span class="token punctuation">.</span>temperature
+    val temperatureUpperLimit1AlarmMark <span class="token operator">=</span> it<span class="token punctuation">.</span>temperatureUpperLimit1AlarmMark
+    val temperatureLowerLimit1AlarmMark <span class="token operator">=</span> it<span class="token punctuation">.</span>temperatureLowerLimit1AlarmMark
+    val temperatureUpperLimit2AlarmMark <span class="token operator">=</span> it<span class="token punctuation">.</span>temperatureUpperLimit2AlarmMark
+    val temperatureLowerLimit2AlarmMark <span class="token operator">=</span> it<span class="token punctuation">.</span>temperatureLowerLimit2AlarmMark
+    val lightIntensityUpperLimitAlarmMark <span class="token operator">=</span> it<span class="token punctuation">.</span>lightIntensityUpperLimitAlarmMark
+    val lightIntensityLowerLimitAlarmMark <span class="token operator">=</span> it<span class="token punctuation">.</span>lightIntensityLowerLimitAlarmMark
+    val lightEventTimestamp <span class="token operator">=</span> it<span class="token punctuation">.</span>lightEventTimestamp
+    val tempEventTimestamp <span class="token operator">=</span> it<span class="token punctuation">.</span>tempEventTimestamp
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><p>There are 2 types of adv frames for MST03 device。</p> <ol><li><p>Device static information frame</p> <ul><li><p>DeviceStaticInfoFrame</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>companyId</td> <td>String</td> <td>ManufacturerId.   0x00E0 = Google</td></tr> <tr><td>googleId</td> <td>String</td> <td>googleid.   0x19</td></tr> <tr><td>frameVersion</td> <td>int</td> <td>frame type</td></tr> <tr><td>firmwareVersion</td> <td>String</td> <td>Firmware Version</td></tr> <tr><td>battery</td> <td>int</td> <td>Battery  range:0~100</td></tr> <tr><td>macAddress</td> <td>String</td> <td>firmware mac.</td></tr> <tr><td>peripheralSupportInfo</td> <td>PeripheralSupportInfo</td> <td>Description of peripheral support</td></tr></tbody></table></li></ul></li> <li><p>Combination frame</p> <ul><li><p>CombinationFrame</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>companyId</td> <td>String</td> <td>ManufacturerId.   0x00E0 = Google</td></tr> <tr><td>googleId</td> <td>String</td> <td>googleid.   0x19</td></tr> <tr><td>frameVersion</td> <td>int</td> <td>frame typee</td></tr> <tr><td>battery</td> <td>int</td> <td>Battery  range:0~100</td></tr> <tr><td>macAddress</td> <td>String</td> <td>firmware mac.</td></tr> <tr><td>temperature</td> <td>float</td> <td>temperature</td></tr> <tr><td>temperatureUpperLimit1AlarmMark</td> <td>int</td> <td>Temperature upper limit 1 alarm mark. 0 =normal , 1 = alarm</td></tr> <tr><td>temperatureLowerLimit1AlarmMark</td> <td>int</td> <td>Temperature lower limit 1 alarm mark. 0 =normal , 1 = alarm</td></tr> <tr><td>temperatureUpperLimit2AlarmMark</td> <td>int</td> <td>Temperature upper limit 2 alarm mark. 0 =normal , 1 = alarm</td></tr> <tr><td>temperatureLowerLimit2AlarmMark</td> <td>int</td> <td>Temperature lower limit 2 alarm mark. 0 =normal , 1 = alarm</td></tr> <tr><td>lightIntensityUpperLimitAlarmMark</td> <td>int</td> <td>Light intensity upper limit alarm mark. 0 =normal , 1 = alarm</td></tr> <tr><td>lightIntensityLowerLimitAlarmMark</td> <td>int</td> <td>Light intensity lower limit alarm mark. 0 =normal , 1 = alarm</td></tr> <tr><td>lightEventTimestamp</td> <td>long</td> <td>Light trigger timestamp.Unit: milliseconds</td></tr> <tr><td>tempEventTimestamp</td> <td>long</td> <td>Temperature trigger timestamp.Unit: milliseconds</td></tr> <tr><td>currentTimestamp</td> <td>long</td> <td>Current device timestamp.Unit: milliseconds</td></tr></tbody></table></li></ul></li></ol> <h3 id="connections"><a href="#connections" class="header-anchor">#</a> Connections</h3> <p>It is usually necessary to stop scanning before connecting. sdk provides methods to connect and disconnect.。</p> <h5 id="_1-connect-device"><a href="#_1-connect-device" class="header-anchor">#</a> 1.Connect Device</h5> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val  mBleManager <span class="token operator">=</span> 	<span class="token class-name">MST03SensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+val  <span class="token keyword">module</span><span class="token operator">:</span><span class="token class-name">MST03Entity</span>
+<span class="token comment">//first:Stop scanning</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">stopScan</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span>mApplication<span class="token punctuation">)</span>
+    
+<span class="token comment">//second:Setting the device secret key</span>
+val key<span class="token operator">=</span><span class="token string">&quot;minewtech1234567&quot;</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">setSecretKey</span><span class="token punctuation">(</span><span class="token keyword">module</span><span class="token punctuation">.</span>macAddress<span class="token punctuation">,</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//setting listener</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">setOnConnStateListener</span><span class="token punctuation">(</span>connectionListener<span class="token punctuation">)</span>
+
+<span class="token comment">//Connection, module for the device to be connected </span>
+mBleManager<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token keyword">module</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+or
+mBleManager<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token keyword">module</span><span class="token punctuation">.</span>macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>Note: Before connecting the device, please confirm whether the device is scanned, if no device broadcast is scanned and the connection method is called, the connection will fail.</p> <h5 id="_2-disconnect-device"><a href="#_2-disconnect-device" class="header-anchor">#</a> 2.DisConnect Device</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>//Disconnect. macAddress is the device mac
+mBleManager.disConnect(macAddress);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h5 id="_3-device-connect-status-listener"><a href="#_3-device-connect-status-listener" class="header-anchor">#</a> 3.Device Connect Status Listener</h5> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val  mBleManager <span class="token operator">=</span> 	<span class="token class-name">MST03SensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//Setting the listener</span>
+mBleManager<span class="token punctuation">.</span>setOnConnStateListener<span class="token punctuation">{</span> macAddress<span class="token punctuation">,</span> connectionState <span class="token operator">-&gt;</span> 
+                when <span class="token punctuation">(</span>connectionState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>Connecting</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ConnectionState.Connecting&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>Connected</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ConnectionState.Connected&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>AuthenticateSuccess</span> <span class="token operator">-&gt;</span><span class="token punctuation">{</span>
+
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>AuthenticateFail</span> <span class="token operator">-&gt;</span><span class="token punctuation">{</span>
+                    <span class="token class-name">LoadingDialogUtil</span><span class="token punctuation">.</span><span class="token function">dismissLoadingDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    <span class="token class-name">ToastUtils</span><span class="token punctuation">.</span><span class="token function">showLong</span><span class="token punctuation">(</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>input_secret_key_error<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>ConnectComplete</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ConnectionState.Connect_Complete&quot;</span><span class="token punctuation">)</span>
+                    <span class="token class-name">LoadingDialogUtil</span><span class="token punctuation">.</span><span class="token function">dismissLoadingDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    connectSensorEntity<span class="token operator">?</span><span class="token punctuation">.</span>let <span class="token punctuation">{</span> sensor <span class="token operator">-&gt;</span>
+                        <span class="token class-name">DRouter</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">RouterPaths</span><span class="token punctuation">.</span><span class="token constant">MST03_DEVICE_DETAIL_ACTIVITY</span><span class="token punctuation">)</span><span class="token punctuation">.</span>apply <span class="token punctuation">{</span>
+                            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token class-name">Constant</span><span class="token punctuation">.</span><span class="token constant">MAC_KEY</span><span class="token punctuation">,</span>sensor<span class="token punctuation">.</span>macAddress<span class="token punctuation">)</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token annotation punctuation">@Mst03ScanDeviceListActivity</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+
+                <span class="token punctuation">}</span>
+
+                <span class="token class-name">BleConnectionState<span class="token punctuation">.</span>Disconnect</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;connectionListener&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ConnectionState.Disconnect&quot;</span><span class="token punctuation">)</span>
+                    <span class="token class-name">LoadingDialogUtil</span><span class="token punctuation">.</span><span class="token function">dismissLoadingDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    <span class="token class-name">ToastUtils</span><span class="token punctuation">.</span><span class="token function">showLong</span><span class="token punctuation">(</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>conn_failure<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>                              
+                                  
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>During the connection process, sdk will return multiple connection states to the app, which the app needs to handle properly.</p> <ul><li><strong>BleConnectionState.Connecting</strong>，<strong>BleConnectionState.Connected</strong>: Connecting the device in, do not do time-consuming operations in this state, because at this time in the connected device discovery service, and send authentication data, etc.。</li> <li><strong>BleConnectionState.ConnectComplete</strong>: The sensor device is successfully connected at this point, and can perform read and write operations, such as configuring advparameters, sensor configuration, reading historical data, etc.。</li> <li><strong>BleConnectionState.AuthenticateFail</strong>：The secret key is verified during the authentication process. If the entered secret key is incorrect, this state will be called back and the device will actively disconnect.</li> <li><strong>BleConnectionState.AuthenticateSuccess</strong>：The secret key is verified during the authentication process. If the entered secret key is correct, this status will be called back.</li> <li><strong>BleConnectionState.Disconnect</strong>: The callback will be made if the connection fails or the device is disconnected.</li></ul> <h3 id="reading-and-writing"><a href="#reading-and-writing" class="header-anchor">#</a> Reading and writing</h3> <h5 id="_1-set-device-key"><a href="#_1-set-device-key" class="header-anchor">#</a> 1.Set device key</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>	/**
+      *Set device key
+      * @param macAddress device mac
+      * @param secretKey secret key key
+      * @param listener
+      */
+     void setDeviceSecretKey(String macAddress, String secretKey, OnModifyConfigurationListener listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>use：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>val  mBleManager <span class="token operator">=</span> 	<span class="token class-name">MST03SensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+val secretKey <span class="token operator">=</span> <span class="token string">&quot;minewtech1234567&quot;</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">setSecretKey</span><span class="token punctuation">(</span>mAddress<span class="token punctuation">,</span>secretKey<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h5 id="_2-change-device-password"><a href="#_2-change-device-password" class="header-anchor">#</a> 2.Change device password</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * change device key
+     * @param macAddress device mac
+     * @param secretKey new secretKey
+     * @param listener listener
+     */
+     void changeSecretKey(String macAddress,String secretKey, OnModifyConfigurationListener listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>use:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    suspend fun changePassword(password:String): Boolean = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext false
+        }
+        return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+            manager.changeSecretKey(connectMacAddress!!,password) {
+                continuation.resume(it, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h5 id="_3-set-led-config"><a href="#_3-set-led-config" class="header-anchor">#</a> 3.Set led Config</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * This command is used to set the LED configuration.
+ * 
+ * @param macAddress Device MAC address
+ * @param colorTable Color table, where 1=Blue, 2=Green, 3=Red, 4=Yellow, 5=White, 6=Magenta, 7=Cyan
+ * @param workTotalCount The number of operation cycles, ranging from 1 to 65535. Value = durationTime / (singleCycleLightingTime + singleCycleLightOffTime)
+ * @param singleCycleLightingTime Lighting time within a single cycle, ranging from 1 to 65535 milliseconds
+ * @param singleCycleLightOffTime Off time within a single cycle, ranging from 1 to 65535 milliseconds
+ * @param brightness Brightness level, ranging from 0 to 100
+ */
+    void setLEDConfiguration(String macAddress, int colorTable, int workTotalCount, int singleCycleLightingTime, int singleCycleLightOffTime, int brightness, OnModifyConfigurationListener listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>use:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+val duration = 10*1000 //(unit: milliseconds),0-1000s,
+val singleCycleLightingTime = 200 //Light on time in a single cycle (unit: milliseconds)
+val singleCycleLightOffTime = 200 //The indicator off time in a single period,   (unit: milliseconds)
+val workTotalCount = duration/(singleCycleLightingTime+singleCycleLightOffTime); //The number of operation cycles,  0 means no operation
+val ledColor = 3 //led Color
+val brightness =100 //Brightness 1, 0~100
+
+    suspend fun setLEDConfig(
+        color: Int,
+        workTotalCount: Int,
+        singleCycleLightingTime: Int,
+        singleCycleLightOffTime: Int,
+        brightness: Int
+    ): Boolean =
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext false
+            }
+            return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+                manager.setLEDConfiguration(
+                    connectMacAddress!!,
+                    color,
+                    workTotalCount,
+                    singleCycleLightingTime,
+                    singleCycleLightOffTime,
+                    brightness
+                ) { isSuccess -&gt;
+                    continuation.resume(isSuccess, null)
+                }
+            }
+        }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><h5 id="_4-query-device-version-information"><a href="#_4-query-device-version-information" class="header-anchor">#</a> 4.Query device version information</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>	/**
+      * Query device version information
+      * @param macAddress device mac
+      * @param listener listener
+      */
+     void queryDeviceFirmwareInfo(String macAddress, OnQueryResultListener&lt;FirmwareVersionModel&gt;  listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>FirmwareVersionModel:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>versionInfoList</td> <td>List<VersionInfo></VersionInfo></td> <td>firmware version data list</td></tr></tbody></table> <p>VersionInfo:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>firmwareName</td> <td>String</td> <td>firmware name</td></tr> <tr><td>firmwareType</td> <td>int</td> <td>type</td></tr> <tr><td>firmwareVersion</td> <td>String</td> <td>firmware version V3.2.6</td></tr></tbody></table> <p>use:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    suspend fun <span class="token function">queryFirmwareInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">FirmwareVersionModel</span><span class="token operator">?</span> <span class="token operator">=</span> <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FirmwareVersionModel</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+            manager<span class="token punctuation">.</span><span class="token function">queryDeviceFirmwareInfo</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> isSuccessful<span class="token punctuation">,</span> version <span class="token operator">-&gt;</span>
+                continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>
+                    when <span class="token punctuation">(</span>isSuccessful<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token boolean">true</span> <span class="token operator">-&gt;</span> version
+                        <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token keyword">null</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">null</span>
+                <span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h5 id="_5-query-adv-frame-broadcast-parameters-and-configure-adv-parameters"><a href="#_5-query-adv-frame-broadcast-parameters-and-configure-adv-parameters" class="header-anchor">#</a> 5.Query adv frame broadcast parameters and configure adv parameters</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>	/**
+      * Query adv frame broadcast parameters
+      * @param macAddress device mac
+      * @param slot Query the broadcast channel value, default value 0.slot = 0 DeviceStaticInfoFrame 、slot = 1 			  
+      * CombinationFrame
+      * @param listener listener
+      */
+     void queryAdvParametersConfiguration(String macAddress,int slot,  OnQueryResultListener&lt;AdvParametersConfiguration&gt;  listener);
+     
+     
+	/**
+      * Set broadcast frame broadcast parameters
+      *
+      * @param macAddress device mac
+      * @param frameType FrameType enumeration gets getFrameTypeVersion()
+      * @param slotNumber sets the channel value corresponding to the broadcast, 
+      * @param advertisingInterval broadcast interval in milliseconds, the broadcast interval is adjustable from 1s to 60s, and 	  * the scale is 1s;
+      * @param txPower -40 -20 -16 -12 -8 -4 0 4dBm
+      * @param advertisingContent Device name (Supported only for String frames)
+      * @param listener listener
+      */
+     void setAdvParametersConfiguration(String macAddress,String frameType, int slotNumber,int advertisingInterval, int txPower, String advertisingContent,OnModifyConfigurationListener listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>AdvParametersConfiguration:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>slotNumber</td> <td>int</td> <td>0 = DeviceStaticInfoFrame 、 1 = CombinationFrame</td></tr> <tr><td>frameType</td> <td>String</td> <td>frane type</td></tr> <tr><td>advertisingInterval</td> <td>int</td> <td>advertising Interval   range = 1s to 60s ,the scale is 1s .   unit= millisecond</td></tr> <tr><td>txPower</td> <td>int</td> <td>txPower  value = -40, -20 ,-16, -12, -8, -4, 0, 4    unit=dBm</td></tr> <tr><td>alwaysAdvertising</td> <td>int</td> <td></td></tr> <tr><td>advertisingContent</td> <td>String</td> <td>device  name.</td></tr></tbody></table> <p>use:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    
+    //get  0 = DeviceStaticInfoFrame 、 1 = CombinationFrame
+    suspend fun queryAdvertisingParametersConfiguration(slot:Int): AdvParametersConfiguration? =
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext null
+            }
+            return@withContext suspendCancellableCoroutine&lt;AdvParametersConfiguration?&gt; { continuation -&gt;
+                manager.queryAdvParametersConfiguration(connectMacAddress!!,slot) { isSuccessful, configResult -&gt;
+
+                    continuation.resume(
+                        when (isSuccessful) {
+                            true -&gt; configResult
+                            else -&gt; null
+                        }, null
+                    )
+                }
+            }
+        }
+        
+    //set
+    suspend fun setAdvertisingParametersConfiguration(slot:Int,frameType: String,advertisingInterval:Int, txPower:Int,advertisingContent: String?): Boolean =
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext false
+            }
+            return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+                manager.setAdvParametersConfiguration(connectMacAddress!!,frameType,slot,advertisingInterval,txPower,advertisingContent) { isSuccess -&gt;
+                    continuation.resume(isSuccess, null)
+                }
+            }
+        } 
+        //for example
+        mAdvParametersConfiguration?.let {
+            lifecycleScope.launch(Dispatchers.Main) {
+                LoadingDialogUtil.showLoadingDialog()
+                val result = mConnectViewModel.setAdvertisingParametersConfiguration(
+                    it.slotNumber,
+                    it.frameType,
+                    it.advertisingInterval,
+                    it.txPower,
+                    it.advertisingContent
+                )
+                LoadingDialogUtil.dismissLoadingDialog()
+                if (result) {
+                    ToastUtils.showShort(getString(R.string.common_config_success))
+                } else {
+                    ToastUtils.showShort(getString(R.string.common_config_fail))
+                }
+            }
+        }
+        
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br></div></div><h5 id="_6-query-temperature-historical-data"><a href="#_6-query-temperature-historical-data" class="header-anchor">#</a> 6.Query temperature historical data</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>	/**
+      * Read historical data
+      *
+      * @param macAddress device mac
+      * @param rules Historical data acquisition rules, 0 means to obtain all data, 1 means to obtain data of a certain time           *period, when rules==0, startTime and endTime do not need to be passed, and 0 is passed by default
+      * @param startTime starting timestamp unit: seconds
+      * @param endTime end timestamp unit: seconds,Cannot be greater than systemTime
+      * @param systemTime real-time timestamp unit: seconds
+      * @param listener listener
+      */
+     void queryTemperatureHistoryData(String macAddress,int rules,long startTime,long endTime,long systemTime, OnQueryResultListener&lt;HistoryHtData&gt;  listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>HistoryHtData:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>historyDataList</td> <td>List<HtData></HtData></td> <td>temperature data</td></tr></tbody></table> <p>HtData:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>macAddress</td> <td>String</td> <td>mac address</td></tr> <tr><td>temperature</td> <td>float</td> <td>temperature data</td></tr> <tr><td>humidity</td> <td>float</td> <td>Invalid value  -128f</td></tr> <tr><td>timestamps</td> <td>long</td> <td>record time . unit= millisecond</td></tr></tbody></table> <p>use:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+val systemTime = System.currentTimeMillis()/1000
+val startTime = (systemTime-60*60*1000*24)/1000
+val endTime = systemTime
+
+val rule = 0
+
+suspend fun readHtHistoryData(rules:Int,startTime:Long,endTime:Long,systemTime:Long): HistoryHtData?=
+        withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext null
+        }
+        return@withContext suspendCancellableCoroutine&lt;HistoryHtData?&gt; { continuation -&gt;
+            manager.queryTemperatureHistoryData(connectMacAddress!!,rules,startTime,endTime,systemTime) { result,historyData -&gt;
+                continuation.resume(historyData, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h5 id="_7-clear-temperature-data"><a href="#_7-clear-temperature-data" class="header-anchor">#</a> 7.Clear Temperature  Data</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * Clear historical  data
+     * 
+     * @param macAddress Device MAC address
+     * @param listener Listener s
+     */
+    void cleanTempHistoryData(String macAddress, OnModifyConfigurationListener listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>use:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    suspend fun cleanTempHistoryData(): Boolean = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext false
+        }
+        return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+            manager.cleanTempHistoryData(connectMacAddress!!) {
+                continuation.resume(it, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h5 id="_8-query-light-historical-data"><a href="#_8-query-light-historical-data" class="header-anchor">#</a> 8.Query Light Historical Data</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+  *
+  * @param macAddress device mac
+  * @param rules Historical data acquisition rules, 0 means to obtain all data, 1 means to obtain data of a certain time           *period, when rules==0, startTime and endTime do not need to be passed, and 0 is passed by default
+  * @param startTime starting timestamp unit: seconds
+  * @param endTime end timestamp unit: seconds,Cannot be greater than systemTime
+  * @param systemTime real-time timestamp unit: seconds
+  * @param listener listener
+  */
+ void queryLightHistoryData(String macAddress,int rules,long startTime,long endTime,long systemTime, OnQueryResultListener&lt;HistoryLightData&gt;  listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>HistoryLightData:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>historyDataList</td> <td>List<LightData></LightData></td> <td>Light data</td></tr></tbody></table> <p>LightData:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>macAddress</td> <td>String</td> <td>mac address</td></tr> <tr><td>lightIntensity</td> <td>int</td> <td>light Intensity  unit=nW/cm²</td></tr> <tr><td>alarmType</td> <td>int</td> <td>alarm type.1=Low threshold trigger.2 = High threshold trigger,255 = Fixed interval collection</td></tr> <tr><td>timestamps</td> <td>long</td> <td>record time . unit= millisecond</td></tr></tbody></table> <p>​		use:</p> <p>​</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>val systemTime = System.currentTimeMillis()/1000
+val startTime = (systemTime-60*60*1000*24)/1000
+val endTime = systemTime
+
+val rule = 0
+
+suspend fun readLightHistoryData(rules:Int,startTime:Long,endTime:Long,systemTime:Long): HistoryLightData?=
+        withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext null
+        }
+        return@withContext suspendCancellableCoroutine&lt;HistoryLightData?&gt; { continuation -&gt;
+            manager.queryLightHistoryData(connectMacAddress!!,rules,startTime,endTime,systemTime) { result,historyData -&gt;
+                continuation.resume(historyData, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h5 id="_9-clear-light-data"><a href="#_9-clear-light-data" class="header-anchor">#</a> 9.Clear Light Data</h5> <p>​</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * Clear historical  data
+     * 
+     * @param macAddress Device MAC address
+     * @param listener Listener s
+     */
+    void cleanLightHistoryData(String macAddress, OnModifyConfigurationListener listener);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>​		use:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    suspend fun cleanLightHistoryData(): Boolean = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext false
+        }
+        return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+            manager.cleanLightHistoryData(connectMacAddress!!) {
+                continuation.resume(it, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h5 id="_10-query-temperature-sensor-parameters-and-configure-parameters"><a href="#_10-query-temperature-sensor-parameters-and-configure-parameters" class="header-anchor">#</a> 10.Query temperature sensor parameters and configure parameters</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+	/**
+      * Query temperature and humidity sensor configuration
+      *
+      * @param macAddress device mac
+      * @param listener listener
+      */
+     void queryHTSensorConfiguration(String macAddress, OnQueryResultListener&lt;HtSensorConfiguration&gt; listener);
+     
+     
+	/**
+      * Set temperature and humidity sensor configuration
+      *
+      * @param macAddress device mac
+      * @param htSensorConfiguration sensor configuration
+      * @param listener listener
+      */
+     void setHTSensorConfiguration(String macAddress, HtSensorConfiguration htSensorConfiguration, 				  OnModifyConfigurationListener listener);
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>HtSensorConfiguration:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>htSettingData</td> <td>List<HTSensorThresholdConfig></HTSensorThresholdConfig></td> <td></td></tr> <tr><td>samplingInterval</td> <td>int</td> <td>Collection interval. Unit: seconds</td></tr> <tr><td>delay</td> <td>int</td> <td>Delay recording time. Unit: seconds</td></tr></tbody></table> <p>HTSensorThresholdConfig:</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>lowTemperature</td> <td>float</td> <td>Lower limit of low temperature，value:-128  means not enabled</td></tr> <tr><td>highTemperature</td> <td>float</td> <td>High temperature upper limit，value:-128 means not enabled</td></tr> <tr><td>lowHumidity</td> <td>float</td> <td>Invalid value -128，-128 means not enabled</td></tr> <tr><td>highHumidity</td> <td>float</td> <td>Invalid value -128，-128 means not enabled</td></tr></tbody></table> <p>use:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//Query sensor parameters</span>
+    suspend fun <span class="token function">queryHTSensorConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">HtSensorConfiguration</span><span class="token operator">?</span> <span class="token operator">=</span>
+        <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token keyword">null</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HtSensorConfiguration</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+                manager<span class="token punctuation">.</span><span class="token function">queryHTSensorConfiguration</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> isSuccessful<span class="token punctuation">,</span> configResult <span class="token operator">-&gt;</span>
+
+                    continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>
+                        when <span class="token punctuation">(</span>isSuccessful<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token boolean">true</span> <span class="token operator">-&gt;</span> configResult
+                            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token keyword">null</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">null</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+<span class="token comment">//Set sensor parameters</span>
+        val list<span class="token operator">:</span> <span class="token class-name">MutableList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HTSensorThresholdConfig</span><span class="token punctuation">&gt;</span></span> <span class="token operator">=</span> <span class="token function">mutableListOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        val tempHtConfig1 <span class="token operator">=</span> <span class="token class-name">HTSensorThresholdConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        when <span class="token punctuation">(</span>binding<span class="token punctuation">.</span>switchTemperature1Alarm<span class="token punctuation">.</span>isChecked<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token boolean">true</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                tempHtConfig1<span class="token punctuation">.</span>highTemperature <span class="token operator">=</span> temperatureAlarmHigh1
+                tempHtConfig1<span class="token punctuation">.</span>lowTemperature <span class="token operator">=</span> temperatureAlarmLow1
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                tempHtConfig1<span class="token punctuation">.</span>highTemperature <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+                tempHtConfig1<span class="token punctuation">.</span>lowTemperature <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        tempHtConfig1<span class="token punctuation">.</span>highHumidity <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+        tempHtConfig1<span class="token punctuation">.</span>lowHumidity <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+
+        val tempHtConfig2 <span class="token operator">=</span> <span class="token class-name">HTSensorThresholdConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        when <span class="token punctuation">(</span>binding<span class="token punctuation">.</span>switchTemperature2Alarm<span class="token punctuation">.</span>isChecked<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token boolean">true</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                tempHtConfig2<span class="token punctuation">.</span>highTemperature <span class="token operator">=</span> temperatureAlarmHigh2
+                tempHtConfig2<span class="token punctuation">.</span>lowTemperature <span class="token operator">=</span> temperatureAlarmLow2
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                tempHtConfig2<span class="token punctuation">.</span>highTemperature <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+                tempHtConfig2<span class="token punctuation">.</span>lowTemperature <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        tempHtConfig2<span class="token punctuation">.</span>highHumidity <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+        tempHtConfig2<span class="token punctuation">.</span>lowHumidity <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128f</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>tempHtConfig1<span class="token punctuation">)</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>tempHtConfig2<span class="token punctuation">)</span>
+
+        val configuration<span class="token operator">:</span> <span class="token class-name">HtSensorConfiguration</span> <span class="token operator">=</span> <span class="token class-name">HtSensorConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        configuration<span class="token punctuation">.</span>samplingInterval <span class="token operator">=</span> samplingInterval
+        configuration<span class="token punctuation">.</span>delay <span class="token operator">=</span> delayRecordTime
+        configuration<span class="token punctuation">.</span>htSettingData <span class="token operator">=</span> list
+            
+    suspend fun <span class="token function">setHTSensorConfiguration</span><span class="token punctuation">(</span>configuration<span class="token operator">:</span> <span class="token class-name">HtSensorConfiguration</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">Boolean</span> <span class="token operator">=</span>
+        <span class="token function">withContext</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Default</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>connectMacAddress <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> <span class="token boolean">false</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span><span class="token annotation punctuation">@withContext</span> suspendCancellableCoroutine<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span> continuation <span class="token operator">-&gt;</span>
+                manager<span class="token punctuation">.</span><span class="token function">setHTSensorConfiguration</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">,</span>configuration<span class="token punctuation">)</span> <span class="token punctuation">{</span> isSuccess <span class="token operator">-&gt;</span>
+                    continuation<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span>isSuccess<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>   
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br></div></div><h5 id="_11-query-light-sensor-parameters-and-configure-parameters"><a href="#_11-query-light-sensor-parameters-and-configure-parameters" class="header-anchor">#</a> 11.Query Light sensor parameters and configure parameters</h5> <p>​	LightIntensitySensorConfiguration:</p> <p>​</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>lightIntensityLowerLimitAlarm</td> <td>int</td> <td>Low Light Threshold.Range: 1.2 to 10,000,000 nW/cm². for example: 1.3 = lightIntensityLowerLimitAlarm/10f,(lightIntensityLowerLimitAlarm = 13)</td></tr> <tr><td>lightIntensityUpperLimitAlarm</td> <td>int</td> <td>High Light Threshold.Range: 1.2 to 10,000,000 nW/cm².for example: 1300 = lightIntensityUpperLimitAlarm/10f,(lightIntensityUpperLimitAlarm = 13000)</td></tr></tbody></table> <p>​	use:</p> <p>​</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//get
+    suspend fun getLightIntensityConfiguration(): LightIntensitySensorConfiguration? =
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext null
+            }
+            return@withContext suspendCancellableCoroutine&lt;LightIntensitySensorConfiguration?&gt; { continuation -&gt;
+                manager.getLightIntensityConfiguration(connectMacAddress!!) { isSuccessful, configResult -&gt;
+
+                    continuation.resume(
+                        when (isSuccessful) {
+                            true -&gt; configResult
+                            else -&gt; null
+                        }, null
+                    )
+                }
+            }
+        }
+
+     mLightIntensitySensorConfiguration?.let {
+                binding.highLightThresholdEdit.setText(&quot;${it.lightIntensityUpperLimitAlarm/10f}&quot;)// nW/cm²
+                binding.lowLightThresholdEdit.setText(&quot;${it.lightIntensityLowerLimitAlarm/10f}&quot;)// nW/cm²
+     } 
+        
+        
+        
+ //set
+         val lightIntensitySensorConfiguration = LightIntensitySensorConfiguration().apply {
+            this.lightIntensityLowerLimitAlarm = (lowLightThresholdInputText.toFloat() * 10).toInt()
+            this.lightIntensityUpperLimitAlarm = (highLightThresholdInputText.toFloat() * 10).toInt()
+
+        }
+     suspend fun setLightIntensityConfiguration(configuration: LightIntensitySensorConfiguration): Boolean =
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext false
+            }
+            return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+                manager.setLightIntensityConfiguration(connectMacAddress!!,configuration) { isSuccess -&gt;
+                    continuation.resume(isSuccess, null)
+                }
+            }
+        } 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br></div></div><h5 id="_12-query-alarm-strategy-and-set"><a href="#_12-query-alarm-strategy-and-set" class="header-anchor">#</a> 12.Query Alarm strategy and set</h5> <p>​	AlarmStrategyConfiguration:</p> <p>​</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>alarmLedDuration</td> <td>int</td> <td>Alarm light flashing duration, 60s (1min) to 14400s (240min) in seconds</td></tr> <tr><td>alarmCountThreshold</td> <td>int</td> <td>The number of consecutive threshold violations required to trigger an alarm   range:0~255</td></tr></tbody></table> <p>​			use:</p> <p>​</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//get
+    suspend fun getAlarmStrategyConfiguration(): AlarmStrategyConfiguration? =
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext null
+            }
+            return@withContext suspendCancellableCoroutine&lt;AlarmStrategyConfiguration?&gt; { continuation -&gt;
+                manager.getAlarmStrategyConfiguration(connectMacAddress!!) { isSuccessful, configResult -&gt;
+
+                    continuation.resume(
+                        when (isSuccessful) {
+                            true -&gt; configResult
+                            else -&gt; null
+                        }, null
+                    )
+                }
+            }
+        }
+   //set
+   val alarmStrategyConfiguration = AlarmStrategyConfiguration().apply {
+            this.alarmLedDuration = 10*60  //unit:seconds
+            this.alarmCountThreshold = 5
+        }
+        
+        
+suspend fun setAlarmStrategyConfiguration(configuration: AlarmStrategyConfiguration): Boolean =
+        withContext(Dispatchers.Default) {
+            if (connectMacAddress == null) {
+                return@withContext false
+            }
+            return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+                manager.setAlarmStrategyConfiguration(connectMacAddress!!,configuration) { isSuccess -&gt;
+                    continuation.resume(isSuccess, null)
+                }
+            }
+        }     
+   
+        
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h5 id="_13-firmware-upgrade"><a href="#_13-firmware-upgrade" class="header-anchor">#</a> 13.Firmware upgrade</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>		/**
+      * Firmware upgrade
+      *
+      * @param macAddress device mac
+      * @param isLinkUpgrade =true: url upgrade, isLinkUpgrade =false: firmware package upgrade. The default value is false, and the url upgrade  	  * method is not supported. 
+      * @param dfuTarget isLinkUpgrade =true, dfuTarget = 0
+      * @param upgradeData upgrade package data
+      * @param listener listener
+      */
+     void firmwareUpgrade(String macAddress,boolean isLinkUpgrade,int dfuTarget,byte[] upgradeData, 		 OnFirmwareUpgradeListener listener);
+     
+      /**
+		* Verify the correctness of the OTA upgrade file
+		* @param zipFilePath OTA upgrade file path
+		* @return true = mst03 upgrade file, false = not an mst03 ota file
+	*/
+    boolean verifyOtaFile(@NonNull String zipFilePath);
+     
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>use:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>
+    <span class="token keyword">private</span> fun <span class="token function">checkFile</span><span class="token punctuation">(</span>fileUri<span class="token operator">:</span> <span class="token class-name">Uri</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">var</span> fileName <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+        val cursor <span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span>contentResolver<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>fileUri<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>cursor <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> cursor<span class="token punctuation">.</span><span class="token function">moveToFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                fileName <span class="token operator">=</span> cursor<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span>
+                    cursor<span class="token punctuation">.</span><span class="token function">getColumnIndex</span><span class="token punctuation">(</span><span class="token class-name">OpenableColumns</span><span class="token punctuation">.</span><span class="token constant">DISPLAY_NAME</span><span class="token punctuation">)</span>
+                <span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            cursor<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+<span class="token comment">//        LogUtil.e(TAG, &quot;fileName=$fileName&quot;)</span>
+        val zipFilePath <span class="token operator">=</span> <span class="token class-name">FileUtil</span><span class="token punctuation">.</span><span class="token function">getFileAbsolutePath</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> fileUri<span class="token punctuation">)</span>
+        val verifyResult <span class="token operator">=</span> mConnectViewModel<span class="token punctuation">.</span><span class="token function">verifyOtaFile</span><span class="token punctuation">(</span>zipFilePath<span class="token punctuation">)</span>
+<span class="token comment">//        LogUtil.e(TAG, &quot;verifyResult=$verifyResult&quot;)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>verifyResult<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">chooseFileError</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_file_select_error<span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">dealFileData</span><span class="token punctuation">(</span>zipFilePath<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+
+
+
+    <span class="token keyword">private</span> fun <span class="token function">dealFileData</span><span class="token punctuation">(</span>zipFilePath<span class="token operator">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MinewExecutors</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDiskIO</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>execute <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                val bininputstream <span class="token operator">=</span> <span class="token class-name">ZipUtil</span><span class="token punctuation">.</span><span class="token function">readZipFile</span><span class="token punctuation">(</span>zipFilePath<span class="token punctuation">,</span> <span class="token string">&quot;.bin&quot;</span><span class="token punctuation">)</span>
+                val bufferedInputStream <span class="token operator">=</span> <span class="token class-name">BufferedInputStream</span><span class="token punctuation">(</span>bininputstream<span class="token punctuation">)</span>
+                val allData <span class="token operator">=</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Byte</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token comment">//4k</span>
+                val buffer <span class="token operator">=</span> <span class="token class-name">ByteArray</span><span class="token punctuation">(</span><span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">)</span>
+                <span class="token keyword">var</span> bytesRead <span class="token operator">=</span> <span class="token number">0</span>
+                <span class="token keyword">var</span> tempLength <span class="token operator">=</span> <span class="token number">0</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>bufferedInputStream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">.</span>also <span class="token punctuation">{</span> bytesRead <span class="token operator">=</span> it <span class="token punctuation">}</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span>i in <span class="token number">0</span> until bytesRead<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        val by <span class="token operator">=</span> buffer<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                        allData<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>by<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                    tempLength <span class="token operator">+=</span> bytesRead
+                <span class="token punctuation">}</span>
+                val fileData <span class="token operator">=</span> <span class="token class-name">ByteArray</span><span class="token punctuation">(</span>allData<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span>i in allData<span class="token punctuation">.</span>indices<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    fileData<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> allData<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+                bufferedInputStream<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>fileData<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> <span class="token class-name">FileNotFoundException</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token function">chooseFileError</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_file_select_error<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> <span class="token class-name">IOException</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token function">chooseFileError</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_file_select_error<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword">private</span> fun <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>
+        fileByte<span class="token operator">:</span> <span class="token class-name">ByteArray</span><span class="token punctuation">,</span>
+        dfuTarget<span class="token operator">:</span> <span class="token class-name">Int</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        mConnectViewModel<span class="token punctuation">.</span><span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>dfuTarget<span class="token punctuation">,</span> fileByte<span class="token punctuation">,</span>
+            progressCallBack <span class="token operator">=</span> <span class="token punctuation">{</span> progress <span class="token operator">-&gt;</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token class-name"><span class="token namespace">common<span class="token punctuation">.</span></span>R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_upgrading<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>progress <span class="token operator">/</span> <span class="token number">100f</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                binding<span class="token punctuation">.</span>progressBarSimpleCustom<span class="token punctuation">.</span>progress <span class="token operator">=</span> progress<span class="token punctuation">.</span><span class="token function">toFloat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            successCallBack <span class="token operator">=</span> <span class="token punctuation">{</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token class-name">ToastUtils</span><span class="token punctuation">.</span><span class="token function">showShort</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_firmware_upgrade_successfully<span class="token punctuation">)</span>
+                <span class="token function">showFirmwareUpgradeSuccessfulDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            failCallBack <span class="token operator">=</span> <span class="token punctuation">{</span>
+                <span class="token class-name">WaitDialog</span><span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token class-name">ToastUtils</span><span class="token punctuation">.</span><span class="token function">showShort</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>string<span class="token punctuation">.</span>common_firmware_upgrade_failure2<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+
+    fun <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>
+        dfuTarget<span class="token operator">:</span> <span class="token class-name">Int</span><span class="token punctuation">,</span>
+        fileByte<span class="token operator">:</span> <span class="token class-name">ByteArray</span><span class="token punctuation">,</span>
+        progressCallBack<span class="token operator">:</span><span class="token punctuation">(</span>progress<span class="token operator">:</span><span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Unit</span><span class="token punctuation">,</span>
+        successCallBack<span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Unit</span><span class="token punctuation">,</span>
+        failCallBack<span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Unit</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">{</span>
+        manager<span class="token punctuation">.</span><span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>connectMacAddress<span class="token operator">!</span><span class="token operator">!</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span>dfuTarget<span class="token punctuation">,</span>fileByte<span class="token punctuation">,</span>
+            object <span class="token operator">:</span> <span class="token class-name">OnFirmwareUpgradeListener</span> <span class="token punctuation">{</span>
+                override fun <span class="token function">updateProgress</span><span class="token punctuation">(</span>progress<span class="token operator">:</span> <span class="token class-name">Int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">progressCallBack</span><span class="token punctuation">(</span>progress<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+
+                override fun <span class="token function">upgradeSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">successCallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+
+                override fun <span class="token function">upgradeFailed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">failCallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br></div></div><h5 id="_14-restore-the-factory-settings"><a href="#_14-restore-the-factory-settings" class="header-anchor">#</a> 14.Restore the factory settings</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code> /**
+  * Restore factory settings
+  *
+  * @param macAddress device mac
+  * @param listener listener
+  */
+  void reset(String macAddress, OnModifyConfigurationListener listener);
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>use:</p> <p>​</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    suspend fun reset(): Boolean = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext false
+        }
+        return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+            manager.reset(connectMacAddress!!) {
+                continuation.resume(it, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h5 id="_15-shutdown"><a href="#_15-shutdown" class="header-anchor">#</a> 15.Shutdown</h5> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token comment">/**
+     * Shutdown
+     * @param macAddress device mac
+     * @param listener listener
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">powerOff</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>use:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>    suspend fun shutdown(): Boolean = withContext(Dispatchers.Default) {
+        if (connectMacAddress == null) {
+            return@withContext false
+        }
+        return@withContext suspendCancellableCoroutine&lt;Boolean&gt; { continuation -&gt;
+            manager.powerOff(connectMacAddress!!) {
+                continuation.resume(it, null)
+            }
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="history"><a href="#history" class="header-anchor">#</a> History</h2> <ul><li>2025/08/06  edit；</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated::</span> <span class="time">9/10/2025, 8:33:57 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/70.a4692fcf.js" defer></script>
+  </body>
+</html>

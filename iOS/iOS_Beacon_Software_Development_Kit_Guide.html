@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewBeacon Scan Software Development Kit Guide | SDK &amp; API</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="SDKs and APIs for MBeacon, BeaconPlus, MSensor, etc.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/75.723e0570.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/106.a3d11e42.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/113.e8cff9ce.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/18.6db3ccbb.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/45.a58e8a25.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.ca9adaaf.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/68.8866be89.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.a4692fcf.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="SDK &amp; API" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_Beacon_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewBeacon Scan Software Development Kit Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#installation" class="sidebar-link">Installation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#cocoapods" class="sidebar-link">CocoaPods</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#manually" class="sidebar-link">Manually</a></li></ul></li><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#requirements" class="sidebar-link">Requirements</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#configs-before-development" class="sidebar-link">Configs before development</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#get-started" class="sidebar-link">Get Started</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#class-reference" class="sidebar-link">Class reference</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#minewbeacon" class="sidebar-link">MinewBeacon</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#minewbeaconvalue" class="sidebar-link">MinewBeaconValue</a></li><li class="sidebar-sub-header"><a href="/iOS/iOS_Beacon_Software_Development_Kit_Guide.html#minewbeaconmanager" class="sidebar-link">MinewBeaconManager</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="minewbeacon-scan-software-development-kit-guide"><a href="#minewbeacon-scan-software-development-kit-guide" class="header-anchor">#</a> MinewBeacon Scan Software Development Kit Guide</h1> <h2 id="installation"><a href="#installation" class="header-anchor">#</a> Installation</h2> <h3 id="cocoapods"><a href="#cocoapods" class="header-anchor">#</a> CocoaPods</h3> <p>MinewBeaconScan is available through <a href="http://cocoapods.org/" target="_blank" rel="noopener noreferrer">CocoaPods<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>. To install it, simply add the following line to your Podfile, and then import &lt;MinewBeaconScan/MinewBeaconScan&gt;:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pod &quot;MinewBeaconScan&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="manually"><a href="#manually" class="header-anchor">#</a> Manually</h3> <ol><li>Download the project and drop MinewBeaconScan.framework folder into your project.</li> <li>Import file <code>&lt;MinewBeaconScan/MinewBeaconScan.h&gt;</code>.</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>#import &lt;MinewBeaconScan/MinewBeaconScan.h&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="requirements"><a href="#requirements" class="header-anchor">#</a> Requirements</h2> <p>This library requires iOS 9.0+.</p> <h2 id="configs-before-development"><a href="#configs-before-development" class="header-anchor">#</a> Configs before development</h2> <p>The SDK used CoreLocation and CoreBluetooth.</p> <p>In order to comply with Apple's audit specifications, we need to some distinction for using background task or not.</p> <p>for the developer not require  background task:</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>  <span class="token comment">// 1. set backgroundSupport to NO </span>
+    <span class="token punctuation">[</span>aManager startScan<span class="token punctuation">:</span>uuids backgroundSupport<span class="token punctuation">:</span> NO<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+ <span class="token comment">// 2. disable Location update and Uses Bluetooth LE accessories in your project. </span>
+
+ <span class="token comment">//  PS: Because of the iOS restrictions, if some device don't support background scanning, you will not get these data for the device when the App enter background, although the application process is not in a suspended state.</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>for the developer require background task：</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>  <span class="token comment">// 1. set backgroundSupport to YES</span>
+  <span class="token punctuation">[</span>aManager startScan<span class="token punctuation">:</span>uuids backgroundSupport <span class="token punctuation">:</span>YES<span class="token punctuation">]</span><span class="token punctuation">;</span>
+   
+  <span class="token comment">// 2、enable Location update and Uses Bluetooth LE accessories.at the same time, you need add &quot;NSLocationAlwaysUsageDescription&quot; item to your project's info.plist file. </span>
+
+  <span class="token comment">// PS：SDK will change to background mode and continue to scan,if there are devices support background mode, all delegate methods will be execute normally.</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>Configs for &quot;info.plist&quot;</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Bluetooth <span class="token operator">--</span><span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>key<span class="token operator">&gt;</span>NSBluetoothPeripheralUsageDescription<span class="token operator">&lt;</span><span class="token operator">/</span>key<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span>App will use bluetooth to communication with devices<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">&gt;</span> 
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Location <span class="token operator">--</span><span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>key<span class="token operator">&gt;</span>NSLocationUsageDescription<span class="token operator">&lt;</span><span class="token operator">/</span>key<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span>App will record your location<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> use location <span class="token keyword">while</span> app <span class="token keyword">in</span> use <span class="token operator">--</span><span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>key<span class="token operator">&gt;</span>NSLocationWhenInUseUsageDescription<span class="token operator">&lt;</span><span class="token operator">/</span>key<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span>App will record your location<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">&gt;</span> 
+  
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token keyword">if</span> you need background scanning<span class="token punctuation">,</span> you should add configs below <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> always use location<span class="token operator">--</span><span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>key<span class="token operator">&gt;</span>NSLocationAlwaysUsageDescription<span class="token operator">&lt;</span><span class="token operator">/</span>key<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span>App will record your location<span class="token operator">&lt;</span><span class="token operator">/</span>string<span class="token operator">&gt;</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="get-started"><a href="#get-started" class="header-anchor">#</a> Get Started</h2> <p>MinewBeaconManager (as Manager below) can scan or stop scan devices around, it will create <strong>Minewbeacon</strong>(as Beacon below)  instance for every device. it will listen the data update and appear(we think a device disappeared if it doesn't update data in seconds, we think a device appeared if it is scanned at first time or scanned from &quot;disappear&quot; ) state of devices, at the same time, Manager will listen the changes of cellphone's Bluetooth state. Here is the code below:</p> <ol><li>Get Manager shared instance, set delegate:</li></ol> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>MinewBeaconManager <span class="token operator">*</span>manager <span class="token operator">=</span> <span class="token punctuation">[</span>MinewBeaconManager sharedInstance<span class="token punctuation">]</span><span class="token punctuation">;</span>
+manager<span class="token punctuation">.</span>delegate <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="2"><li>Start scan for devices.</li></ol> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token punctuation">[</span>manager startScan<span class="token punctuation">:</span><span class="token operator">@</span><span class="token punctuation">[</span><span class="token string">@&quot;uuid1&quot;</span><span class="token punctuation">,</span> <span class="token string">@&quot;uuid2&quot;</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">]</span> backgroundSupport<span class="token punctuation">:</span>NO<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="3"><li>get data of devices from delegate method.</li></ol> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// if the manager found devices, this method will be executed every second, </span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>minewBeaconManager<span class="token punctuation">:</span><span class="token punctuation">(</span>MinewBeaconManager <span class="token operator">*</span><span class="token punctuation">)</span>manager didRangeBeacons<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>beacons
+<span class="token punctuation">{</span>
+    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;current beacons:%@&quot;</span><span class="token punctuation">,</span> beacons<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="4"><li><p>get data of beacon instance.</p> <p>Via method &quot;-(MinewBeaconValue *)getBeaconValue:(BeaconValueIndex)index&quot;. for data versatility, we use <strong>MinewBeaconValue</strong> to handle all types of data, BeaconValue instance can be a string, int, float or bool, every &quot;index&quot; correspond to a value, as the code below:</p></li></ol> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>MinewBeacon <span class="token operator">*</span>beacon <span class="token operator">=</span> beacons<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// uuid</span>
+NSString <span class="token operator">*</span>uuid <span class="token operator">=</span> <span class="token punctuation">[</span>beacon getBeaconValue<span class="token punctuation">:</span>BeaconValueIndex_UUID<span class="token punctuation">]</span><span class="token punctuation">.</span>stringValue<span class="token punctuation">;</span> 
+<span class="token comment">// major</span>
+NSInteger major <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span><span class="token punctuation">[</span>beacon getBeaconValue<span class="token punctuation">:</span>BeaconValueIndex_Major<span class="token punctuation">]</span><span class="token punctuation">.</span>intValue<span class="token punctuation">;</span>
+<span class="token comment">// minor</span>
+NSInteger minor <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span><span class="token punctuation">[</span>beacon getBeaconValue<span class="token punctuation">:</span>BeaconValueIndex_Minor<span class="token punctuation">]</span><span class="token punctuation">.</span>intValue<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>Table for ValueIndex and data types</p> <table><thead><tr><th>index</th> <th>Data name</th> <th>Type</th> <th>Detail</th></tr></thead> <tbody><tr><td>BeaconValueIndex_UUID</td> <td>uuid</td> <td>stringValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Name</td> <td>Name</td> <td>stringValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Major</td> <td>major</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Minor</td> <td>minor</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_WechatId</td> <td>wechatId</td> <td>intValue</td> <td>Partial device</td></tr> <tr><td>BeaconValueIndex_Mac</td> <td>MAC address</td> <td>stringValue</td> <td>Partial device</td></tr> <tr><td>BeaconValueIndex_RSSI</td> <td>rssi</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_BatteryLevel</td> <td>Battery</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Temperature</td> <td>Temperature</td> <td>floatValue</td> <td>Partial device</td></tr> <tr><td>BeaconValueIndex_Humidity</td> <td>Humidity</td> <td>floatValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Txpower</td> <td>txPower</td> <td>intValue</td> <td></td></tr> <tr><td>BeaconValueIndex_InRange</td> <td>in range</td> <td>boolValue</td> <td></td></tr> <tr><td>BeaconValueIndex_Connectable</td> <td>Connectable</td> <td>boolValue</td> <td></td></tr></tbody></table> <p>you just need get the data you want via indexs above.</p> <p>Now, we finish the basic use of SDK, more codes below:</p> <p>listen to the device appear and disappear changes.</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// disappear devices.</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>minewBeaconManager<span class="token punctuation">:</span><span class="token punctuation">(</span>MinewBeaconManager <span class="token operator">*</span><span class="token punctuation">)</span>manager disappearBeacons<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>beacons
+<span class="token punctuation">{</span>
+    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;---disappear beacons:%@&quot;</span><span class="token punctuation">,</span> beacons<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// appear devices.</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>minewBeaconManager<span class="token punctuation">:</span><span class="token punctuation">(</span>MinewBeaconManager <span class="token operator">*</span><span class="token punctuation">)</span>manager appearBeacons<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>beacons
+<span class="token punctuation">{</span>
+    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;appear beacons:%@&quot;</span><span class="token punctuation">,</span> beacons<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>Listen to the Bluetooth state of cellphone.</p> <p>Three Bluetooth state:</p> <p>BluetoothState：BluetoothStatePowerOn（poweron），BluetoothStatePowerOff（power off），BluetoothStateUnknown（unknown）</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// listen to the changes of bluetooth state</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>minewBeaconManager<span class="token punctuation">:</span><span class="token punctuation">(</span>MinewBeaconManager <span class="token operator">*</span><span class="token punctuation">)</span>manager didUpdateState<span class="token punctuation">:</span><span class="token punctuation">(</span>BluetoothState<span class="token punctuation">)</span>state
+<span class="token punctuation">{</span>
+    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Bluetooth state:%ld&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span>state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>you can also check bluetooth state like this:</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>BluetoothState state <span class="token operator">=</span> <span class="token punctuation">[</span>aManager checkBluetoothState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span>state <span class="token operator">==</span> BluetoothStatePowerOn<span class="token punctuation">)</span>
+  <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Bluetooth is PowerOn now.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="class-reference"><a href="#class-reference" class="header-anchor">#</a> Class reference</h2> <h3 id="minewbeacon"><a href="#minewbeacon" class="header-anchor">#</a> MinewBeacon</h3> <p>Device instance Class,</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// get data of device</span>
+ <span class="token operator">-</span><span class="token punctuation">(</span>MinewBeaconValue <span class="token operator">*</span><span class="token punctuation">)</span>getBeaconValue<span class="token punctuation">:</span><span class="token punctuation">(</span>BeaconValueIndex<span class="token punctuation">)</span>index<span class="token punctuation">;</span>
+
+<span class="token comment">// such as get UUID：</span>
+  <span class="token punctuation">[</span>aBeacon getBeaconValue<span class="token punctuation">:</span>BeaconValueIndex_UUID<span class="token punctuation">]</span><span class="token punctuation">.</span>stringValue<span class="token punctuation">;</span>
+
+<span class="token comment">// index from &quot;BeaconValueIndex&quot;；</span>
+ <span class="token comment">// !!!:you should get data by its type</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span><span class="token punctuation">(</span>NSInteger<span class="token punctuation">,</span> BeaconValueIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token comment">// UUID      </span>
+    BeaconValueIndex_UUID <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token comment">// stringValue</span>
+    <span class="token comment">// Major </span>
+    BeaconValueIndex_Major<span class="token punctuation">,</span>   <span class="token comment">// intValue</span>
+    <span class="token comment">// Minor</span>
+    BeaconValueIndex_Minor<span class="token punctuation">,</span>   <span class="token comment">// intValue</span>
+    <span class="token comment">// Name</span>
+    BeaconValueIndex_Name<span class="token punctuation">,</span>   <span class="token comment">// stringValue</span>
+    <span class="token comment">// RSSI</span>
+    BeaconValueIndex_RSSI<span class="token punctuation">,</span>   <span class="token comment">//  intValue</span>
+    <span class="token comment">// battery</span>
+    BeaconValueIndex_BatteryLevel<span class="token punctuation">,</span>  <span class="token comment">// intValue</span>
+    <span class="token comment">// temperature</span>
+    BeaconValueIndex_Temperature<span class="token punctuation">,</span> 
+    <span class="token comment">// humidity</span>
+    BeaconValueIndex_Humidity<span class="token punctuation">,</span> 
+    <span class="token comment">// TxPower</span>
+    BeaconValueIndex_TxPower<span class="token punctuation">,</span>  <span class="token comment">// intValue</span>
+    <span class="token comment">// in scanning range or not</span>
+    BeaconValueIndex_InRage<span class="token punctuation">,</span>  <span class="token comment">// boolValue</span>
+    <span class="token comment">// wechatId，（Partial device）</span>
+    BeaconValueIndex_WechatId<span class="token punctuation">,</span> <span class="token comment">// intValue</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><h3 id="minewbeaconvalue"><a href="#minewbeaconvalue" class="header-anchor">#</a> MinewBeaconValue</h3> <p>Device value instance class</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// get int value</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> assign<span class="token punctuation">)</span> NSInteger intValue<span class="token punctuation">;</span>
+
+<span class="token comment">// get float value</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> assign<span class="token punctuation">)</span> <span class="token keyword">float</span> floatValue<span class="token punctuation">;</span>
+
+<span class="token comment">// get string value</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> copy<span class="token punctuation">)</span> NSString <span class="token operator">*</span>stringValue<span class="token punctuation">;</span>
+
+<span class="token comment">// get data value</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> strong<span class="token punctuation">)</span> NSData  <span class="token operator">*</span>dataValue<span class="token punctuation">;</span>
+
+<span class="token comment">// get bool value</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> assign<span class="token punctuation">)</span> BOOL boolValue<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="minewbeaconmanager"><a href="#minewbeaconmanager" class="header-anchor">#</a> MinewBeaconManager</h3> <p>Global Manager class.</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// delegate</span>
+<span class="token keyword">@protocol</span> MinewBeaconManagerDelegate <span class="token operator">&lt;</span>NSObject<span class="token operator">&gt;</span>
+<span class="token operator">@</span>optional
+
+<span class="token comment">// scanned new devices, callback every 3 seconds, </span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>minewBeaconManager<span class="token punctuation">:</span><span class="token punctuation">(</span>MinewBeaconManager <span class="token operator">*</span> <span class="token punctuation">)</span>manager appearBeacons<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>beacons<span class="token punctuation">;</span>
+
+<span class="token comment">// listen the disappear devices (doesn't update data in 10 second.)</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>minewBeaconManager<span class="token punctuation">:</span><span class="token punctuation">(</span>MinewBeaconManager <span class="token operator">*</span> <span class="token punctuation">)</span>manager disappearBeacons<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>beacons<span class="token punctuation">;</span>
+
+<span class="token comment">// listen the appear devices (scanned first time.)</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>minewBeaconManager<span class="token punctuation">:</span><span class="token punctuation">(</span>MinewBeaconManager <span class="token operator">*</span> <span class="token punctuation">)</span>manager didRangeBeacons<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span> <span class="token punctuation">)</span>beacons<span class="token punctuation">;</span>
+
+<span class="token keyword">@end</span>
+
+<span class="token comment">// </span>
+<span class="token keyword">@interface</span> MinewBeaconManager <span class="token punctuation">:</span> NSObject
+
+<span class="token comment">// sharedinstance</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span>MinewBeaconManager  <span class="token operator">*</span><span class="token punctuation">)</span>sharedInstance<span class="token punctuation">;</span>
+
+<span class="token comment">// start scan devices, &quot;uuids&quot; is a uuid string array, &quot;enable&quot; is a switch for background scanning support </span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>startScan<span class="token punctuation">:</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>NSString <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span><span class="token punctuation">)</span>uuids backgroundSupport <span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>enable<span class="token punctuation">;</span>
+
+<span class="token comment">// stop scan for device.</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>stopScan<span class="token punctuation">;</span>
+
+<span class="token comment">// delegate</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> strong<span class="token punctuation">)</span> id <span class="token operator">&lt;</span>MinewBeaconManagerDelegate<span class="token operator">&gt;</span> delegate<span class="token punctuation">;</span>
+
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> assign<span class="token punctuation">)</span> BluetoothState
+
+<span class="token comment">// all devices scanned.</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> copy<span class="token punctuation">)</span> NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span>scannedBeacons<span class="token punctuation">;</span>
+
+<span class="token comment">// all devices in range.</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>nonatomic<span class="token punctuation">,</span> readonly<span class="token punctuation">,</span> copy<span class="token punctuation">)</span> NSArray<span class="token operator">&lt;</span>MinewBeacon <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span>inRangeBeacons<span class="token punctuation">;</span>
+
+<span class="token keyword">@end</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p>#Change log</p> <ul><li>2017.10.16 English version</li> <li>2016.12.22 update for iOS 10</li> <li>2016.11.29 update for new firmware.</li> <li>2016.9.18 update for Apple's review</li> <li>2020.09.18 update for scan v3 device。</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated::</span> <span class="time">1/12/2024, 2:37:29 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/75.723e0570.js" defer></script>
+  </body>
+</html>

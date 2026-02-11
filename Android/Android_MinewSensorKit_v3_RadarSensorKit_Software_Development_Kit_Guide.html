@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewSensorKit document | SDK &amp; API</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="SDKs and APIs for MBeacon, BeaconPlus, MSensor, etc.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/64.ca9adaaf.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/106.a3d11e42.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/113.e8cff9ce.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/18.6db3ccbb.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/45.a58e8a25.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/68.8866be89.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.a4692fcf.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/75.723e0570.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="SDK &amp; API" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewSensorKit document</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html#preliminary-work" class="sidebar-link">Preliminary work</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html#import-to-project" class="sidebar-link">Import to project</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html#use" class="sidebar-link">Use</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html#scanning-section" class="sidebar-link">Scanning section</a></li><li class="sidebar-sub-header"><a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html#connections" class="sidebar-link">Connections</a></li><li class="sidebar-sub-header"><a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html#reading-and-writing" class="sidebar-link">Reading and writing</a></li></ul></li><li><a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html#history" class="sidebar-link">History</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="minewsensorkit-document"><a href="#minewsensorkit-document" class="header-anchor">#</a> MinewSensorKit document</h1> <p>This SDK only supports the Bluetooth sensor devices from Minew. The SDK helps developers to handle everything between the phone and the sensor, including: scanning the device, broadcasting data, connecting to the device, writing data to the device, receiving data from the device, etc.</p> <p>Currently the SDK only supports the use of millimeter-wave radar sensors.</p> <h2 id="preliminary-work"><a href="#preliminary-work" class="header-anchor">#</a> Preliminary work</h2> <p>Overall framework: <code>RadarSensorBleManager</code>is the device management class, which is always a single instance when the app is running. <code>RadarSensor</code>is the device instance class, this suite generates an instance for each device, which is used after scanning and connecting, and contains device broadcast data inside, which will be updated during scanning as the device keeps broadcasting.</p> <p><code>RadarSensorBleManager</code>：Device management class that scans the surrounding ESL devices and can connect them, verify them, etc.；</p> <p><code>RadarSensor</code>：An instance of a millimeter-wave radar sensor device obtained during scanning, inherited from<code>SensorModule</code>；</p> <h2 id="import-to-project"><a href="#import-to-project" class="header-anchor">#</a> Import to project</h2> <ol><li><p>Development Environment</p> <p>The minimum sdk support is Android 5.0, corresponding to API Level 21. set <code>minSdkVersion</code> to 21 or above in <code>build.gradle</code> of the module.</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>android <span class="token punctuation">{</span>
+
+    defaultConfig <span class="token punctuation">{</span>
+        applicationId <span class="token interpolation-string"><span class="token string">&quot;com.xxx.xxx&quot;</span></span>
+        minSdkVersion <span class="token number">21</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>Add <code>MinewSensorKit.jar</code>to the module's libs folder and add the following statement to the <code>build.gradle</code> of the <code>module</code> (add the dependency directly).</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/radar_sensor_sdk.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/sensor_sdk_base.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token string">'org.lucee:bcprov-jdk15on:1.52.0'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>Or right-click the jar file and select <code>Add as Library</code> to add it to the current module.</p></li> <li><p>The following permissions are required in <code>AndroidManifest.xml</code>, and if <code>targetSdkVersion</code> is greater than 23, you need to do <strong>permission management</strong> to get the permissions.</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_COARSE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_FINE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADMIN<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_SCAN<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_CONNECT<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>receiver</span>
+     <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.minew.radar.scan.OreoPendingReceiver<span class="token punctuation">&quot;</span></span>
+     <span class="token attr-name"><span class="token namespace">android:</span>exported</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>false<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.minew.sensor.sdk.ACTION_FOUND<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>intent-filter</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>receiver</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></li></ol> <p>​</p> <h2 id="use"><a href="#use" class="header-anchor">#</a> Use</h2> <p>The sdk is divided into three phases: scanning, connecting, and reading and writing.</p> <h3 id="scanning-section"><a href="#scanning-section" class="header-anchor">#</a> Scanning section</h3> <h4 id="start-scanning"><a href="#start-scanning" class="header-anchor">#</a> Start scanning</h4> <p>For Android 6.0 or above, you need to apply for location permission and turn on the location switch before you can perform BLE scanning.</p> <p>To turn on Bluetooth scanning, you need to turn on Bluetooth first, if you go to scan without turning on Bluetooth, the app will flash back. BLETool.isBluetoothTurnOn can be used to determine if Bluetooth is turned on. If not open, you can call BLETool.setBluetoothTurnOn to open it.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">RadarSensorBleManager</span> manager <span class="token operator">=</span> 	<span class="token class-name">RadarSensorBleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">BLETool</span><span class="token punctuation">.</span><span class="token function">isBluetoothTurnOn</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    manager<span class="token punctuation">.</span><span class="token function">startScan</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">OnScanSensorResultListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onScanResult</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RadarSensor</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//scan result</span>
+        <span class="token punctuation">}</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStopScan</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RadarSensor</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//stop scan result</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//Set scan duration 5 minutes, sdk default scan duration 5 minutes</span>
+        manager<span class="token punctuation">.</span><span class="token function">startScan</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token number">5</span><span class="token operator">*</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">1000</span>，<span class="token keyword">new</span> <span class="token class-name">OnScanSensorResultListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onScanResult</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RadarSensor</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//scan result</span>
+        <span class="token punctuation">}</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStopScan</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RadarSensor</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//stop scan result</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>The sdk does not handle the length of the Bluetooth scan internally, but the scan is a power hungry operation, the sdk stops scanning in 5 minutes by default, if you still need to continue scanning, you can provide a timer or refresh and other operations to continue to call the scan method to continue scanning the device.</p> <h4 id="retrieve-data"><a href="#retrieve-data" class="header-anchor">#</a> Retrieve data</h4> <p>During the scan, the APP is able to get a part of the current data of the device through the sdk. The  data of the device is obtained through <code>RadarSensor</code> as shown below, which is stored in the broadcast frame object.</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>macAddress</td> <td>String</td> <td>device mac</td></tr> <tr><td>name</td> <td>String</td> <td>device name</td></tr> <tr><td>rssi</td> <td>int</td> <td>Signal strength</td></tr></tbody></table> <p><code>RadarSensor</code> also keeps a Map, which is used internally to store the device broadcast data frames it acquires during a scan, and can be retrieved as follows</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">DeviceStaticInfoFrame</span> deviceInforFrame <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">DeviceStaticInfoFrame</span><span class="token punctuation">)</span><span class="token keyword">module</span><span class="token punctuation">.</span><span class="token function">getMinewFrame</span><span class="token punctuation">(</span><span class="token class-name">RadarAdvertisingFrameType</span><span class="token punctuation">.</span><span class="token constant">DEVICE_STATIC_INFO_FRAME</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">PeopleFlowMonitoringFrame</span> peopleFlowFrame <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">PeopleFlowMonitoringFrame</span><span class="token punctuation">)</span><span class="token keyword">module</span><span class="token punctuation">.</span><span class="token function">getMinewFrame</span><span class="token punctuation">(</span><span class="token class-name">RadarAdvertisingFrameType</span><span class="token punctuation">.</span><span class="token constant">PEOPLE_FLOW_MONITORING_FRAME</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">PeopleCoordinateInformationFrame</span> peopleCoordinateFrame <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">PeopleCoordinateInformationFrame</span><span class="token punctuation">)</span><span class="token keyword">module</span><span class="token punctuation">.</span><span class="token function">getMinewFrame</span><span class="token punctuation">(</span><span class="token class-name">RadarAdvertisingFrameType<span class="token punctuation">.</span>PeopleCoordinateInformationFrame</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>deviceInforFrame <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//Device mac address</span>
+    <span class="token class-name">String</span> macAddress <span class="token operator">=</span> deviceInforFrame<span class="token punctuation">.</span><span class="token function">getMacAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//Percentage of power</span>
+    <span class="token keyword">int</span> battery <span class="token operator">=</span> deviceInforFrame<span class="token punctuation">.</span><span class="token function">getBattery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//firmware version</span>
+    <span class="token class-name">String</span> firmwareVersion <span class="token operator">=</span> deviceInforFrame<span class="token punctuation">.</span><span class="token function">getFirmwareVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>peopleFlowFrame <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//Number of entrances detected by radar</span>
+    <span class="token keyword">int</span> numberOfEntries <span class="token operator">=</span> peopleFlowFrame<span class="token punctuation">.</span><span class="token function">getNumberOfEntries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//Number of trips detected by radar</span>
+    <span class="token keyword">int</span> numberOfExits <span class="token operator">=</span> peopleFlowFrame<span class="token punctuation">.</span><span class="token function">getNumberOfExits</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>peopleCoordinateFrame <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//Total number of people detected by radar</span>
+    <span class="token keyword">int</span> totalNumberOfPerson <span class="token operator">=</span> peopleCoordinateFrame<span class="token punctuation">.</span><span class="token function">getTotalNumberOfPerson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//Personnel coordinate information detected by radar</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">CoordinateInformation</span><span class="token punctuation">&gt;</span></span> coordinateInformationLists <span class="token operator">=</span> peopleCoordinateFrame<span class="token punctuation">.</span><span class="token function">getCoordinateInformationLists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>There are 3 types of broadcast frames for radar equipment. But there can only be 2 kinds of broadcasts at the same time. People flow monitoring radar equipment has equipment static information frames and people flow monitoring frames, and personnel coordinate information radar equipment has equipment static information frames and personnel coordinate information monitoring frames.</p> <ol><li><p>Device static information frame</p> <ul><li><p>DeviceStaticInfoFrame</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>frameVersion</td> <td>int</td> <td>device type</td></tr> <tr><td>firmwareVersion</td> <td>String</td> <td>Firmware Version</td></tr> <tr><td>batteryLevel</td> <td>int</td> <td>Battery Level Percentage</td></tr> <tr><td>macAddress</td> <td>String</td> <td>firmware mac</td></tr> <tr><td>peripheralSupportInfo</td> <td>PeripheralSupportInfo</td> <td>Description of peripheral support</td></tr></tbody></table></li></ul></li> <li><p>People flow monitoring frame</p> <ul><li><p>PeopleFlowMonitoringFrame</p> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>frameVersion</td> <td>int</td> <td>device type</td></tr> <tr><td>serialNumber</td> <td>int</td> <td>Every time the radar sensor outputs monitoring data, the serial number is increased by 1.</td></tr> <tr><td>numberOfEntries</td> <td>int</td> <td>Number of entrances detected by radar</td></tr> <tr><td>numberOfExits</td> <td>int</td> <td>Number of trips detected by radar</td></tr> <tr><td>digitalSignature</td> <td>int</td> <td>Digital signature</td></tr> <tr><td>totalNumberOfPerson</td> <td>int</td> <td>Total number of people monitored</td></tr></tbody></table> <ol start="3"><li><p>People flow monitoring frame</p> <ul><li>PeopleCoordinateInformationFrame</li></ul> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>frameVersion</td> <td>int</td> <td>device type</td></tr> <tr><td>serialNumber</td> <td>int</td> <td>Every time the radar sensor outputs monitoring data, the serial number is increased by 1.</td></tr> <tr><td>totalNumberOfPerson</td> <td>int</td> <td>Total number of people monitored</td></tr> <tr><td>coordinateInformationLists</td> <td>List&lt;CoordinateInformation&gt;</td> <td>Coordinate information</td></tr></tbody></table> <ul><li>CoordinateInformation</li></ul> <table><thead><tr><th>Name</th> <th>Type</th> <th>Description</th></tr></thead> <tbody><tr><td>x</td> <td>float</td> <td>X-axis coordinates</td></tr> <tr><td>y</td> <td>float</td> <td>y-axis coordinates</td></tr> <tr><td>z</td> <td>float</td> <td>z-axis coordinates</td></tr></tbody></table></li></ol></li></ul></li></ol> <h3 id="connections"><a href="#connections" class="header-anchor">#</a> Connections</h3> <p>It is usually necessary to stop scanning before connecting. sdk provides methods to connect and disconnect.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//Stop scanning</span>
+manager<span class="token punctuation">.</span><span class="token function">stopScan</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Setting the device secret key</span>
+<span class="token class-name">String</span> key<span class="token punctuation">;</span>
+manager<span class="token punctuation">.</span><span class="token function">setSecretKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Connection, module for the device to be connected</span>
+<span class="token class-name">RadarSensor</span> <span class="token keyword">module</span><span class="token punctuation">;</span>
+manager<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token keyword">module</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Disconnect. macAddress is the device mac</span>
+manager<span class="token punctuation">.</span><span class="token function">disConnect</span><span class="token punctuation">(</span>macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>Note: Before connecting the device, please confirm whether the device is scanned, if no device broadcast is scanned and the connection method is called, the connection will fail.</p> <p>After calling <code>connect()</code>, there will be a status listener in sdk for the connection process.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//Setting the listener</span>
+manager<span class="token punctuation">.</span><span class="token function">setOnConnStateListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OnConnStateListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token comment">/*
+     * Status callbacks during connection
+     *
+     * @param macAddress      device mac
+     * @param connectionState status
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onUpdateConnState</span><span class="token punctuation">(</span><span class="token class-name">String</span> address<span class="token punctuation">,</span> <span class="token class-name">MSensorConnectionState</span> state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token class-name">Disconnect</span><span class="token operator">:</span>
+				<span class="token comment">//Connection failure or device disconnection will be called back, active disconnection will not call back the 					//status</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Connecting</span><span class="token operator">:</span>
+				<span class="token comment">//This state will be called back after calling connect()</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Connected</span><span class="token operator">:</span>
+                <span class="token comment">//The initial connection was successful, as a transition phase, but not really successful at this point</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">ConnectComplete</span><span class="token operator">:</span>
+				<span class="token comment">//Connection is complete, the device is now ready for read and write operations</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">default</span><span class="token operator">:</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>During the connection process, sdk will return multiple connection states to the app, which the app needs to handle properly.</p> <ul><li><strong>MSensorConnectionState.Connecting</strong>, <strong>MSensorConnectionState.Connected</strong>: Connecting the device in, do not do time-consuming operations in this state, because at this time in the connected device discovery service, and send authentication data, etc.</li> <li><strong>MSensorConnectionState.ConnectComplete</strong>: The sensor device is successfully connected at this point, and can perform read and write operations, such as configuring broadcast parameters, sensor configuration, reading historical data, etc.</li> <li><strong>Disconnect</strong>: The callback will be made if the connection fails or the device is disconnected. If the APP actively calls <code>manager.disConnect(macAddress);</code> it will not call back this state.</li></ul> <h3 id="reading-and-writing"><a href="#reading-and-writing" class="header-anchor">#</a> Reading and writing</h3> <p>The read and write APIs are as follows.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token comment">/**
+     * Set the secret key of the device
+     * @param eaxKey The secret key corresponding to the device
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSecretKey</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+ 	<span class="token comment">/**
+     * Set device information frame broadcast parameters
+     *
+     * @param macAddress mac
+     * @param advertising Interval broadcast interval, in milliseconds, the broadcast interval is adjustable from 100ms to 			 *	5000ms, and the scale is 100ms;
+     * @param txPower -40 -20 -16 -12 -8 -4 0 4dBm
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setDeviceInfoFrameAdvertisingParametersConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token keyword">int</span> advertisingInterval<span class="token punctuation">,</span> <span class="token keyword">int</span> txPower<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Query device information frame broadcast parameters
+     *
+     * @param macAddress mac
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">queryDeviceInfoFrameAdvertisingParametersConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span>  <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceInfoAdvertisingParametersConfiguration</span><span class="token punctuation">&gt;</span></span>  listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Set radar frame broadcast parameters
+     *
+     * @param macAddress mac
+     * @param advertising Interval broadcast interval, in milliseconds, the broadcast interval is adjustable from 100ms to 			 *	5000ms, and the scale is 50ms;
+     * @param txPower -40 -20 -16 -12 -8 -4 0 4dBm
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setRadarFrameAdvertisingParametersConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token keyword">int</span> advertisingInterval<span class="token punctuation">,</span> <span class="token keyword">int</span> txPower<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Set radar frame broadcast parameters
+     *
+     * @param macAddress mac
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">queryRadarFrameAdvertisingParametersConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span>  <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RadarMonitorAdvertisingParametersConfiguration</span><span class="token punctuation">&gt;</span></span>  listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * Set radar traffic configuration
+     *
+     * @param macAddress mac
+     * @param maps configuration maps
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setRadarPeopleFlowMonitorConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PeopleFlowMonitorCommandKeys</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> maps<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Query radar traffic configuration
+     *
+     * @param macAddress mac
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">queryRadarPeopleFlowMonitorConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RadarPeopleFlowMonitorParametersConfiguration</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">/**
+     * Set radar coordinate configuration
+     *
+     * @param macAddress mac
+     * @param maps configuration maps
+     * @param listener EnumMap
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setRadarPeopleCoordinateMonitorConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PeopleCoordinateMonitorCommandKeys</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> maps<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Query radar coordinate configuration
+     *
+     * @param macAddress mac
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">queryRadarPeopleCoordinateMonitorConfiguration</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RadarPeopleCoordinateMonitorParametersConfiguration</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Check the type of radar
+     *
+     * @param macAddress mac
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">queryMillimeterWaveRadarSensorType</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span>  <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MillimeterWaveRadarSensor</span><span class="token punctuation">&gt;</span></span>  listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * This instruction is used to control the light on and off. The single cycle time in the instruction = single cycle light  	 *	on time + single cycle light off time. The single cycle time must be greater than the single cycle light on time, 			 *	otherwise an error code of 20 will be reported, and the * instruction will not be executed.
+     * @param macAddress
+     * @param colorTable
+     * @param totalOperationTime LE, total operating time, 1~ 65535 (S)
+     * @param singleCycleLightingTime LE, Lighting time in a single cycle, 1~ 65535 (MS)
+     * @param singleCycleTime LE, single cycle time, 1~ 65535 (MS)
+     * @param brightness, 1~ 100
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setLEDParameters</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">ColorTable</span> colorTable<span class="token punctuation">,</span><span class="token keyword">int</span> totalOperationTime<span class="token punctuation">,</span><span class="token keyword">int</span> singleCycleLightingTime<span class="token punctuation">,</span><span class="token keyword">int</span> singleCycleTime<span class="token punctuation">,</span><span class="token keyword">int</span> brightness<span class="token punctuation">,</span><span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Firmware upgrade
+     *
+     * @param macAddress mac
+     * @param upgradeData
+     * @param listener
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> upgradeData<span class="token punctuation">,</span> <span class="token class-name">OnFirmwareUpgradeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">/** String macAddress
+     * Restore factory settings
+     *
+     * @param macAddress mac
+     * @param listener
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Shut down
+     * @param macAddress mac
+     * @param listener
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">powerOff</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br></div></div><p>A post script of some methods</p> <ol><li><p>Read and set device information frame broadcast parameter configuration</p> <p>PeopleFlowMonitorCommandKeys</p> <table><thead><tr><th>Name</th> <th>Description</th></tr></thead> <tbody><tr><td>SCAN_TIME</td> <td>Configure scan interval (unit ms, range [100,10000], default 100)</td></tr> <tr><td>HEAT_TIME</td> <td>Configure heartbeat interval (unit s, range [10,999], default 60)</td></tr> <tr><td>VERTICAL_HEIGHT</td> <td>Set vertical distance (in cm, range (50,500), default 270)</td></tr> <tr><td>SENS</td> <td>Configure sensitivity (range [1,19], default is 2)</td></tr> <tr><td>RANGE</td> <td>Configure radial distance (unit cm, range [10,1000], default 1000)</td></tr> <tr><td>XPOSI</td> <td>Configure X forward range (unit cm, range[-100,300),, default 100)</td></tr> <tr><td>XNEGA</td> <td>Configure X negative range (unit cm, range [-300,100), default -100)</td></tr> <tr><td>YPOSI</td> <td>Configure Y forward range (unit cm, range [-100,300), default value 50)</td></tr> <tr><td>YNEGA</td> <td>Configure Y negative range (unit cm, range [-300,100), default -50)</td></tr> <tr><td>SCAN_XPOSI</td> <td>Configure X forward scan range (unit cm, range[0,300])</td></tr> <tr><td>SCAN_XNEGA</td> <td>Configure X negative  scan range (unit cm, range[-300,0))</td></tr> <tr><td>SCAN_YPOSI</td> <td>Configure Y forward scan range (unit cm, range[0,300])</td></tr> <tr><td>SCAN_YNEGA</td> <td>Configure Y negative scan range (unit cm, range [-300,0))</td></tr> <tr><td>SCAN_HEIGHT</td> <td>Configure scan height(unit ms, range[50,500])</td></tr></tbody></table> <p>PeopleCoordinateMonitorCommandKeys</p> <table><thead><tr><th>Name</th> <th>Description</th></tr></thead> <tbody><tr><td>SCAN_TIME</td> <td>Configure scan interval (unit ms, range [100,10000], default 100)</td></tr> <tr><td>MONITOR_TIME</td> <td>Configure monitoring interval (unit s, range [1,99], default 1)</td></tr> <tr><td>HEAT_TIME</td> <td>Configure heartbeat interval (unit s, range [10,999], default 60)</td></tr> <tr><td>RANGE</td> <td>Configure radial distance (in cm, range [100,1000], default 600)</td></tr> <tr><td>SENS</td> <td>Configure sensitivity (range [1,19], default is 2)</td></tr> <tr><td>DOOR1</td> <td>Gate 1 configuration (range [-3, 3], including -3 and 3, supports up to one decimal place)</td></tr> <tr><td>DOOR2</td> <td>Gate 1 configuration (range [-3, 3], including -3 and 3, supports up to one decimal place)</td></tr> <tr><td>DOOR3</td> <td>Gate 1 configuration (range [-3, 3], including -3 and 3, supports up to one decimal place)</td></tr> <tr><td>WINDOWS1</td> <td>Gate 1 configuration (range [-3, 3], including -3 and 3, supports up to one decimal place)</td></tr> <tr><td>WINDOWS2</td> <td>Gate 1 configuration (range [-3, 3], including -3 and 3, supports up to one decimal place)</td></tr> <tr><td>WINDOWS3</td> <td>Gate 1 configuration (range [-3, 3], including -3 and 3, supports up to one decimal place)</td></tr></tbody></table> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//read broadcast parameter information</span>
+manager<span class="token punctuation">.</span>queryDeviceInfoFrameAdvertisingParametersConfiguration <span class="token punctuation">(</span>mAddress<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnQueryResultListener</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token class-name">DeviceInfoAdvertisingParametersConfiguration</span> <span class="token punctuation">&gt;</span></span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token class-name">Public</span> <span class="token keyword">void</span> <span class="token class-name">OnQueryResult</span> <span class="token punctuation">(</span><span class="token keyword">boolean</span> queryResult<span class="token punctuation">,</span> <span class="token class-name">DeviceInfoAdvertisingParametersConfiguration</span> queryInfo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//queryResult is true, indicating that the query succeeded, otherwise it failed</span>
+                <span class="token constant">IF</span> <span class="token punctuation">(</span>queryResult<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//query failed</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Set broadcast parameter information</span>
+<span class="token class-name">Int</span> advertising <span class="token class-name">Interval</span> <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+<span class="token class-name">Int</span> txPower <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">;</span>
+manager<span class="token punctuation">.</span>setDeviceInfoFrameAdvertisingParametersConfiguration <span class="token punctuation">(</span>macAddress<span class="token punctuation">,</span> advertising <span class="token class-name">Interval</span><span class="token punctuation">,</span> txPower<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnModifyConfigurationListener</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token class-name">Public</span> <span class="token keyword">void</span> onModifyResult <span class="token punctuation">(</span><span class="token keyword">boolean</span> success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//success is true, indicating that the setting was successful, otherwise it is a failure</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div></li> <li><p>Read and set equipment radar monitoring frame broadcast parameter configuration</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//read broadcast parameter information</span>
+manager<span class="token punctuation">.</span>queryRadarFrameAdvertisingParametersConfiguration <span class="token punctuation">(</span>mAddress<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnQueryResultListener</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token class-name">RadarMonitor</span> <span class="token class-name">AdvertisingParametersConfiguration</span> <span class="token punctuation">&gt;</span></span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token class-name">Public</span> <span class="token keyword">void</span> <span class="token class-name">OnQueryResult</span> <span class="token punctuation">(</span><span class="token keyword">boolean</span> queryResult<span class="token punctuation">,</span> <span class="token class-name">RadarMonitor</span> <span class="token class-name">AdvertisingParametersConfiguration</span> queryInfo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//queryResult is true, indicating that the query succeeded, otherwise it failed</span>
+                <span class="token constant">IF</span> <span class="token punctuation">(</span>queryResult<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//query failed</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Set broadcast parameter information</span>
+<span class="token class-name">Int</span> advertising <span class="token class-name">Interval</span> <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+<span class="token class-name">Int</span> txPower <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">;</span>
+manager<span class="token punctuation">.</span>setRadarFrameAdvertisingParametersConfiguration <span class="token punctuation">(</span>macAddress<span class="token punctuation">,</span> advertising <span class="token class-name">Interval</span><span class="token punctuation">,</span> txPower<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnModifyConfigurationListener</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token class-name">Public</span> <span class="token keyword">void</span> onModifyResult <span class="token punctuation">(</span><span class="token keyword">boolean</span> success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//success is true, indicating that the setting was successful, otherwise it is a failure</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div></li> <li><p>Read and set device radar traffic monitoring parameter configuration.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//Read the traffic configuration parameter information</span>
+manager<span class="token punctuation">.</span>queryRadarPeopleFlowMonitorConfiguration <span class="token punctuation">(</span>mAddress<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnQueryResultListener</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token class-name">RadarPeopleFlowMonitor</span> <span class="token class-name">ParametersConfiguration</span> <span class="token punctuation">&gt;</span></span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token class-name">Public</span> <span class="token keyword">void</span> <span class="token class-name">OnQueryResult</span> <span class="token punctuation">(</span><span class="token keyword">boolean</span> queryResult<span class="token punctuation">,</span> <span class="token class-name">RadarPeopleFlowMonitoring</span> orParametersConfiguration queryInfo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//queryResult is true, indicating that the query succeeded, otherwise it failed</span>
+                <span class="token constant">IF</span> <span class="token punctuation">(</span>queryResult<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//query failed</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Set the traffic configuration parameter information</span>
+<span class="token class-name">Map</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token class-name">PeopleFlowMonitorCommandKeys</span> <span class="token class-name">CommandKeys</span><span class="token punctuation">,</span> <span class="token class-name">Object</span> <span class="token punctuation">&gt;</span></span> maps <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token punctuation">&gt;</span></span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Maps</span><span class="token punctuation">.</span>put <span class="token punctuation">(</span><span class="token class-name">PeopleFlowMonitor</span> <span class="token class-name">CommandKeys</span><span class="token punctuation">.</span> <span class="token constant">HEAT_TIME</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Maps</span><span class="token punctuation">.</span>put <span class="token punctuation">(</span><span class="token class-name">PeopleFlowMonitor</span> <span class="token class-name">CommandKeys</span><span class="token punctuation">.</span> <span class="token constant">VERTICAL_HEIGHT</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Maps</span><span class="token punctuation">.</span>put <span class="token punctuation">(</span><span class="token class-name">PeopleFlowMonitor</span> <span class="token class-name">CommandKeys</span><span class="token punctuation">.</span><span class="token constant">SCAN_TIME</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Maps</span><span class="token punctuation">.</span>put <span class="token punctuation">(</span><span class="token class-name">PeopleFlowMonitor</span> <span class="token class-name">CommandKeys</span><span class="token punctuation">.</span> <span class="token constant">SENS</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Maps</span><span class="token punctuation">.</span>put <span class="token punctuation">(</span><span class="token class-name">PeopleFlowMonitor</span> <span class="token class-name">CommandKeys</span><span class="token punctuation">.</span> <span class="token constant">XPOSI</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Maps</span><span class="token punctuation">.</span>put <span class="token punctuation">(</span><span class="token class-name">PeopleFlowMonitor</span> <span class="token class-name">CommandKeys</span><span class="token punctuation">.</span> <span class="token constant">XNEGA</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+manager<span class="token punctuation">.</span>setRadarPeopleFlowMonitoringConfiguration <span class="token punctuation">(</span>macAddress<span class="token punctuation">,</span> maps<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnModifyConfigurationListener</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token class-name">Public</span> <span class="token keyword">void</span> onModifyResult <span class="token punctuation">(</span><span class="token keyword">boolean</span> success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//success is true, indicating that the setting was successful, otherwise it is a failure</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div></li> <li><p>Read and set equipment radar personnel coordinate monitoring parameter configuration.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//Read the personnel coordinate configuration parameter information
+manager.queryRadarPeopleCoordinateMonitoring orConfiguration (mAddress, new OnQueryResultListener &lt; RadarPeopleCoordinateMonitoring orParametersConfiguration &gt; () {
+            @Override
+            Public void OnQueryResult (boolean queryResult, RadarPeopleCoordinateMonitoring orParametersConfiguration queryInfo) {
+                //queryResult is true, indicating that the query succeeded, otherwise it failed
+                IF (queryResult) {
+                   
+                } else {
+                    //query failed
+                }
+            }
+        });
+//Set personnel coordinate configuration parameter information
+Map &lt; PeopleCoordinateMonitor CommandKeys, Object &gt; maps = new HashMap &lt; &gt; ();
+Maps.put (PeopleCoordinateMonitor CommandKeys. HEAT_TIME, 100);
+Maps.put (PeopleCoordinateMonitor CommandKeys. SCAN_TIME, 1000);
+Maps.put (PeopleCoordinateMonitor CommandKeys. MONITOR_TIME, 10);
+Maps.put (PeopleCoordinateMonitor CommandKeys. SENS, 2);
+List &lt; CoordinateBean &gt; doorList = new ArrayList &lt; &gt; ();
+doorList.add (new CoordinateBean (-3,0));
+doorList.add (new CoordinateBean (0,3));
+Maps.put (PeopleCoordinateMonitoring CommandKeys. DOOR1, doorList);
+List &lt; CoordinateBean &gt; windowList = new ArrayList &lt; &gt; ();
+windowList.add (new CoordinateBean (-1, 1));
+windowList.add (new CoordinateBean (2, 3));
+Maps.put (PeopleCoordinateMonitor CommandKeys. WINDOWS1, windowList);
+manager.setRadarPeopleCoordinateMonitor Configuration (macAddress, maps, new OnModifyConfigurationListener () {
+    @Override
+    Public void onModifyResult (boolean success) {
+		//success is true, indicating that the setting was successful, otherwise it is a failure
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div></li> <li><p>Firmware Upgrade。。</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">/**
+ * Firmware upgrade
+ *
+ * @param macAddress device mac
+ * @param isLinkUpgrade Whether it is a connection upgrade, set false by the upgrade package, and set true by the url upgrade 	* 	method.
+ * @param dfuTarget Upgrade Bluetooth firmware dfuTarget = 0, upgrade radar firmware dfuTarget = 1
+ * @param upgradeData Upgrade package data
+ * @param listener listener
+ */</span>
+manager<span class="token punctuation">.</span><span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>mac<span class="token punctuation">,</span>isLinkUpgrade<span class="token punctuation">,</span>dfuTarget<span class="token punctuation">,</span> upgradeData<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnFirmwareUpgradeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token comment">/**
+     * Progress of writing upgrade package data
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">updateProgress</span><span class="token punctuation">(</span><span class="token keyword">int</span> progress<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Upgrade success callback, at this time the device will actively disconnect from the phone, so it will trigger          	   *OnConnStateListener callback, return
+     * MSensorConnectionState.Disconnect state
+     */</span><span class="token class-name">DisconnectState</span><span class="token punctuation">.</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">upgradeSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/**
+     * Upgrade failure.
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">upgradeFailed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div></li> <li><p>Set the radar device type.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//Query the type of radar</span>
+manager<span class="token punctuation">.</span>queryMillimeterWaveRadarSensorType <span class="token punctuation">(</span>mAddress<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnQueryResultListener</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token class-name">MillimeterWaveRadarSensor</span> <span class="token punctuation">&gt;</span></span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token class-name">Public</span> <span class="token keyword">void</span> <span class="token class-name">OnQueryResult</span> <span class="token punctuation">(</span><span class="token keyword">boolean</span> queryResult<span class="token punctuation">,</span> <span class="token class-name">MillimeterWaveRadarSensor</span> queryInfo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//queryResult is true, indicating that the query succeeded, otherwise it failed</span>
+                <span class="token constant">IF</span> <span class="token punctuation">(</span>queryResult<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token class-name">RadarFirmwareType</span> radarFirmwareType <span class="token operator">=</span> queryInfo<span class="token punctuation">.</span>getRadarFirmwareType <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token class-name">Switch</span> <span class="token punctuation">(</span>radarFirmwareType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            		<span class="token class-name">Case</span> <span class="token constant">PEOPLE_FLOW_MONITORING_FRAME</span><span class="token operator">:</span>
+                		<span class="token class-name">RadarPeopleFlowMonitoring</span> orParametersConfiguration radarPeopleFlowConfiguration <span class="token operator">=</span> getRadarPeopleFlowMonitoring orParametersConfiguration <span class="token punctuation">(</span><span class="token punctuation">)</span>
+                		<span class="token class-name">Break</span><span class="token punctuation">;</span>
+            		<span class="token class-name">Case</span> <span class="token constant">PEOPLE_COORDINATE_INFOMATION_FRAME</span><span class="token operator">:</span>
+                		<span class="token class-name">RadarPeopleCoordinateMonitor</span> orParametersConfiguration radarPeopleCoordinateConfiguration <span class="token operator">=</span> getRadarPeopleCoordinateMonitor orParametersConfiguration <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                	<span class="token class-name">Break</span><span class="token punctuation">;</span>
+            		<span class="token class-name">Default</span><span class="token operator">:</span>
+                		<span class="token class-name">Break</span><span class="token punctuation">;</span>
+        			<span class="token punctuation">}</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//query failed</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div></li> <li><p>Restore factory settings.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">/**
+ * Restore factory settings
+ *
+ * @param macAddress mac
+ */</span>
+<span class="token class-name">Manager</span><span class="token punctuation">.</span>reset <span class="token punctuation">(</span>macAddress<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnModifyConfigurationListener</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token class-name">Public</span> <span class="token keyword">void</span> onModifyResult <span class="token punctuation">(</span><span class="token keyword">boolean</span> success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//success is true, indicating that the setting was successful, otherwise it is a failure</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></li></ol> <p>8.shutdown。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * Reset
+ *
+ * @parameter macAddress device mac
+ */
+Manager.poweroff (macAddress, new OnModifyConfigurationListener () {
+    @overlay
+    Public void onModifyResult {Boolean Success}
+		//success is true, indicating that the setting was successful, otherwise it is a failure
+    }
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="history"><a href="#history" class="header-anchor">#</a> History</h2> <ul><li>**2023/07/19  add；</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated::</span> <span class="time">1/12/2024, 6:46:52 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/64.ca9adaaf.js" defer></script>
+  </body>
+</html>

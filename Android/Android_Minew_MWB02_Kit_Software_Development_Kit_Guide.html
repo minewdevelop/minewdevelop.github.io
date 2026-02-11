@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewMWB02Kit Documentation | SDK &amp; API</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="SDKs and APIs for MBeacon, BeaconPlus, MSensor, etc.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/68.8866be89.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/106.a3d11e42.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/113.e8cff9ce.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/18.6db3ccbb.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/45.a58e8a25.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.ca9adaaf.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.a4692fcf.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/75.723e0570.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="SDK &amp; API" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/iOS/iOS_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_GatewayConfig_Develop_Kit_EN.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Language</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewMWB02Kit Documentation</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#preliminary-work" class="sidebar-link">Preliminary work</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#import-into-project" class="sidebar-link">Import into project</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#use" class="sidebar-link">USE</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#connect" class="sidebar-link">Connect</a></li><li class="sidebar-sub-header"><a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#device-configuration-read-and-write-operations" class="sidebar-link">Device configuration read and write operations</a></li></ul></li><li><a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html#document-update-record" class="sidebar-link">Document update record</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="minewmwb02kit-documentation"><a href="#minewmwb02kit-documentation" class="header-anchor">#</a> MinewMWB02Kit Documentation</h1> <p>This SDK only supports Bluetooth devices produced by Minew company.</p> <p>SDK can assist developers in handling all tasks between mobile phones and Bluetooth devices, including scanning devices, broadcasting data, connecting devices, writing data to devices, receiving data from devices, etc.</p> <p>At present, the SDK only supports the use of Wearable SOS Button devices.</p> <h2 id="preliminary-work"><a href="#preliminary-work" class="header-anchor">#</a> Preliminary work</h2> <p>Overall framework: <code>MWB02BleManager</code> is a device management class that remains singleton during app runtime. <code>MWB02Model</code> is a device instance class that generates an instance for each device, which is used after scanning and connecting. It contains device broadcast data, which is updated as the device broadcasts continuously during scanning.
+``MWB02BleManager<code>: Device management class that can scan surrounding devices, connect them, verify them, etc</code>MWB02Model<code>: The BLE LTE Location Badge device instance obtained during scanning, inherited from</code> BaseBleDeviceEntity`</p> <h2 id="import-into-project"><a href="#import-into-project" class="header-anchor">#</a> Import into project</h2> <ol><li><p>development environment</p> <p>The SDK supports a minimum of Android 5.0 and corresponds to API Level 21. Set <code>minSdkVersion</code> to 21 or above in the <code>build. gradle</code> of the module:</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>android <span class="token punctuation">{</span>
+    defaultConfig <span class="token punctuation">{</span>
+        applicationId <span class="token interpolation-string"><span class="token string">&quot;com.xxx.xxx&quot;</span></span>
+        minSdkVersion <span class="token number">21</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>Add the jar package to the libs folder of the <code>module</code>and add the following statement in the <code>build. gradle</code> of the module (directly add dependencies):</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/lib_ble_base.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/lib_ble_mwb02.jar'</span><span class="token punctuation">)</span>
+implementation <span class="token function">files</span><span class="token punctuation">(</span><span class="token string">'libs/lib_ble_nl.jar'</span><span class="token punctuation">)</span>
+api <span class="token string">'org.lucee:bcprov-jdk15on:1.52.0'</span>
+api <span class="token string">'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.16.0'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li></ol> <p>Alternatively, right-click on the jar file and select <code>Add as Library</code> to add it to the current module.</p> <p>Add the. so library file and add the following configuration to <code>build. gradle</code> in the App directory:</p> <div class="language-groovy line-numbers-mode"><pre class="language-groovy"><code>   android <span class="token punctuation">{</span>
+       defaultConfig <span class="token punctuation">{</span>
+           ndk <span class="token punctuation">{</span>
+               abiFilters <span class="token string">'armeabi-v7a'</span><span class="token punctuation">,</span><span class="token string">'arm64-v8a'</span><span class="token punctuation">,</span><span class="token string">'x86'</span><span class="token punctuation">,</span><span class="token string">'x86_64'</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+       sourceSets <span class="token punctuation">{</span>
+           main <span class="token punctuation">{</span>
+               jniLibs<span class="token punctuation">.</span>srcDirs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'libs'</span><span class="token punctuation">]</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ol start="3"><li><p>The following permissions are required in <code>AndroidManifest. xml</code> If <code>targetSdkVersion</code> is greater than 23, permission management needs to be done to obtain the permissions:</p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADMIN<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">tools:</span>node</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>replace<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_SCAN<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_ADVERTISE<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.BLUETOOTH_CONNECT<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_FINE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_COARSE_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.ACCESS_BACKGROUND_LOCATION<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_IMAGES<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_AUDIO<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_MEDIA_VIDEO<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.READ_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>android.permission.WRITE_EXTERNAL_STORAGE<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">android:</span>maxSdkVersion</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>32<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li></ol> <p>​</p> <h2 id="use"><a href="#use" class="header-anchor">#</a> USE</h2> <p>SDK is divided into three stages: scanning, connection, and read-write.</p> <p>For Android 6.0 and above systems, when performing BLE scanning, it is necessary to first apply for Bluetooth permission and turn on the location switch before proceeding.</p> <h4 id="start-scan"><a href="#start-scan" class="header-anchor">#</a> Start Scan</h4> <p>For Android 6.0 and above systems, when performing BLE scanning, it is necessary to first apply for Bluetooth permission and turn on the location switch before proceeding.</p> <p>To enable Bluetooth scanning, you need to first turn on Bluetooth. If you scan without turning on Bluetooth, the app will flash back. BLETool. checkBluetooth (this) can be used to determine if Bluetooth is turned on. If it's not turned on, you can turn on Bluetooth first.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">MWB02BleManager</span> mBleManager <span class="token operator">=</span> <span class="token class-name">MWB02BleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token class-name">BLETool</span><span class="token punctuation">.</span><span class="token function">checkBluetooth</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token constant">BLE_NOT_SUPPORT</span><span class="token operator">:</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">&quot;Not Support BLE&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token constant">LENGTH_SHORT</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token constant">BLUETOOTH_ON</span><span class="token operator">:</span>
+		<span class="token comment">//Set the scanning time to 5 minutes, the SDK defaults to a scanning time of 5 minutes</span>
+		mBleManager<span class="token punctuation">.</span><span class="token function">startScan</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnScanDevicesResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MWB02Model</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onScanResult</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MWB02Model</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStopScan</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MWB02Model</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token constant">BLUETOOTH_OFF</span><span class="token operator">:</span>
+        <span class="token class-name">Intent</span> enableIntent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">BluetoothAdapter</span><span class="token punctuation">.</span><span class="token constant">ACTION_REQUEST_ENABLE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">startActivityForResult</span><span class="token punctuation">(</span>enableIntent<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>During the scanning process, the APP can obtain a portion of the current device data through the SDK. Obtain device data through the <code>MWB02Model</code> as shown below, which is saved in the broadcast frame object.</p> <p>The SDK provides<code>BaseBleDeviceEntity</code> as the base class for <code>MWB02Model</code> to store public data of devices, as shown in the following table:</p> <table><thead><tr><th>field</th> <th>type</th> <th>description</th></tr></thead> <tbody><tr><td>macAddress</td> <td>String</td> <td>mac</td></tr> <tr><td>name</td> <td>String</td> <td>device name</td></tr> <tr><td>rssi</td> <td>int</td> <td>blue strength</td></tr></tbody></table> <p><code>BaseBleDeviceEntity</code> also stores a <code>BaseNanoLinkFrame</code>, which is used internally to store the device broadcast data frames obtained during scanning. It can be retrieved in the following ways:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">MWB02Model</span> <span class="token keyword">module</span><span class="token punctuation">;</span>
+<span class="token class-name">MWB02AdvFrame</span> mwb02AdvFrame <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">MWB02AdvFrame</span><span class="token punctuation">)</span> <span class="token keyword">module</span><span class="token punctuation">.</span><span class="token function">getNanoLinkFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>mwb02AdvFrame <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//mac</span>
+    <span class="token class-name">String</span> macAddress <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getMac</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//deviceName</span>
+    <span class="token class-name">String</span> deviceName <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getDeviceName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//firmwareVersion</span>
+    <span class="token class-name">String</span> firmwareVersion <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getFirmwareVersion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//battery Battery percentage,default：Integer.MIN_VALUE Indicates that battery information is not available</span>
+    <span class="token keyword">int</span> battery <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getBattery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//motion: 0 Active (moving)  1 Idle (stationary)</span>
+    <span class="token keyword">int</span> motion <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getMotion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//modeSos :0 Device is NOT in mode SOS ,1 Device is in mode SOS</span>
+    <span class="token keyword">int</span> modeSos <span class="token operator">=</span> mwb02AdvFrame<span class="token punctuation">.</span><span class="token function">getModeSos</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>Wearable SOS Button have 1 types of broadcast frames available。</p> <ol><li><p>MWB02AdvFrame</p> <ul><li><p>MWB02AdvFrame</p> <table><thead><tr><th>field</th> <th>type</th> <th>description</th></tr></thead> <tbody><tr><td>mac</td> <td>String</td> <td>mac</td></tr> <tr><td>deviceName</td> <td>String</td> <td>device Name</td></tr> <tr><td>firmwareVersion</td> <td>String</td> <td>firmware Version</td></tr> <tr><td>battery</td> <td>int</td> <td>Battery percentage,default：Integer.MIN_VALUE Indicates that battery information is not available</td></tr> <tr><td>motion</td> <td>int</td> <td>0 Active (moving)  1 Idle (stationary)</td></tr> <tr><td>modeSos</td> <td>int</td> <td>0 Device is NOT in mode SOS ,1 Device is in mode SOS</td></tr></tbody></table></li></ul></li></ol> <h3 id="connect"><a href="#connect" class="header-anchor">#</a> Connect</h3> <p>Before connecting, it is generally necessary to stop scanning. The SDK provides methods for connecting and disconnecting.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token class-name">MWB02BleManager</span> mBleManager <span class="token operator">=</span> <span class="token class-name">MWB02BleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//stop</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">stopScan</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Connection: The module is the device to be connected to</span>
+<span class="token class-name">MWB02Model</span> <span class="token keyword">module</span><span class="token punctuation">;</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token keyword">module</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//Disconnect: macAddress is the device's MAC address</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">disConnect</span><span class="token punctuation">(</span>macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>Attention: Before connecting the device, please confirm if the device is scanned. If the device broadcast is not scanned, calling the connection method will result in a connection failure.</p> <p>After calling 'connect()', the SDK will monitor the status of the connection process.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//Set up listener</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">setOnConnStateListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OnConnStateListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/*
+     * State callback during connection process
+     * @param macAddress      mac
+     * @param BleConnectionState connectionState
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onUpdateConnState</span><span class="token punctuation">(</span><span class="token class-name">String</span> address<span class="token punctuation">,</span> <span class="token class-name">BleConnectionState</span> state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token class-name">Connecting</span><span class="token operator">:</span>
+				<span class="token comment">//After calling connect(), the state will be called back</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Connected</span><span class="token operator">:</span>
+                <span class="token comment">//The initial connection was successful, but as a transitional stage, it was not truly successful at this time</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Bond_None</span><span class="token operator">:</span>
+				<span class="token comment">//device pairing callback, this is an invalid pairing state</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Bond_Bonding</span><span class="token operator">:</span>
+				<span class="token comment">//device pairing callback, this is in the pairing state</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Bond_Bonded</span><span class="token operator">:</span>
+				<span class="token comment">//device pairing callback, here is the pairing completion status</span>
+                <span class="token comment">//devices must be paired before they can be operated using the methods provided in MWB02BleManager</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">ConnectComplete</span><span class="token operator">:</span>
+				<span class="token comment">//devices must be connected before they can be operated using the methods provided in MWB02BleManager</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">Disconnect</span><span class="token operator">:</span>
+				<span class="token comment">//Connection failure or device disconnection will trigger a callback, while active disconnection will not trigger this status</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">default</span><span class="token operator">:</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>During the connection process, the SDK will return multiple connection states to the app, and the app needs to handle them properly.</p> <ul><li><strong>BleConnectionState.Connecting</strong>，<strong>BleConnectionState.Connected</strong>: In the connected device, do not perform time-consuming operations in this state, as the device discovers services and sends authentication data.</li> <li><strong>BleConnectionState.Bond_None</strong>:  device pairing is invalid.</li> <li><strong>BleConnectionState.Bond_Bonding</strong>:  device is currently in pairing mode.</li> <li><strong>BleConnectionState.Bond_Bonded</strong>:  device pairing status is complete. Only after the device pairing is completed can device be operated using the methods provided in MWB02BleManager .</li> <li><strong>BleConnectionState.ConnectComplete</strong>: device has been successfully connected and can perform read and write operations, such as configuring broadcast parameters and reading historical data.</li> <li><strong>BleConnectionState.Disconnect</strong>: Connection failure or device disconnection will result in a callback.</li></ul> <h3 id="device-configuration-read-and-write-operations"><a href="#device-configuration-read-and-write-operations" class="header-anchor">#</a> Device configuration read and write operations</h3> <p>The API for device configuration read and write operations is as follows, which can be called using the MWB02BleManager mBleManager=MWB02BleManager. getInstance() object:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>    <span class="token comment">/**
+     * Clear the list of scanning devices
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">clearScanResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Set default scanning duration
+     *
+     * @param scanTime Scanning duration, in milliseconds
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">setDefaultScanTime</span><span class="token punctuation">(</span><span class="token keyword">int</span> scanTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Start scanning device
+     *
+     * @param context context
+     * @param listener OnScanDevicesResultListener
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">startScan</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">OnScanDevicesResultListener</span> listener<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Start scanning device
+     *
+     * @param context context
+     * @param scanTime Scanning duration, in milliseconds
+     * @param listener OnScanDevicesResultListener
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">startScan</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token keyword">int</span> scanTime<span class="token punctuation">,</span> <span class="token class-name">OnScanDevicesResultListener</span> listener<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Stop scanning device
+     *
+     * @param context context
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">stopScan</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Determine if scanning is in progress
+     *
+     */</span>
+     <span class="token keyword">boolean</span> <span class="token function">isScanning</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Restore factory settings
+     *
+     * @param macAddress mac
+     * @param listener OnModifyConfigurationListener
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Shutdown
+     *
+     * @param macAddress mac
+     * @param listener OnModifyConfigurationListener
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">powerOff</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Restart
+     *
+     * @param macAddress mac
+     * @param listener OnModifyConfigurationListener
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">reboot</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Connected Device
+     *
+     * @param context context
+     * @param macAddress mac
+     */</span>
+	 <span class="token keyword">void</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Connected Device
+     *
+     * @param context context
+     * @param module MWC03Model
+     */</span>
+	 <span class="token keyword">void</span> <span class="token keyword">void</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">MWC03Model</span> <span class="token keyword">module</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Disconnect
+     *
+     * @param macAddress mac
+     */</span>
+	 <span class="token keyword">void</span> <span class="token keyword">void</span> <span class="token function">disConnect</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Set up device connection listener
+     *
+     * @param listener OnConnStateListener
+     */</span>
+	<span class="token keyword">void</span> <span class="token function">setOnConnStateListener</span><span class="token punctuation">(</span><span class="token class-name">OnConnStateListener</span> listener<span class="token punctuation">)</span>
+
+    <span class="token comment">/**
+     * device firmware upgrade
+     *
+     * @param macAddress  mac
+     * @param isLinkUpgrade ：true -&gt; upgrade by url，false -&gt; upgrade by file。Default value false, does not support URL upgrade method
+     * @param filePath OTA file path, it can be null when upgrading by URL
+     * @param upgradeData OTA file data bytes, it can be null when upgrading by URL
+     
+     * @param fileUpgradeTarget : Upgrade firmware target, OTA data, default fileUpgradeTarget=&quot;main&quot;, link upgrade method does not need to be modified, only file upgrade method needs to be filled in
+     
+     * @param linkUpgradeTarget : Upgrade firmware target, OTA data, default linkUpgradeTarget=&quot;app&quot;, file upgrade method does not need to be modified, only link upgrade method needs to be filled in
+     
+     * @param listener OnFirmwareUpgradeListener : Upgrade firmware callback
+     */</span>
+     <span class="token keyword">void</span> <span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isLinkUpgrade<span class="token punctuation">,</span> <span class="token class-name">String</span> filePath<span class="token punctuation">,</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> upgradeData<span class="token punctuation">,</span> <span class="token class-name">String</span> fileUpgradeTarget<span class="token punctuation">,</span><span class="token class-name">String</span> linkUpgradeTarget<span class="token punctuation">,</span> <span class="token class-name">OnFirmwareUpgradeListener</span> listener<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Query firmware version
+     *
+     * @param macAddress mac
+     * @param listener OnQueryResultListener
+     */</span>
+	<span class="token keyword">void</span> <span class="token function">getFirmwareVersion</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FirmwareVersionModel</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Brief content about the FirmwareVersionsModel class</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FirmwareVersionModel</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">VersionInfo</span><span class="token punctuation">&gt;</span></span> versionInfoList<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//About the brief content of the VersionsInfo class</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VersionInfo</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Firmware Name</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> firmwareName<span class="token punctuation">;</span>
+        <span class="token comment">// Firmware type</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> firmwareType<span class="token punctuation">;</span>
+        <span class="token comment">// Firmware version</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> firmwareVersion<span class="token punctuation">;</span>
+        <span class="token comment">// Firmware slot</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> slot<span class="token punctuation">;</span>
+        <span class="token comment">// methods ：Upgrade methods corresponding to firmware types: 'img' supports image file upgrade, 'hl' supports link upgrade, 'file' supports file upgrade</span>
+        <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> methods<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	
+	<span class="token comment">/**
+     * Obtain the trigger mode
+     * @param macAddress  MAC 
+     * @param listener
+     */</span>
+	<span class="token keyword">void</span> <span class="token function">getTriggerMode</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TriggerMode</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">//About the brief content of the TriggerMode class</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TriggerMode</span> <span class="token punctuation">{</span>
+        <span class="token comment">//Press event type</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">KEVT_PRESS</span> <span class="token operator">=</span> <span class="token string">&quot;10&quot;</span><span class="token punctuation">;</span>
+        <span class="token comment">//Double-click event type</span>
+    	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">KEVT_DOUBLE</span> <span class="token operator">=</span> <span class="token string">&quot;2&quot;</span><span class="token punctuation">;</span>
+        <span class="token comment">//The event type must be a numerical value of KEVT-PRESS or KEVT-DUBLE</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> kevt<span class="token punctuation">;</span>
+        <span class="token comment">//This field represents the duration for which the device remains in Trigger mode after activation. A value of 0 is a special case, indicating that the mode remains active indefinitely. The unit is seconds.</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> dur<span class="token punctuation">;</span>
+        <span class="token comment">//Exit event type must be a numerical value of KEVT-PRESS or KEVT-DUBLE</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> e_kevt<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Set the trigger mode
+     * @param macAddress  MAC
+     * @param kevt ：The trigger event must be either the value of KEVT_PRESS or KEVT_DOUBLE
+     * @param cont ：Trigger duration,The unit is seconds.The range is 1 second to 300 seconds.
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setTriggerMode</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">String</span> kevt<span class="token punctuation">,</span><span class="token keyword">int</span> cont<span class="token punctuation">,</span><span class="token class-name">String</span> e_kevt<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Trigger state reset
+     * @param macAddress  MAC
+     * @param force ：Mandatory or not
+     
+     * @param isNeedAddForce ： True indicates that the force setting above is valid, false indicates that the force setting above is invalid
+     
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setStatusReset</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token keyword">boolean</span> force<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isNeedAddForce<span class="token punctuation">,</span><span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">/**
+     * Get broadcast parameters
+     * @param macAddress  MAC
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getAdvParameter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AdvParameter</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//About the brief content of the AdvParameter class</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameter</span> <span class="token punctuation">{</span>
+        <span class="token comment">//Normal mode parameters</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterNormal</span> norm<span class="token punctuation">;</span>
+		<span class="token comment">//Trigger mode parameter - SOS mode or Button mode</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterTrigger</span> trig<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the AdvParameterNormal class</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameterNormal</span> <span class="token punctuation">{</span>
+		<span class="token comment">//The on/off status of this mode</span>
+    	<span class="token keyword">private</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//The broadcast parameters of this mode</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the AdvParameterTrigger class</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameterTrigger</span> <span class="token punctuation">{</span>
+		<span class="token comment">//The on/off status of this mode</span>
+    	<span class="token keyword">private</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//The broadcast parameters of this mode</span>
+    	<span class="token keyword">private</span> <span class="token class-name">AdvParameterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the AdvParameterParam class</span>
+	<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdvParameterParam</span> <span class="token punctuation">{</span>
+		<span class="token comment">//The broadcast interval of this mode， Adjustable from 100ms to 10000ms, with a scale of 100ms</span>
+    	<span class="token keyword">private</span> <span class="token keyword">int</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//The broadcast power of this mode，There are 8: -40, -20, -16, -12, -8, -4, 0, 4, 8</span>
+    	<span class="token keyword">private</span> <span class="token keyword">int</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Configure broadcast parameters
+     * @param macAddress MAC
+     * @param advParameter Broadcast parameters
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setAdvParameter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">AdvParameter</span> advParameter<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Obtain scanning parameter configuration
+     * @param macAddress  MAC
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getLeScanFilter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LeScanFilter</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//About the brief content of the LeScanFilter class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilter</span> <span class="token punctuation">{</span>
+		<span class="token comment">//scanning mode</span>
+        <span class="token keyword">public</span> <span class="token class-name">LeScanFilterMode</span> mode<span class="token punctuation">;</span>
+		<span class="token comment">//Scan filter, the key is just one of rssi, re_mac, re_raw</span>
+        <span class="token comment">//When the key is rssi, the value is int type data, ranging from -100 to 0</span>
+        <span class="token comment">//When the key is re_mac, the value is a regular expression of type String with a length of 64 characters</span>
+        <span class="token comment">//When the key is re_raw, the value is a regular expression of type String with a length of 192 characters</span>
+        <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TypeMap</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> filter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the LeScanFilterMode class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterMode</span> <span class="token punctuation">{</span>
+		<span class="token comment">//Normal Mode</span>
+    	<span class="token keyword">public</span> <span class="token class-name">LeScanFilterNorm</span> norm<span class="token punctuation">;</span>
+		<span class="token comment">//Trigger mode: SOS or button press</span>
+    	<span class="token keyword">public</span> <span class="token class-name">LeScanFilterTrig</span> trig<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the LeScanFilterNorm class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//Normal mode scan switch status</span>
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//Normal mode scanning parameters</span>
+        <span class="token keyword">public</span> <span class="token class-name">LeScanFilterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the LeScanFilterTrig class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterTrig</span> <span class="token punctuation">{</span>
+		<span class="token comment">//Trigger [SOS or button] mode to scan switch status</span>
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//Trigger [SOS or button] mode to scan parameters</span>
+        <span class="token keyword">public</span> <span class="token class-name">LeScanFilterParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the LeScanFilterParam class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LeScanFilterParam</span> <span class="token punctuation">{</span>
+		<span class="token comment">//Scan interval duration， Adjustable from 100ms to 10000ms, with a scale of 100ms</span>
+        <span class="token keyword">public</span> <span class="token keyword">float</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//Scan window duration，Scan Window defines how long to scan at each interval. The unit is milliseconds. The valid range for this field is 2.5ms to 10240ms (10.24s).</span>
+        <span class="token keyword">public</span> <span class="token keyword">float</span> window<span class="token punctuation">;</span>
+		<span class="token comment">//Scan timeout duration，LE scan timeout, the duration of a single scan in PRD. The unit is milliseconds. The unit is milliseconds. The valid range for this field is 500ms to 655350ms (655.35s). </span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> timeout<span class="token punctuation">;</span>
+		<span class="token comment">//Scan restart duration，Time between two LE scan. The unit is milliseconds.</span>
+        <span class="token keyword">public</span> <span class="token keyword">int</span> gap<span class="token punctuation">;</span>
+		<span class="token comment">//Is it active scanning: true Active scanning false Passive scanning</span>
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> active<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Set scanning parameters
+     * @param macAddress  MAC
+     * @param leScanFilter
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setLeScanFilter</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">LeScanFilter</span> leScanFilter<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Obtain lighting effect configuration
+     * @param macAddress  MAC
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getDeviceLEDConfig</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LedConfigEntity</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//About the brief content of the LedConfigEntity class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LedConfigEntity</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_BLUE</span> <span class="token operator">=</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_GREEN</span> <span class="token operator">=</span> <span class="token string">&quot;green&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_RED</span> <span class="token operator">=</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_YELLOW</span> <span class="token operator">=</span> <span class="token string">&quot;yellow&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_WHITE</span> <span class="token operator">=</span> <span class="token string">&quot;white&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_MAGENTA</span> <span class="token operator">=</span> <span class="token string">&quot;magenta&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">COLOR_CYAN</span> <span class="token operator">=</span> <span class="token string">&quot;cyan&quot;</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">EFFECT_OFF</span> <span class="token operator">=</span> <span class="token string">&quot;off&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">EFFECT_STEADY</span> <span class="token operator">=</span> <span class="token string">&quot;steady&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">EFFECT_BLINK</span> <span class="token operator">=</span> <span class="token string">&quot;blink&quot;</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">//This field represents the color of the LED and must be one of the following strings: &quot;blue&quot;, &quot;green&quot;, &quot;red&quot;, &quot;yellow&quot;, &quot;white&quot;, &quot;magenta&quot;, &quot;cyan&quot;. This is an optional field and only takes effect if the device supports multi-color LEDs.</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> color<span class="token punctuation">;</span>
+        <span class="token comment">//This field specifies the LED effect and must be one of the following strings: &quot;off&quot;, &quot;steady&quot;, or &quot;blink&quot;.</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> effect<span class="token punctuation">;</span>
+        <span class="token comment">//This field is of array type and defines the detailed behavior when the LED is set to blink. The 1st parameter indicates the duration (in milliseconds) that the LED stays on in a single cycle(Range 1-65535). The 2nd parameter indicates the duration (in milliseconds) that the LED stays off in the same cycle(Range 1-65535). The 3rd parameter specifies the number of cycles to perform.</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> params<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Set the lighting effect
+     * @param macAddress  MAC
+     * @param ledConfig
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setDeviceLEDConfig</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">LedConfigEntity</span> ledConfig<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Get Relay Control configuration
+     * @param macAddress  MAC
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getRelayControl</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RelayControl</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//About the brief content of the RelayControl class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RelayControl</span> <span class="token punctuation">{</span>
+		<span class="token comment">//This field specifies the type of message to be relayed. It has two case-insensitive options: &quot;mac&quot; and &quot;imm&quot;. &quot;mac&quot; means the relayed content is a Bluetooth LE MAC address; &quot;imm&quot; means the relayed content is the Major &amp; Minor values from an Apple iBeacon.</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> type<span class="token punctuation">;</span>
+		<span class="token comment">//This field specifies how many bytes of the MAC address must be retained when relaying. Allowed lengths are 2, 3, 4, and 6. This field is optional and defaults to 2. It is effective only when the type field is set to &quot;mac&quot;.If the value obtained is Integra.MN_VALUE, it means that no data has been obtained.</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> aln <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+		<span class="token comment">//This field specifies the upper limit on the number of data items to relay at one time (i.e., the maximum number of devices per round). When relaying, the device always selects the most recent records. For example, if the previous Bluetooth scan produced 5 records and the limit is set to 4, the oldest record is discarded; if the limit is set to 6 and only 5 valid records were found, then 5 records are relayed. This field is optional and defaults to 5.If the value obtained is Integra.MN_VALUE, it means that no data has been obtained. The range is 1-100.</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> max <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+		<span class="token comment">//This field specifies the number of relay attempts. It is optional. If it is not present, it indicates continuous relay advertising.If the value obtained is Integra.MN_VALUE, it means that no data has been obtained.</span>
+        <span class="token keyword">private</span> <span class="token class-name">Long</span> cnt <span class="token operator">=</span> <span class="token class-name">Long</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Set Relay Control
+     * @param macAddress  MAC
+     * @param relayControl
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setRelayControl</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">RelayControl</span> relayControl<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Get Apple Ibeacon Frame configuration
+     * @param macAddress  MAC
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getAppleIbeaconFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AppleIbeaconFrame</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//About the brief content of the AppleIbeaconFrame class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconFrame</span> <span class="token punctuation">{</span>
+		<span class="token comment">//Normal mode parameters</span>
+        <span class="token keyword">public</span> <span class="token class-name">AppleIbeaconNorm</span> norm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the AppleIbeaconNorm class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//iBeacon frame broadcast on/off status</span>
+        <span class="token keyword">public</span> <span class="token class-name">Boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//iBeacon frame broadcast data</span>
+        <span class="token keyword">public</span> <span class="token class-name">AppleIbeaconData</span> data<span class="token punctuation">;</span>
+		<span class="token comment">//ibeacon number of participants</span>
+        <span class="token keyword">public</span> <span class="token class-name">AppleIbeaconParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the AppleIbeaconData class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconData</span> <span class="token punctuation">{</span>
+        <span class="token comment">//UUID in Apple iBeacon ad frames，The length must be 32.</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> uuid<span class="token punctuation">;</span>
+		<span class="token comment">//major in Apple iBeacon ad frames,Range 0-65535</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> major<span class="token punctuation">;</span>
+		<span class="token comment">//minor in Apple iBeacon ad frames,Range 0-65535</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> minor<span class="token punctuation">;</span>
+		<span class="token comment">//This field indicates the Calibrated Tx power at 1 m in the Apple iBeacon advertising frame, in dBm, ranging from -128 to 127.</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> cpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the AppleIbeaconParam class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppleIbeaconParam</span> <span class="token punctuation">{</span>
+        <span class="token comment">//Advertising interval, Unit: ms.Adjustable from 100ms to 10000ms, with increments of 100ms.</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//Advertising transmit power, Uint: dBm. If the input value is NOT directly supported by the device, the closest supported value will be used instead.There are 8 values: -40, -20, -16, -12, -8, -4, 0, 4, 8 (unit: dBm)</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Set Apple Ibeacon Frame
+     * @param macAddress  MAC
+     * @param appleIbeaconFrame
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setAppleIbeaconFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">AppleIbeaconFrame</span> appleIbeaconFrame<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Get Eddystone Uid Frame configuration
+     * @param macAddress  MAC
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getEddystoneUidFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EddystoneUidFrame</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUidFrame class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidFrame</span> <span class="token punctuation">{</span>
+		<span class="token comment">//Normal mode parameters</span>
+        <span class="token keyword">public</span> <span class="token class-name">EddystoneUidNorm</span> norm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUidNorm class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//UID frame broadcast on/off status</span>
+        <span class="token keyword">private</span> <span class="token class-name">Boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//UID frame broadcast data</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUidData</span> data<span class="token punctuation">;</span>
+		<span class="token comment">//UID frame broadcast parameters</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUidParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUidData class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidData</span> <span class="token punctuation">{</span>
+		<span class="token comment">//This field indicates the Calibrated Tx power at 0 m in the Eddystone URL advertising frame, in dBm，Range -100 ~ 20</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> cpwr<span class="token punctuation">;</span>
+		<span class="token comment">//Namespace ID length must be 20.</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> nid<span class="token punctuation">;</span>
+		<span class="token comment">//Instance ID length must be 12.</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> bid<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUidParam class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUidParam</span> <span class="token punctuation">{</span>
+        <span class="token comment">//uid Advertising interval, Unit: ms，Adjustable from 100ms to 10000ms, with increments of 100ms.</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//uid Advertising transmit power, Uint: dBm. If the input value is NOT directly supported by the device, the closest supported value will be used instead，There are 8 values: -40, -20, -16, -12, -8, -4, 0, 4, 8 (unit: dBm)</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Set EddystoneUidFrame parameters
+     * @param macAddress  MAC
+     * @param eddystoneUidFrame
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setEddystoneUidFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">EddystoneUidFrame</span> eddystoneUidFrame<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Get Eddystone URL Frame Configuration
+     * @param macAddress  MAC
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getEddystoneUrlFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EddystoneUrlFrame</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Get Eddystone Url Frame configuration
+     * @param macAddress
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getEddystoneUrlFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">OnQueryResultListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EddystoneUrlFrame</span><span class="token punctuation">&gt;</span></span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUrlFrame class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlFrame</span> <span class="token punctuation">{</span>
+		<span class="token comment">//正常模式参数</span>
+        <span class="token keyword">public</span> <span class="token class-name">EddystoneUrlNorm</span> norm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUrlNorm class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlNorm</span> <span class="token punctuation">{</span>
+		<span class="token comment">//URL frame broadcast on/off status</span>
+        <span class="token keyword">private</span> <span class="token class-name">Boolean</span> en<span class="token punctuation">;</span>
+		<span class="token comment">//URL frame broadcast data</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUrlData</span> data<span class="token punctuation">;</span>
+		<span class="token comment">//URL frame broadcast parameters</span>
+        <span class="token keyword">private</span> <span class="token class-name">EddystoneUrlParam</span> param<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUrlData class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlData</span> <span class="token punctuation">{</span>
+		<span class="token comment">//This field indicates the Calibrated Tx power at 0 m in the Eddystone URL advertising frame, in dBm，Range -100 ~ 20</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> cpwr<span class="token punctuation">;</span>
+		<span class="token comment">//URL data in the Advertising frame</span>
+        <span class="token keyword">private</span> <span class="token class-name">String</span> url<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+	<span class="token comment">//About the brief content of the EddystoneUrlParam class</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EddystoneUrlParam</span> <span class="token punctuation">{</span>
+        <span class="token comment">//url Advertising interval, Unit: ms，Adjustable from 100ms to 10000ms, with increments of 100ms.</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> intvl<span class="token punctuation">;</span>
+		<span class="token comment">//url Advertising transmit power, Uint: dBm. If the input value is NOT directly supported by the device, the closest supported value will be used instead，There are 8 values: -40, -20, -16, -12, -8, -4, 0, 4, 8 (unit: dBm)</span>
+        <span class="token keyword">private</span> <span class="token class-name">Integer</span> txpwr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Set EddystoneUrlFrame
+     * @param macAddress  MAC
+     * @param eddystoneUrlFrame
+     * @param listener
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">setEddystoneUrlFrame</span><span class="token punctuation">(</span><span class="token class-name">String</span> macAddress<span class="token punctuation">,</span> <span class="token class-name">EddystoneUrlFrame</span> eddystoneUrlFrame<span class="token punctuation">,</span> <span class="token class-name">OnModifyConfigurationListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br><span class="line-number">370</span><br><span class="line-number">371</span><br><span class="line-number">372</span><br><span class="line-number">373</span><br><span class="line-number">374</span><br><span class="line-number">375</span><br><span class="line-number">376</span><br><span class="line-number">377</span><br><span class="line-number">378</span><br><span class="line-number">379</span><br><span class="line-number">380</span><br><span class="line-number">381</span><br><span class="line-number">382</span><br><span class="line-number">383</span><br><span class="line-number">384</span><br><span class="line-number">385</span><br><span class="line-number">386</span><br><span class="line-number">387</span><br><span class="line-number">388</span><br><span class="line-number">389</span><br><span class="line-number">390</span><br><span class="line-number">391</span><br><span class="line-number">392</span><br><span class="line-number">393</span><br><span class="line-number">394</span><br><span class="line-number">395</span><br><span class="line-number">396</span><br><span class="line-number">397</span><br><span class="line-number">398</span><br><span class="line-number">399</span><br><span class="line-number">400</span><br><span class="line-number">401</span><br><span class="line-number">402</span><br><span class="line-number">403</span><br><span class="line-number">404</span><br><span class="line-number">405</span><br><span class="line-number">406</span><br><span class="line-number">407</span><br><span class="line-number">408</span><br><span class="line-number">409</span><br><span class="line-number">410</span><br><span class="line-number">411</span><br><span class="line-number">412</span><br><span class="line-number">413</span><br><span class="line-number">414</span><br><span class="line-number">415</span><br><span class="line-number">416</span><br><span class="line-number">417</span><br><span class="line-number">418</span><br><span class="line-number">419</span><br><span class="line-number">420</span><br><span class="line-number">421</span><br><span class="line-number">422</span><br><span class="line-number">423</span><br><span class="line-number">424</span><br><span class="line-number">425</span><br><span class="line-number">426</span><br><span class="line-number">427</span><br><span class="line-number">428</span><br><span class="line-number">429</span><br><span class="line-number">430</span><br><span class="line-number">431</span><br><span class="line-number">432</span><br><span class="line-number">433</span><br><span class="line-number">434</span><br><span class="line-number">435</span><br><span class="line-number">436</span><br><span class="line-number">437</span><br><span class="line-number">438</span><br><span class="line-number">439</span><br><span class="line-number">440</span><br><span class="line-number">441</span><br><span class="line-number">442</span><br><span class="line-number">443</span><br><span class="line-number">444</span><br><span class="line-number">445</span><br><span class="line-number">446</span><br><span class="line-number">447</span><br><span class="line-number">448</span><br><span class="line-number">449</span><br><span class="line-number">450</span><br><span class="line-number">451</span><br><span class="line-number">452</span><br><span class="line-number">453</span><br><span class="line-number">454</span><br><span class="line-number">455</span><br><span class="line-number">456</span><br><span class="line-number">457</span><br><span class="line-number">458</span><br><span class="line-number">459</span><br><span class="line-number">460</span><br><span class="line-number">461</span><br><span class="line-number">462</span><br><span class="line-number">463</span><br><span class="line-number">464</span><br><span class="line-number">465</span><br><span class="line-number">466</span><br><span class="line-number">467</span><br><span class="line-number">468</span><br><span class="line-number">469</span><br><span class="line-number">470</span><br><span class="line-number">471</span><br><span class="line-number">472</span><br><span class="line-number">473</span><br><span class="line-number">474</span><br><span class="line-number">475</span><br><span class="line-number">476</span><br><span class="line-number">477</span><br><span class="line-number">478</span><br><span class="line-number">479</span><br><span class="line-number">480</span><br><span class="line-number">481</span><br><span class="line-number">482</span><br><span class="line-number">483</span><br><span class="line-number">484</span><br><span class="line-number">485</span><br><span class="line-number">486</span><br><span class="line-number">487</span><br><span class="line-number">488</span><br><span class="line-number">489</span><br><span class="line-number">490</span><br><span class="line-number">491</span><br><span class="line-number">492</span><br><span class="line-number">493</span><br><span class="line-number">494</span><br><span class="line-number">495</span><br><span class="line-number">496</span><br><span class="line-number">497</span><br><span class="line-number">498</span><br><span class="line-number">499</span><br><span class="line-number">500</span><br><span class="line-number">501</span><br><span class="line-number">502</span><br><span class="line-number">503</span><br><span class="line-number">504</span><br><span class="line-number">505</span><br><span class="line-number">506</span><br><span class="line-number">507</span><br><span class="line-number">508</span><br><span class="line-number">509</span><br><span class="line-number">510</span><br><span class="line-number">511</span><br><span class="line-number">512</span><br></div></div><p>Provide additional explanations for some methods:</p> <ol><li><p>Grant the device the current mobile phone time:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>	
+	<span class="token comment">// First, check if Bluetooth is turned on. The CurrentTimeService service on your phone can only be started when Bluetooth is on. If Bluetooth is off, attempting to start it may cause errors on some Android phones. You also need to monitor the Bluetooth status. When Bluetooth is on, the startSyncTimeServer service needs to be started; when Bluetooth is off, the closeSyncTimeServer service needs to be stopped. Note that the closeSyncTimeServer service also needs to be stopped when the activity page is executed in ondestroy.</span>
+	<span class="token class-name">MWB02BleManager</span> mBleManager <span class="token operator">=</span> <span class="token class-name">MWB02BleManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// Start service</span>
+	mBleManager<span class="token punctuation">.</span><span class="token function">startSyncTimeServer</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Close Service</span>
+    mBleManager<span class="token punctuation">.</span><span class="token function">closeSyncTimeServer</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+
+	<span class="token comment">// Because some phones may occasionally fail to synchronize time, it's necessary to determine if synchronization was successful. It's recommended to check 3 seconds after the device successfully connects.</span>
+	mBleManager<span class="token punctuation">.</span><span class="token function">isDeviceReadSyncTime</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token comment">// If the time synchronization operation fails, then you need to actively send a time synchronization command to the device.</span>
+	mBleManager<span class="token punctuation">.</span><span class="token function">writeTimeToDevice</span><span class="token punctuation">(</span>macAddress<span class="token punctuation">,</span> onWriteTimeToDeviceListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li> <li><p>Firmware upgrade:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">/**
+ * Firmware upgrade:
+ *
+ * @param macAddress  mac
+ * @param upgradeData Upgrade package data
+ * @param listener    OnFirmwareUpgradeListener
+ */</span>
+mBleManager<span class="token punctuation">.</span><span class="token function">firmwareUpgrade</span><span class="token punctuation">(</span>mac<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span> upgradeData<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnFirmwareUpgradeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token comment">/**
+     * Update package data writing progress
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">updateProgress</span><span class="token punctuation">(</span><span class="token keyword">int</span> progress<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Upgrade successful callback, at this point the device will actively disconnect from the phone, triggering the On State Listener callback and returning the BleeConnectionState.Disconnect status
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">upgradeSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/**
+     * Upgrade failed
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">upgradeFailed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div></li> <li><p>Search History Record</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code>
+<span class="token comment">// Because reading historical records is a time-consuming operation, it must be called in a background thread, not in the main thread.</span>
+lifecycleScope<span class="token punctuation">.</span><span class="token function">launch</span><span class="token punctuation">(</span><span class="token class-name">Dispatchers</span><span class="token punctuation">.</span><span class="token constant">IO</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    					<span class="token comment">//Historical record Searcher: StorageIndexRecordSearcher</span>
+    					<span class="token comment">//Generic type of query data callback: StorageActualDataClick</span>
+    					<span class="token comment">//Call getStorageIndexRecordsNeedSearchFile to perform a query, with the following parameters:</span>
+                        <span class="token class-name">StorageIndexRecordSearcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StorageActualDataClick</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getStorageIndexRecordsNeedSearchFile</span><span class="token punctuation">(</span>
+                            <span class="token comment">//context</span>
+                            context<span class="token punctuation">,</span>
+                            <span class="token comment">//macAddress</span>
+                            macAddress<span class="token punctuation">,</span>
+                            <span class="token comment">//Enable logging of query history; false means disabled, true means enabled.</span>
+                            <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            <span class="token comment">//Query conditions for history</span>
+                            <span class="token class-name">StorageIndexRecordCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//Data type to query</span>
+                                <span class="token punctuation">.</span><span class="token function">setStorageDataBlockType</span><span class="token punctuation">(</span><span class="token class-name">StorageDataBlockType<span class="token punctuation">.</span>Click</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//Querying instances of the corresponding data type, generally using: StorageIndexInstance.INSTANCE_DEFAULT</span>
+                                <span class="token punctuation">.</span><span class="token function">setInstance</span><span class="token punctuation">(</span><span class="token class-name">StorageIndexInstance</span><span class="token punctuation">.</span><span class="token constant">INSTANCE_DEFAULT</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//The `queryAllData` variable specifies the start time for querying historical data. It is defined by the developer; `true` retrieves all data, and `false` retrieves data by time period. The unit for this parameter is seconds.</span>
+                                <span class="token punctuation">.</span><span class="token function">setStartTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token number">0</span>
+                                    <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedStartTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                            	<span class="token comment">//The `queryAllData` variable specifies the end time for querying historical data. It is defined by the developer; `true` retrieves all data, and `false` retrieves data by time period. The unit for this parameter is seconds.</span>
+                                <span class="token punctuation">.</span><span class="token function">setEndTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">1000</span>
+                                    <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedEndTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                            <span class="token comment">//resultClickList The query results for historical data of type StorageDataBlockType.Click are as follows: If the result is empty, it means that there are no historical records for that time period.</span>
+                            <span class="token comment">//exceptionClick If any data errors occur during the query, a notification will be displayed to the developer here. If no errors occur, the value will be null.</span>
+                            resultClickList<span class="token punctuation">,</span>exceptionClick <span class="token operator">-&gt;</span>
+                            <span class="token class-name">LogUtil</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;exceptionClick  ${exceptionClick?:&quot;</span> exceptionClick <span class="token keyword">null</span> <span class="token string">&quot;}&quot;</span><span class="token punctuation">)</span>
+                                
+							<span class="token comment">//The generic type of the query data callback is StorageActualDataScanResultAdvertisingRawData.</span>
+                            <span class="token class-name">StorageIndexRecordSearcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StorageActualDataScanResultAdvertisingRawData</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getStorageIndexRecordsNeedSearchFile</span><span class="token punctuation">(</span>
+                                <span class="token comment">//context</span>
+                                context<span class="token punctuation">,</span>
+                                <span class="token comment">//macAddress</span>
+                                macAddress<span class="token punctuation">,</span>
+                                <span class="token comment">//Enable logging of query history; false means disabled, true means enabled.</span>
+                                <span class="token boolean">false</span><span class="token punctuation">,</span>
+                                <span class="token comment">//Query conditions for history</span>
+                                <span class="token class-name">StorageIndexRecordCondition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//Data type to query</span>
+                                    <span class="token punctuation">.</span><span class="token function">setStorageDataBlockType</span><span class="token punctuation">(</span><span class="token class-name">StorageDataBlockType<span class="token punctuation">.</span>Scan_Result</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//Querying instances of the corresponding data type, generally using: StorageIndexInstance.INSTANCE_DEFAULT</span>
+                                    <span class="token punctuation">.</span><span class="token function">setInstance</span><span class="token punctuation">(</span><span class="token class-name">StorageIndexInstance</span><span class="token punctuation">.</span><span class="token constant">INSTANCE_DEFAULT</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//The `queryAllData` variable specifies the start time for querying historical data. It is defined by the developer; `true` retrieves all data, and `false` retrieves data by time period. The unit for this parameter is seconds.</span>
+                                    <span class="token punctuation">.</span><span class="token function">setStartTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                        <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token number">0</span>
+                                        <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedStartTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//The `queryAllData` variable specifies the end time for querying historical data. It is defined by the developer; `true` retrieves all data, and `false` retrieves data by time period. The unit for this parameter is seconds.</span>
+                                    <span class="token punctuation">.</span><span class="token function">setEndTime</span><span class="token punctuation">(</span>when <span class="token punctuation">(</span>queryAllData<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                        <span class="token boolean">true</span> <span class="token operator">-&gt;</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">1000</span>
+                                        <span class="token keyword">else</span>  <span class="token operator">-&gt;</span>selectedEndTimeDate<span class="token punctuation">.</span>time<span class="token operator">/</span><span class="token number">1000</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                	<span class="token comment">//Due to Android phone system memory limitations on apps, querying too much data may cause memory overflow, so it is necessary to limit the maximum amount of historical data that can be queried.</span>
+                                    <span class="token punctuation">.</span><span class="token function">setMaximumQuantityLimit</span><span class="token punctuation">(</span><span class="token class-name">StorageIndexRecordCondition<span class="token punctuation">.</span>QuantityLimit</span><span class="token punctuation">.</span><span class="token constant">LIMIT_10000</span><span class="token punctuation">)</span>
+                            <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                                <span class="token comment">//resultStorageActualDataScanResultAdvertisingRawDataList  The query results for historical data of type StorageDataBlockType.Scan_Result are as follows: If the result is empty, it means that there are no historical records for that time period.</span>
+                                <span class="token comment">//exceptionScanResult If any data errors occur during the query, a notification will be displayed to the developer here. If no errors occur, the value will be null.</span>
+                                resultStorageActualDataScanResultAdvertisingRawDataList<span class="token punctuation">,</span>exceptionScanResult <span class="token operator">-&gt;</span>
+                                <span class="token class-name">LogUtil</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;exceptionScanResult  ${exceptionScanResult?:&quot;</span> exceptionScanResult <span class="token keyword">null</span> <span class="token string">&quot;}&quot;</span><span class="token punctuation">)</span>
+                                storageActualDataScanResultAdvertisingRawDataList <span class="token operator">=</span> resultStorageActualDataScanResultAdvertisingRawDataList
+                                <span class="token keyword">if</span> <span class="token punctuation">(</span>resultStorageActualDataScanResultAdvertisingRawDataList<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token class-name">LogUtil</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;resultStorageActualDataScanResultAdvertisingRawDataList  ${resultStorageActualDataScanResultAdvertisingRawDataList!!.size}&quot;</span><span class="token punctuation">)</span>
+                                <span class="token punctuation">}</span>
+                                <span class="token comment">/**
+                                * Once historical data reading is complete, it is necessary to switch to the main thread to update the user interface.
+                                */</span>
+                                lifecycleScope<span class="token punctuation">.</span>launch <span class="token punctuation">(</span><span class="token class-name">Dispatchers<span class="token punctuation">.</span>Main</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                                    <span class="token comment">//The main thread handles operations related to historical data.</span>
+                                <span class="token punctuation">}</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br></div></div></li></ol> <h2 id="document-update-record"><a href="#document-update-record" class="header-anchor">#</a> Document update record</h2> <ul><li>2026/02/11	Add MWB02 device operation basic function API</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated::</span> <span class="time">2/11/2026, 10:36:25 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/68.8866be89.js" defer></script>
+  </body>
+</html>

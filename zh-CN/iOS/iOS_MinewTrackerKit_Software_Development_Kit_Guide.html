@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MinewTrackerKit说明文档 | 移动SDK文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="汇集 MBeacon, BeaconPlus, MSensor 等产品的移动SDK文档.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.fef98304.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/18.6db3ccbb.js" as="script"><link rel="prefetch" href="/assets/js/100.54ecfdbe.js"><link rel="prefetch" href="/assets/js/101.55a4a0dd.js"><link rel="prefetch" href="/assets/js/102.f2fc7b39.js"><link rel="prefetch" href="/assets/js/103.b1a15fde.js"><link rel="prefetch" href="/assets/js/104.f174bab9.js"><link rel="prefetch" href="/assets/js/105.75630d9d.js"><link rel="prefetch" href="/assets/js/106.a3d11e42.js"><link rel="prefetch" href="/assets/js/107.a7a5f183.js"><link rel="prefetch" href="/assets/js/108.67bcd1af.js"><link rel="prefetch" href="/assets/js/109.c2e24781.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.f652dcc7.js"><link rel="prefetch" href="/assets/js/111.b48743ee.js"><link rel="prefetch" href="/assets/js/112.30a8837d.js"><link rel="prefetch" href="/assets/js/113.e8cff9ce.js"><link rel="prefetch" href="/assets/js/114.bd0c683b.js"><link rel="prefetch" href="/assets/js/115.78b62576.js"><link rel="prefetch" href="/assets/js/116.20ab4f59.js"><link rel="prefetch" href="/assets/js/117.857e7d59.js"><link rel="prefetch" href="/assets/js/118.bdd02254.js"><link rel="prefetch" href="/assets/js/119.48f203c8.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.969852b6.js"><link rel="prefetch" href="/assets/js/121.e5b80d1e.js"><link rel="prefetch" href="/assets/js/122.92965ffb.js"><link rel="prefetch" href="/assets/js/123.2727505b.js"><link rel="prefetch" href="/assets/js/124.cda0e2d0.js"><link rel="prefetch" href="/assets/js/125.9f47dbc5.js"><link rel="prefetch" href="/assets/js/126.a45ada73.js"><link rel="prefetch" href="/assets/js/127.99f26761.js"><link rel="prefetch" href="/assets/js/128.6409a022.js"><link rel="prefetch" href="/assets/js/129.2e11333f.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.04c68f04.js"><link rel="prefetch" href="/assets/js/131.242cef01.js"><link rel="prefetch" href="/assets/js/132.4ba2b957.js"><link rel="prefetch" href="/assets/js/133.e3c29412.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.de28f169.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.fdf873b7.js"><link rel="prefetch" href="/assets/js/22.f86a6b2a.js"><link rel="prefetch" href="/assets/js/23.c962fb9d.js"><link rel="prefetch" href="/assets/js/24.dd5a5066.js"><link rel="prefetch" href="/assets/js/25.60fa12e9.js"><link rel="prefetch" href="/assets/js/26.076a9c0b.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.94e3a977.js"><link rel="prefetch" href="/assets/js/29.1f02f5e9.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.8dbe0a28.js"><link rel="prefetch" href="/assets/js/34.22a67dce.js"><link rel="prefetch" href="/assets/js/35.84bd4176.js"><link rel="prefetch" href="/assets/js/36.d8ecb1a6.js"><link rel="prefetch" href="/assets/js/37.2bb9c15b.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.5765aa19.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.39b7a973.js"><link rel="prefetch" href="/assets/js/41.6dbb2693.js"><link rel="prefetch" href="/assets/js/42.5122c78e.js"><link rel="prefetch" href="/assets/js/43.1cb8bebc.js"><link rel="prefetch" href="/assets/js/44.2173a006.js"><link rel="prefetch" href="/assets/js/45.a58e8a25.js"><link rel="prefetch" href="/assets/js/46.e01d23ab.js"><link rel="prefetch" href="/assets/js/47.61660617.js"><link rel="prefetch" href="/assets/js/48.f85a4831.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.8d7c283e.js"><link rel="prefetch" href="/assets/js/52.44f68518.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f1f5c4dd.js"><link rel="prefetch" href="/assets/js/55.798ced28.js"><link rel="prefetch" href="/assets/js/56.aa0fd809.js"><link rel="prefetch" href="/assets/js/57.89da00b3.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.6aefb692.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.e8adf440.js"><link rel="prefetch" href="/assets/js/61.8240b6a0.js"><link rel="prefetch" href="/assets/js/62.183a9f0f.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.ca9adaaf.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.06def160.js"><link rel="prefetch" href="/assets/js/67.7eb8009c.js"><link rel="prefetch" href="/assets/js/68.8866be89.js"><link rel="prefetch" href="/assets/js/69.2b683fe3.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.a4692fcf.js"><link rel="prefetch" href="/assets/js/71.ffc2d4c3.js"><link rel="prefetch" href="/assets/js/72.44cdb27c.js"><link rel="prefetch" href="/assets/js/73.99a10aa4.js"><link rel="prefetch" href="/assets/js/74.78d59507.js"><link rel="prefetch" href="/assets/js/75.723e0570.js"><link rel="prefetch" href="/assets/js/76.2c88a84f.js"><link rel="prefetch" href="/assets/js/77.592a5098.js"><link rel="prefetch" href="/assets/js/78.2872e3c9.js"><link rel="prefetch" href="/assets/js/79.1ed4c3d8.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.21f6345b.js"><link rel="prefetch" href="/assets/js/81.ffdbd435.js"><link rel="prefetch" href="/assets/js/82.f12e33cc.js"><link rel="prefetch" href="/assets/js/83.e169de25.js"><link rel="prefetch" href="/assets/js/84.01013dfe.js"><link rel="prefetch" href="/assets/js/85.0ec937e1.js"><link rel="prefetch" href="/assets/js/86.c927785a.js"><link rel="prefetch" href="/assets/js/87.2caa4987.js"><link rel="prefetch" href="/assets/js/88.782ec634.js"><link rel="prefetch" href="/assets/js/89.d7d76d3c.js"><link rel="prefetch" href="/assets/js/90.b3219e78.js"><link rel="prefetch" href="/assets/js/91.582bdb75.js"><link rel="prefetch" href="/assets/js/92.cb3c201d.js"><link rel="prefetch" href="/assets/js/93.369fca1e.js"><link rel="prefetch" href="/assets/js/94.d38be9c3.js"><link rel="prefetch" href="/assets/js/95.a142f7de.js"><link rel="prefetch" href="/assets/js/96.a4abd30b.js"><link rel="prefetch" href="/assets/js/97.0fff9d4b.js"><link rel="prefetch" href="/assets/js/98.cedca655.js"><link rel="prefetch" href="/assets/js/99.87ee2fde.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="移动SDK文档" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MinewTrackerKit说明文档</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html#minewtrackerkit说明文档" class="sidebar-link">MinewTrackerKit说明文档</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html#前期工作" class="sidebar-link">前期工作</a></li><li class="sidebar-sub-header"><a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html#开始上手" class="sidebar-link">开始上手</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="minewtrackerkit说明文档"><a href="#minewtrackerkit说明文档" class="header-anchor">#</a> MinewTrackerKit说明文档</h2> <p>本套SDK仅支持基于的nordic52芯片寻物器，<strong>与过去的51芯片不兼容</strong>。请仔细阅读此文档以便尽快上手开发。</p> <p><strong>兼容性说明：过去用过MinewFinderSDK的开发者请注意：MinewFinder与MTTrackerKit互相不兼容，切不可用于同一个项目。</strong></p> <h3 id="前期工作"><a href="#前期工作" class="header-anchor">#</a> 前期工作</h3> <p>此开发套件和过去的MinewFinder有些类似。我们在之前的基础上全面更新了加密算法和设备端稳定性，性能实际表现远远高于51版本的Tracker。</p> <p>MTTrackerManager为设备管理类，在APP运行时始终是单例。MTTracker是设备实例类，此套件会为每一个设备生成一个MTTracker实例以便于对监听设备和操作设备。</p> <p>整体设计思路如下图所示：</p> <p><img src="/assets/img/design.48a5b3ec.png" alt="设计说明"></p> <p>*MTTrackerManager：*设备管理类，可以扫描周围的Tracker设备，并且可以连接它们，校验它们等。</p> <p>MTTracker：设备实例类，当Manager发现一个物理设备时，Manager会生成一个Tracker实例，这个实例就对应一个物理设备。</p> <h3 id="开始上手"><a href="#开始上手" class="header-anchor">#</a> 开始上手</h3> <h4 id="开发环境"><a href="#开发环境" class="header-anchor">#</a> 开发环境：</h4> <ul><li>Xcode9+，当前SDK使用Xcode9编译，请使用Xcode9及以上版本进行开发；</li> <li>iOS8，限制最低系统版本为iOS8；</li></ul> <h4 id="导入到工程"><a href="#导入到工程" class="header-anchor">#</a> 导入到工程：</h4> <h5 id="cocoapods"><a href="#cocoapods" class="header-anchor">#</a> CocoaPods</h5> <p>MTTrackKit可通过<a href="http://cocoapods.org/" target="_blank" rel="noopener noreferrer">CocoaPods获得<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。要安装它，只需将以下行添加到您的Podfile中，然后导入 &lt;MTTrackKit/MTTrackKit.h&gt;：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pod 'MTTrackKit'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h5 id="手动导入"><a href="#手动导入" class="header-anchor">#</a> 手动导入</h5> <ol><li><p>将开发套件的framework文件：MTTrackit.framework拷贝到项目工程目录下，然后添加到工程中，target为当前的工程，然后点“Add”，如下图所示：</p> <p><img src="/assets/img/addframework.0b887314.png" alt="添加framework"></p></li></ol> <p>​    依次找到：“Target” -&gt; General -&gt; Embedded Binaries，点击下面的“+”，继续点击“Add Other”将MTTrackit.framework文件添加进来。同样的，也需要添加到 ”Linked Frameworks and Libraries“，添加完应该如下图：</p> <p><img src="/assets/img/frameworkadded.219650ea.png" alt="frameworkadded"></p> <ol start="2"><li><p>由于APP需要在后台时也能正常响应Tracker的事件，因此需要开启相关的后台蓝牙权限。如下图：</p> <p><img src="/assets/img/bluetoothbackground.f0d91607.png" alt=""></p></li> <li><p>*如果使用Swift开发，需要添加一个Objective C BridgingHeader .h文件（此处不再赘述），并且在此文件添加：import ，如果使用Objective C进行开发，在需要的文件的顶端添加：import</p></li> <li><p>!!!在iOS10及以上版本，苹果对蓝牙APi添加了权限限制，你需要在工程的info.plist文件里添加一项字符串：Privacy - Bluetooth Peripheral Usage Description - &quot;你的使用描述&quot;。如下图所示：</p> <p><img src="/assets/img/bluetoothdescription.7ceeb2e7.png" alt="bluetoothdescription"></p></li></ol> <h4 id="开始开发"><a href="#开始开发" class="header-anchor">#</a> 开始开发</h4> <h5 id="扫描设备"><a href="#扫描设备" class="header-anchor">#</a> 扫描设备</h5> <p>首先需要获取到MTTrackerManager的单例，然后检查手机当前的蓝牙状态，接着就可以进行设备扫描了。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// 获取Manager单例</span>
+MTTrackerManager <span class="token operator">*</span>manager <span class="token operator">=</span> <span class="token punctuation">[</span>MTTrackerManager sharedInstance<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 手机端当前的蓝牙开关状态</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>manager<span class="token punctuation">.</span>bleState <span class="token operator">==</span> Poweron<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token comment">// 开始进行设备扫描</span>
+    <span class="token punctuation">[</span>manager startScan<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>MTTracker <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span>trackers<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 当检测到周围的设备后，此block会回调。</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>PS：trackers数组里包含的只有<strong>未绑定的设备</strong>（下文将会提供绑定相关说明）。</p> <h5 id="绑定校验"><a href="#绑定校验" class="header-anchor">#</a> 绑定校验</h5> <p>某个Tracker只有被绑定了才能正常使用，我们建议进行绑定操作时，Tracker与手机的距离不要超过10cm。</p> <p>基于以前的经验，我们使用了全新的加密算法来保证手机和设备之间通信的安全性。另外，Tracker在出厂时默认密码为空，每个设备在绑定时都需要一个密码，一旦绑定成功，这个Tracker将只接受来自主人手机的连接。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">/*
+  manager: MTTrackerManager单例
+*/</span>
+<span class="token comment">// 设置密码,长度必须是8位,可以是大小写字母，数字，特殊符号。</span>
+manager<span class="token punctuation">.</span>password <span class="token operator">=</span> <span class="token string">@&quot;********&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 开始进行设备绑定验证操作</span>
+<span class="token punctuation">[</span>manager bindingVerify<span class="token punctuation">:</span>aTracker completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token comment">// 如果绑定验证成功了，tracker将会被自动添加到manager的bindTrackers数组里，</span>
+     <span class="token comment">// 否则说明此设备因为种种原因无法成功绑定。</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>PS：无法绑定的设备是不能正常使用的。</p> <h5 id="解绑设备"><a href="#解绑设备" class="header-anchor">#</a> 解绑设备</h5> <p>如果用户丢失了某个Tracker，或者想把Tracker送给别人。就需要进行解绑操作，严格的来说，除非Tracker丢失了。其它情况下都应该在保持设备与手机连接的状态下进行解绑操作。这是由于Tracker内部记录了当前主人的密码，解绑时需要擦除密码才能保证下一次的正常使用。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">/*
+  manager: MTTrackerManager单例
+*/</span>
+<span class="token comment">// 解除设备绑定</span>
+
+<span class="token comment">// 你想要解除绑定设备的mac地址</span>
+NSString <span class="token operator">*</span>mac <span class="token operator">=</span> <span class="token string">@&quot;acd498765432&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 解除设备绑定</span>
+<span class="token punctuation">[</span>manager unbindTracker<span class="token punctuation">:</span>mac completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 同样的，操作成功后 success为YES，否则为NO。</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h5 id="获取设备信息"><a href="#获取设备信息" class="header-anchor">#</a> 获取设备信息</h5> <p>你可以通过MTTracker实例获取到对应物理设备的信息，例如蓝牙名称，mac地址，rssi等数据。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// aTracker MTTracker实例</span>
+
+NSString <span class="token operator">*</span>mac <span class="token operator">=</span> aTracker<span class="token punctuation">.</span>mac<span class="token punctuation">;</span> <span class="token comment">// mac 地址</span>
+NSString <span class="token operator">*</span>name <span class="token operator">=</span> aTracker<span class="token punctuation">.</span>name<span class="token punctuation">;</span> <span class="token comment">// 蓝牙名称</span>
+NSInteger rssi <span class="token operator">=</span> aTraker<span class="token punctuation">.</span>rssi<span class="token punctuation">;</span>   <span class="token comment">// 信号强度</span>
+NSInteger battery <span class="token operator">=</span> aTracker<span class="token punctuation">.</span>battery<span class="token punctuation">;</span> <span class="token comment">// 电池 0～100</span>
+Connection status <span class="token operator">=</span> aTracker<span class="token punctuation">.</span>connection<span class="token punctuation">;</span> <span class="token comment">// 设备当前的连接状态</span>
+ModelType model <span class="token operator">=</span> aTracker<span class="token punctuation">.</span>model<span class="token punctuation">;</span>    <span class="token comment">// 设备型号</span>
+Distance dis <span class="token operator">=</span> aTracker<span class="token punctuation">.</span>distance<span class="token punctuation">;</span>    <span class="token comment">// 距离信息</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h5 id="呼叫设备"><a href="#呼叫设备" class="header-anchor">#</a> 呼叫设备</h5> <p>通过我们提供的APi，可以对设备进行呼叫，当然是在设备保持连接的状态下。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// aTracker MTTracker实例</span>
+
+<span class="token comment">// 当ring 为YES的时候是让设备响铃，为NO的时候是停止设备响铃。</span>
+BOOL ring <span class="token operator">=</span> YES<span class="token punctuation">;</span>
+
+<span class="token comment">// 切换设备响铃状态</span>
+<span class="token punctuation">[</span>aTracker switchBellStatus<span class="token punctuation">:</span>ring completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;响铃状态切换成功。&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h5 id="配置设备断开时的事件处理"><a href="#配置设备断开时的事件处理" class="header-anchor">#</a> 配置设备断开时的事件处理</h5> <p>Tracker在断开时会有相应的事件处理，比如断开响铃以告知用户等。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// aTracker MTTracker实例</span>
+
+<span class="token comment">// 为YES表示Tracker断开时将会响铃，否则不响铃</span>
+BOOL alert <span class="token operator">=</span> YES<span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>aTracker writeLossAlert<span class="token punctuation">:</span>alert completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;成功配置断开事件处理。&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h5 id="接受来自设备的事件"><a href="#接受来自设备的事件" class="header-anchor">#</a> 接受来自设备的事件</h5> <p>手机可以接受来自设备的事件，需要做好相关监听。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// aTracker MTTracker实例</span>
+<span class="token punctuation">[</span>aTracker didReceive<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>Receiving rec<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token comment">// Tracker上的按钮被按下，</span>
+    <span class="token comment">// 你可以在这里处理拍照，手机端报警等操作。</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>rec <span class="token operator">==</span> ReceivingButtonPushed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;按下了设备上的按钮。&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听设备连接状态变化</span>
+<span class="token punctuation">[</span>aTracker didConnectionChange<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>Connection con<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span>con<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">case</span> ConnectionConnecting<span class="token punctuation">:</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;正在连接到Tracker&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> ConnectionConnected<span class="token punctuation">:</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Tracker已经连接&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> ConnectionDisconnected<span class="token punctuation">:</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;Tracker已经断开连接&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 监听设备数据更新</span>
+<span class="token punctuation">[</span>aTracker didValueUpdate<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">/*
+      设备的属性或状态更新了，你可以刷新UI界面了。
+    */</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h5 id="重启app后的相关处理"><a href="#重启app后的相关处理" class="header-anchor">#</a> 重启APP后的相关处理</h5> <p>你可能会发现，SDK的操作只涉及到内存数据，如果APP被Kill掉，之前的绑定数据什么的就失效了。所以需要你自行做数据永久化存储，比如当前用户的绑定密码，每个已绑定设备的Mac地址等。</p> <p>当然，我们也提供了一些APi用于APP恢复后的相关操作。</p> <p>以下代码均在APP重新运行时处理的。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// 获取一个已绑定Tracker的实例</span>
+<span class="token comment">/*
+  SDK会智能解析mac地址并生成一个MTTracker实例，如果Tracker在手机附近正常工作。SDK会自动处理连接配置等的相关操作。
+  唯一需要注意的就是需要保证所提供的mac地址是已绑定的，就是使用过 “- (void)bindingVerify:(MTTracker *)tracker completion:(void(^)(BOOL success, NSError *error))handler;” 方法并且获得了成功的回调。
+  在获取到MTTracker实例的同时，此Tracker实例也被添加到BindTrackers数组里。
+*/</span>
+MTTracker <span class="token operator">*</span>bindTracker <span class="token operator">=</span> <span class="token punctuation">[</span>aManager addTracker<span class="token punctuation">:</span><span class="token string">@&quot;xxxxxxxxxxxx&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h5 id="关于用户切换"><a href="#关于用户切换" class="header-anchor">#</a> 关于用户切换</h5> <p>有的时候可能出现当前用户注销自己的登录，然后登入另外一个账号，此时就需要从Manager中移除已经绑定的设备，然后加载新用户的已绑定设备。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// 移除当前用户的绑定设备</span>
+<span class="token punctuation">[</span>aMTTrackerManager removeAllTrackers<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 设置新用户的绑定密码 </span>
+aMTTrackerManager<span class="token punctuation">.</span>password <span class="token operator">=</span> <span class="token string">@&quot;********&quot;</span><span class="token punctuation">;</span> 
+
+<span class="token comment">/*
+     此处加载新用户的绑定设备Mac地址，假设为数组：bindMacs
+*/</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>NSinteger i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> bindMacs<span class="token punctuation">.</span>count<span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">// tracker就是新用户的已绑定设备</span>
+   MTTracker <span class="token operator">*</span>tracker <span class="token operator">=</span> <span class="token punctuation">[</span>aMTTrackerManager addTracker<span class="token punctuation">:</span>bindMacs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h4 id="高级操作"><a href="#高级操作" class="header-anchor">#</a> !!!高级操作</h4> <p>此部分APi属于高级APi，我们把这部分开放给高级开发。除非你明白这些操作的将会导致什么样子的结果，否则不要轻易尝试。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code><span class="token comment">// aTracker MTTracker实例</span>
+
+<span class="token comment">// 修改设备的断开延迟。</span>
+
+<span class="token comment">// 这个参数指的是在断开响铃的状态下，设备端将等待delay秒后开始发出声音。</span>
+<span class="token comment">// 需要注意，它的范围是1s-7s，如果设置的数据太小将会出现误报的问题。</span>
+NSInteger delay <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 写入断开延迟</span>
+<span class="token punctuation">[</span>aTracker writeLossDelay<span class="token punctuation">:</span>delay completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">if</span><span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 成功写入到设备。</span>
+        
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 这个参数指的是设备的断开距离，设备将在配置的距离断开连接。</span>
+<span class="token comment">// 例如：如果配置的是“远”，设备将在30米左右断开连接。“中”：将在20米左右，“近”，将在10米左右。</span>
+<span class="token comment">// 需要注意的是，上述30米/20米/10米是举例值，实际使用中受限于环境</span>
+<span class="token comment">// 有远/中/近三档可选，默认情况下是“远”。</span>
+DistanceLevel level <span class="token operator">=</span> DistanceLevelFar<span class="token punctuation">;</span>
+<span class="token punctuation">[</span>aTracker writeLossDistance<span class="token punctuation">:</span>level completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>   <span class="token comment">// 成功写入到设备</span>
+            
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h4 id=""><a href="#" class="header-anchor">#</a></h4> <h4 id="f5新特性"><a href="#f5新特性" class="header-anchor">#</a> F5新特性</h4> <p>在F5设备中新增了修改设备铃声和查询设备铃声的功能。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>NSInteger type <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//type ：0/1/2/3/4</span>
+<span class="token comment">//写入设备铃声</span>
+<span class="token punctuation">[</span>aTracker writeLossDeviceSound<span class="token punctuation">:</span>type com<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>status<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//修改成功</span>
+            
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">//查询设备铃声</span>
+<span class="token punctuation">[</span>aTracker writeSelectLossDeviceSound<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>uint8_t type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h4 id="f6新特性"><a href="#f6新特性" class="header-anchor">#</a> F6新特性</h4> <p>在F6设备中新增了移动报警开关和移动报警灵敏度档位设置，并提供查询。</p> <div class="language-objc line-numbers-mode"><pre class="language-objc"><code>Bool isMoving <span class="token operator">=</span> YES<span class="token punctuation">;</span>
+<span class="token comment">//写入移动报警开关数据，isMoving = YES:开，isMoving = NO:关</span>
+<span class="token punctuation">[</span>aTracker writeMovingAlert<span class="token punctuation">:</span>isMoving completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;write moving alert success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;write moving alert error:%@&quot;</span><span class="token punctuation">,</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">//查询移动报警开关</span>
+<span class="token punctuation">[</span>aTracker writeSelectMovingAlert<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>uint8_t type<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//type=1:开，type=0:关</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><div class="language-objc line-numbers-mode"><pre class="language-objc"><code>NSInteger level <span class="token operator">=</span> <span class="token number">0</span><span class="token comment">//0:低，1:中，2:高,如若传值非0/1/2，即默认选择低档位</span>
+<span class="token comment">//写入移动报警灵敏度档位设置</span>
+<span class="token punctuation">[</span>aTracker writeMovingAlertLevelSetting<span class="token punctuation">:</span>level completion<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>BOOL success<span class="token punctuation">,</span> NSError <span class="token operator">*</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;write moving alert success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;write moving alert error:%@&quot;</span><span class="token punctuation">,</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//查询移动报警灵敏度档位</span>
+<span class="token punctuation">[</span>aTracker writeSelectMovingAlertLevel<span class="token punctuation">:</span><span class="token operator">^</span><span class="token punctuation">(</span>uint8_t type<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//type=0:低，type=1:中，type=2:高</span>
+        <span class="token keyword">self</span><span class="token operator">-&gt;</span>_deviceACCLevel <span class="token operator">=</span> type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新::</span> <span class="time">2024/1/12 14:37:29</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fef98304.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/18.6db3ccbb.js" defer></script>
+  </body>
+</html>
