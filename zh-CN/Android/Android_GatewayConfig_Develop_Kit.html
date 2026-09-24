@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GatewayConfig SDK 说明文档 | 移动SDK文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="汇集 MBeacon, BeaconPlus, MSensor 等产品的移动SDK文档.">
+    
+    <link rel="preload" href="/assets/css/0.styles.44c319ae.css" as="style"><link rel="preload" href="/assets/js/app.ebf38cfb.js" as="script"><link rel="preload" href="/assets/js/2.31f2ce87.js" as="script"><link rel="preload" href="/assets/js/1.a9521bca.js" as="script"><link rel="preload" href="/assets/js/42.f5caa34c.js" as="script"><link rel="prefetch" href="/assets/js/100.559a18d6.js"><link rel="prefetch" href="/assets/js/101.f6198894.js"><link rel="prefetch" href="/assets/js/102.55c828a0.js"><link rel="prefetch" href="/assets/js/103.db60a979.js"><link rel="prefetch" href="/assets/js/104.e039fd62.js"><link rel="prefetch" href="/assets/js/105.f6edd680.js"><link rel="prefetch" href="/assets/js/106.0d03daae.js"><link rel="prefetch" href="/assets/js/107.75a4fac3.js"><link rel="prefetch" href="/assets/js/108.6a2f5716.js"><link rel="prefetch" href="/assets/js/109.bbfe5a6f.js"><link rel="prefetch" href="/assets/js/11.b61f3949.js"><link rel="prefetch" href="/assets/js/110.00c811f9.js"><link rel="prefetch" href="/assets/js/111.a9d1374a.js"><link rel="prefetch" href="/assets/js/112.5fb620d3.js"><link rel="prefetch" href="/assets/js/113.6c31cdb3.js"><link rel="prefetch" href="/assets/js/114.13962e35.js"><link rel="prefetch" href="/assets/js/115.30e6432b.js"><link rel="prefetch" href="/assets/js/116.6815a17c.js"><link rel="prefetch" href="/assets/js/117.91c81175.js"><link rel="prefetch" href="/assets/js/118.e1d182d5.js"><link rel="prefetch" href="/assets/js/119.af301ded.js"><link rel="prefetch" href="/assets/js/12.19e2c148.js"><link rel="prefetch" href="/assets/js/120.964112e5.js"><link rel="prefetch" href="/assets/js/121.eee1b92b.js"><link rel="prefetch" href="/assets/js/122.3a043db8.js"><link rel="prefetch" href="/assets/js/123.4a695bf4.js"><link rel="prefetch" href="/assets/js/124.3596e601.js"><link rel="prefetch" href="/assets/js/125.5c7249cc.js"><link rel="prefetch" href="/assets/js/126.4e58cc65.js"><link rel="prefetch" href="/assets/js/127.d930979f.js"><link rel="prefetch" href="/assets/js/128.b9f3a061.js"><link rel="prefetch" href="/assets/js/129.577954eb.js"><link rel="prefetch" href="/assets/js/13.bf35e539.js"><link rel="prefetch" href="/assets/js/130.64705013.js"><link rel="prefetch" href="/assets/js/131.d1931ea0.js"><link rel="prefetch" href="/assets/js/132.d433bb3f.js"><link rel="prefetch" href="/assets/js/133.48d0bc58.js"><link rel="prefetch" href="/assets/js/134.d8947202.js"><link rel="prefetch" href="/assets/js/135.aa60be12.js"><link rel="prefetch" href="/assets/js/136.4f653b38.js"><link rel="prefetch" href="/assets/js/137.819e81a4.js"><link rel="prefetch" href="/assets/js/138.e0b1265b.js"><link rel="prefetch" href="/assets/js/139.bd84b053.js"><link rel="prefetch" href="/assets/js/14.478ed167.js"><link rel="prefetch" href="/assets/js/140.50436a05.js"><link rel="prefetch" href="/assets/js/141.1f5cd44f.js"><link rel="prefetch" href="/assets/js/142.73156811.js"><link rel="prefetch" href="/assets/js/143.b29c074a.js"><link rel="prefetch" href="/assets/js/144.a1523553.js"><link rel="prefetch" href="/assets/js/145.44294068.js"><link rel="prefetch" href="/assets/js/15.83a1a568.js"><link rel="prefetch" href="/assets/js/16.f27bc1db.js"><link rel="prefetch" href="/assets/js/17.37373e5a.js"><link rel="prefetch" href="/assets/js/18.fd056bc8.js"><link rel="prefetch" href="/assets/js/19.0f7527b6.js"><link rel="prefetch" href="/assets/js/20.d1fa983b.js"><link rel="prefetch" href="/assets/js/21.b99a7fd1.js"><link rel="prefetch" href="/assets/js/22.a1a64d5d.js"><link rel="prefetch" href="/assets/js/23.f103660e.js"><link rel="prefetch" href="/assets/js/24.45174a81.js"><link rel="prefetch" href="/assets/js/25.3b913fd1.js"><link rel="prefetch" href="/assets/js/26.e65b51c3.js"><link rel="prefetch" href="/assets/js/27.bbba3e2f.js"><link rel="prefetch" href="/assets/js/28.d41902fc.js"><link rel="prefetch" href="/assets/js/29.5ae5328e.js"><link rel="prefetch" href="/assets/js/3.4daa0608.js"><link rel="prefetch" href="/assets/js/30.7666f34e.js"><link rel="prefetch" href="/assets/js/31.efc60d8c.js"><link rel="prefetch" href="/assets/js/32.8f2bb9b7.js"><link rel="prefetch" href="/assets/js/33.ebd8779e.js"><link rel="prefetch" href="/assets/js/34.2528a465.js"><link rel="prefetch" href="/assets/js/35.de0dcaf1.js"><link rel="prefetch" href="/assets/js/36.11c10ad6.js"><link rel="prefetch" href="/assets/js/37.0df64dd4.js"><link rel="prefetch" href="/assets/js/38.e4485167.js"><link rel="prefetch" href="/assets/js/39.9eaaffa8.js"><link rel="prefetch" href="/assets/js/4.54dd87c7.js"><link rel="prefetch" href="/assets/js/40.7479d935.js"><link rel="prefetch" href="/assets/js/41.9821c6be.js"><link rel="prefetch" href="/assets/js/43.f7a941ae.js"><link rel="prefetch" href="/assets/js/44.ba3636ce.js"><link rel="prefetch" href="/assets/js/45.018222ef.js"><link rel="prefetch" href="/assets/js/46.420850f7.js"><link rel="prefetch" href="/assets/js/47.15a98df0.js"><link rel="prefetch" href="/assets/js/48.27a0dceb.js"><link rel="prefetch" href="/assets/js/49.e6e930f7.js"><link rel="prefetch" href="/assets/js/5.17cd0efc.js"><link rel="prefetch" href="/assets/js/50.e2d00833.js"><link rel="prefetch" href="/assets/js/51.d1194bb4.js"><link rel="prefetch" href="/assets/js/52.68707580.js"><link rel="prefetch" href="/assets/js/53.2c1573a3.js"><link rel="prefetch" href="/assets/js/54.f0992277.js"><link rel="prefetch" href="/assets/js/55.847fcc45.js"><link rel="prefetch" href="/assets/js/56.8bf862bc.js"><link rel="prefetch" href="/assets/js/57.f6a5108d.js"><link rel="prefetch" href="/assets/js/58.136bcb3a.js"><link rel="prefetch" href="/assets/js/59.164fd24d.js"><link rel="prefetch" href="/assets/js/6.4693f4d7.js"><link rel="prefetch" href="/assets/js/60.b6fb81f9.js"><link rel="prefetch" href="/assets/js/61.bbdc6654.js"><link rel="prefetch" href="/assets/js/62.1aca8d18.js"><link rel="prefetch" href="/assets/js/63.c8ba761d.js"><link rel="prefetch" href="/assets/js/64.c6617b3f.js"><link rel="prefetch" href="/assets/js/65.69817988.js"><link rel="prefetch" href="/assets/js/66.6f60548d.js"><link rel="prefetch" href="/assets/js/67.b0e4728f.js"><link rel="prefetch" href="/assets/js/68.b914dbaf.js"><link rel="prefetch" href="/assets/js/69.1bb9e612.js"><link rel="prefetch" href="/assets/js/7.28c424b4.js"><link rel="prefetch" href="/assets/js/70.9ffec814.js"><link rel="prefetch" href="/assets/js/71.ae5c34da.js"><link rel="prefetch" href="/assets/js/72.6b7259de.js"><link rel="prefetch" href="/assets/js/73.4eadf575.js"><link rel="prefetch" href="/assets/js/74.dac2cab5.js"><link rel="prefetch" href="/assets/js/75.0cf69d0c.js"><link rel="prefetch" href="/assets/js/76.7982c5c2.js"><link rel="prefetch" href="/assets/js/77.1f9817ea.js"><link rel="prefetch" href="/assets/js/78.a599b3a3.js"><link rel="prefetch" href="/assets/js/79.47e8b8a7.js"><link rel="prefetch" href="/assets/js/8.957badf2.js"><link rel="prefetch" href="/assets/js/80.5929a820.js"><link rel="prefetch" href="/assets/js/81.ba4eb361.js"><link rel="prefetch" href="/assets/js/82.1a24ca18.js"><link rel="prefetch" href="/assets/js/83.82b90bc6.js"><link rel="prefetch" href="/assets/js/84.2100a36a.js"><link rel="prefetch" href="/assets/js/85.85fbd4d3.js"><link rel="prefetch" href="/assets/js/86.764c4cb6.js"><link rel="prefetch" href="/assets/js/87.2c8c6d88.js"><link rel="prefetch" href="/assets/js/88.a5966812.js"><link rel="prefetch" href="/assets/js/89.fd5d57a8.js"><link rel="prefetch" href="/assets/js/90.5167b836.js"><link rel="prefetch" href="/assets/js/91.53cfd5fa.js"><link rel="prefetch" href="/assets/js/92.b51f8e4d.js"><link rel="prefetch" href="/assets/js/93.4b5326a9.js"><link rel="prefetch" href="/assets/js/94.2ca4e1de.js"><link rel="prefetch" href="/assets/js/95.7d73d387.js"><link rel="prefetch" href="/assets/js/96.c1f1497d.js"><link rel="prefetch" href="/assets/js/97.1f9b895a.js"><link rel="prefetch" href="/assets/js/98.b6748a14.js"><link rel="prefetch" href="/assets/js/99.bae2c5b3.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.0053ac3f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44c319ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="https://www.minew.com/" target="_blank" class="home-link"><img src="/header-logo.png" alt="移动SDK文档" class="logo"> <span class="site-name can-hide"></span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_MTB02_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_MTB06_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_MTB11_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWC05_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC05Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MSG01_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MSG01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MTB13_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB13Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="iOS" class="dropdown-title"><span class="title">iOS</span> <span class="arrow down"></span></button> <button type="button" aria-label="iOS" class="mobile-dropdown-title"><span class="title">iOS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTSensorV3Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Repeater_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_Radar_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_pt100_Software_Development_Kit_Guide.html" class="nav-link">
+  PT100SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_MTB02_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_MTB06_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_MTB11_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MTIndustrialSensorKit_mbt02_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/iOS/iOS_GatewayConfig_Develop_Kit.html" class="nav-link">
+  GatewayConfig
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Android" class="dropdown-title"><span class="title">Android</span> <span class="arrow down"></span></button> <button type="button" aria-label="Android" class="mobile-dropdown-title"><span class="title">Android</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Software_Development_Kit_Guide.html" class="nav-link">
+  Sensor-V3
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTIndustrialSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTIndustrialSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_RadarSensorKit_Software_Development_Kit_Guide.html" class="nav-link">
+  RadarSensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst03_Software_Development_Kit_Guide.html" class="nav-link">
+  Mst03SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_S4_Software_Development_Kit_Guide.html" class="nav-link">
+  S4V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mst01_PT100_Software_Development_Kit_Guide.html" class="nav-link">
+  MST01_PT100_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB02_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB02_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconPlus_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconSET Plus
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewTrackerKit_Software_Development_Kit_Guide.html" class="nav-link">
+  TrackerKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewModuleKit_Software_Development_Kit_Guide.html" class="nav-link">
+  ModuleKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_BeaconAdmin_Software_Development_Kit_Guide.html" class="nav-link">
+  BeaconAdmin
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewToolsKit_Software_Development_Kit_Guide.html" class="nav-link">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  GatewayConfig
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_version2_Software_Development_Kit_Guide.html" class="nav-link">
+  Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mwc01_Software_Development_Kit_Guide.html" class="nav-link">
+  Badge Bluetooth® Repeater
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Mbt02_Connectable_Asset_Tag_Software_Development_Kit_Guide.html" class="nav-link">
+  Connectable Asset Tag
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB06_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB06_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_MTB11_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB11_V3SensorKit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewMWC03Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC03Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_MinewSensorKit_v3_Msd01_Software_Development_Kit_Guide.html" class="nav-link">
+  MSD01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWB02_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWB02Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MWC05_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MWC05Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MSG01_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MSG01Kit
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_Minew_MTB13_Kit_Software_Development_Kit_Guide.html" class="nav-link">
+  MTB13Kit
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言切换</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言切换</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>GatewayConfig SDK 说明文档</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html#前言" class="sidebar-link">前言</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html#wifi-配置功能" class="sidebar-link">WiFi 配置功能</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/zh-CN/Android/Android_GatewayConfig_Develop_Kit.html#api-接口" class="sidebar-link">API 接口</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="gatewayconfig-sdk-说明文档"><a href="#gatewayconfig-sdk-说明文档" class="header-anchor">#</a> GatewayConfig SDK 说明文档</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>GatewayConfig APP 又名网关助手，由深圳云里物里科技股份有限公司开发完成并发布，其主要功能是用来进行对深圳云里物里科技股份有限公司所生产的相关网关设备进行参数配置。</p> <h2 id="wifi-配置功能"><a href="#wifi-配置功能" class="header-anchor">#</a> WiFi 配置功能</h2> <p>WiFi 配置功能使用了乐鑫科技股份有限公司的 SDK ，其功能主要是用于手机 APP 进行 WiFi 广播数据，以及接收 WiFi 广播数据使用，其 SDK 地址为：</p> <p><a href="https://github.com/EspressifApp/EsptouchForAndroid" target="_blank" rel="noopener noreferrer">ESP-WiFi 广播 SDK 地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="/assets/img/espv2.9b4b8ecc.png" alt="esp-touch-v2"></p> <p>在 Github 地址里边的 README.md 中，查看 EspTouchV2 的文档；</p> <h2 id="api-接口"><a href="#api-接口" class="header-anchor">#</a> API 接口</h2> <p>API 接口是网关设备作为 HTTP 服务端，手机 APP 在通过 WiFi 配网之后获得网关设备地址，并且手机与网关处于同一局域网下的前提下，通过 API 接口来进行对网关设备的参数修改；</p> <p>API 接口文档链接如下：</p> <p><a href="/zh-CN/Android/esp32c3_wifi_gw_http_api_user.html">网关 API 接口地址</a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新::</span> <span class="time">2024/1/12 18:46:52</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ebf38cfb.js" defer></script><script src="/assets/js/2.31f2ce87.js" defer></script><script src="/assets/js/1.a9521bca.js" defer></script><script src="/assets/js/42.f5caa34c.js" defer></script>
+  </body>
+</html>
